@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>渠道用户查询</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+
+</head>
+<style>
+    ol li{display: block}
+
+</style>
+<script>
+    var host = window.location.origin;
+
+
+    $(function () {
+        var channelNo = 0;
+        $('#btn').click(function(){
+            channelNo = $("#no").val();
+            $.ajax({
+                url: host+ "/extraChannel/countUser",
+                type: "get",
+                dataType:'json',
+                async:true,//请求是否异步，默认为异步，这也是ajax重要特性
+                cache:false,
+                headers: {"content-type":"application/json","channelno":channelNo},
+                success:function(data){
+                    if(data.code == 500){
+                        alert('获取失败');
+                    }else {
+
+                        $('#count').html(channelNo+'号渠道用户总数:'+data.count);
+                    }
+                },
+                error:function() {
+                    alert('获取数据失败,请重试!');
+                }
+            });
+        });
+
+
+    });
+
+</script>
+<body>
+<!--顶部bar-->
+<div style="width: 80%; margin: 10px auto">
+    <input type="number" id="no">
+    <input type="button" value="查询" id="btn">
+    <div style="margin-top: 10px"><label id="count"></label></div>
+
+</div>
+
+<div style="margin: 0 auto; color: red; width: 80%">--- 推广起始日期:2017-10-16 ---</div>
+    <ol style="display: block; margin-top: 20px;">
+        <li>1号渠道总数需减去 1163</li>
+        <li>4号渠道总数需减去 503</li>
+        <li>5号渠道总数需减去 449</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>绑定账号</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../js/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../js/plugins/AdminLTE/AdminLTE.min.css">
+    <!-- breadMenu -->
+    <link rel="stylesheet" href="../../js/plugins/breadMenu/style.css">
+
+    <link rel="stylesheet" href="../../js/plugins/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../../css/wechatapp.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="hold-transition register-page">
+
+    <div class="title register-logo">
+      <a href="#"><b>维加斯</b>游戏</a>
+    </div><!-- /.login-logo -->
+    <div class='breadcrumbs'>
+      <div class='inner'>
+        <ul class='cf reg'>
+          <li class="step1">
+            <a class='active'>
+              <span>1</span>
+              <span>绑定账号</span>
+            </a>
+          </li>
+          <li class="step2">
+            <a>
+              <span>2</span>
+              <span>完成</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bind-account" style="display: none">
+      <div class="register-box">
+        <div class="register-box-body">
+          <p class="login-box-msg">绑定注册号</p>
+          <form>
+            <div class="form-group has-feedback phone-input">
+              <input type="tel" name="username" class="form-control" placeholder="注册手机号">
+              <span class="fa fa-mobile form-control-feedback"></span>
+            </div>
+            <div class="form-group phone-p" style="display: none">
+              <h4></h4>
+            </div>
+            <div class="input-group form-group">
+              <input type="text" name="codes" class="form-control" placeholder="验证码">
+              <span class="input-group-btn">
+                <button id="sendCode" class="btn btn-warning" type="button">获取验证码</button>
+              </span>
+            </div>
+            <div class="form-group has-feedback visitor-uid" style="display: none">
+              <input type="tel" name="visUid" class="form-control" placeholder="游客号UID">
+              <span class="fa fa-user form-control-feedback"></span>
+            </div>
+
+            <input type="button" id="bindUser" class="btn btn-primary btn-block btn-flat" value="下 一 步">
+          </form>
+        </div><!-- /.form-box -->
+      </div><!-- /.register-box -->
+    </div>
+
+    <div class="bind-finish" style="display: none">
+      <div class="register-box">
+        <div class="register-box-body text-center">
+          <h1>恭喜你</h1>
+          <h4>账号绑定申请已提交,请在24小时内打开游戏,点击邮件确认,完成绑定!</h4>
+        </div><!-- /.form-box -->
+      </div><!-- /.register-box -->
+    </div>
+
+    <div class="bind-wait" style="display: none">
+      <div class="register-box">
+        <div class="register-box-body text-center">
+          <h3>数据获取中,请稍后...</h3>
+        </div><!-- /.form-box -->
+      </div><!-- /.register-box -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../js/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../js/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Self -->
+    <script src="../../js/wcBinding.js"></script>
+    <script src="../../js/util.js"></script>
+
+  </body>
+</html>

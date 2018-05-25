@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Blank Page</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../js/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../js/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../js/plugins/ionicons/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../js/plugins/AdminLTE/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../js/plugins/AdminLTE/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+
+      .controlSetting input[type=text] {
+        width: 100px;
+      }
+
+      .controlSetting form{
+        margin: 5px 0px;
+      }
+
+      .controlSetting form div{
+        margin: 0px 5px;
+      }
+
+      .controlSetting form label{
+        margin-right: 5px;
+      }
+
+      .controlSetting .updateNow {
+        float: right;
+        margin-left: 5px;
+      }
+
+      .controlWatch {
+        margin-top: 30px;
+      }
+
+    </style>
+
+    <script id="fishControlNowTmpl" type="text/x-jsrender">
+       <p>当前设置</p>
+       <p>总体捕获概率 : {{:fishGlobal}}</p>
+       <p>玩家稳定概率参考比例(%) : {{:fishRange}}</p>
+       <p>数据更新时间区间(s) : {{:lowerTime}} - {{:upperTime}}</p>
+       <p>设置时间 : {{:setTime}}</p>
+    </script>
+    <script id="fishControlWatchTmpl" type="text/x-jsrender">
+       <tr>
+          <td>{{:updateTime}}</td>
+          <td>{{:coinInput}}</td>
+          <td>{{:coinOutput}}</td>
+          <td>{{:coinSubtraction}}</td>
+          <td>{{:coinDivision}}</td>
+       </tr>
+    </script>
+
+    <script id="robotGameFishTotalTmpl" type="text/x-jsrender">
+       <tr>
+          <td>{{:updateTime}}</td>
+          <td>{{:count}}</td>
+          <td>{{:curCoin}}</td>
+       </tr>
+    </script>
+    <script id="robotGameFishWatchTmpl" type="text/x-jsrender">
+       <tr>
+          <td>{{:uid}}</td>
+          <td>{{:coin}}</td>
+          <td>{{:probability}}</td>
+          <td>{{:updateTime}}</td>
+       </tr>
+    </script>
+
+    <script id="colorControlNowTmpl" type="text/x-jsrender">
+       <p>当前设置</p>
+       <p>没牛概率 : {{:noneNiu}}</p>
+       <p>小牛概率 : {{:smallNiu}}</p>
+       <p>大牛概率 : {{:bigNiu}}</p>
+       <p>牛牛概率 : {{:niuNiu}}</p>
+       <p>四炸概率 : {{:fried}}</p>
+       <p>五花概率 : {{:cattle}}</p>
+       <p>五小概率 : {{:calves}}</p>
+       <p>设置时间 : {{:setTime}}</p>
+    </script>
+    <script id="colorControlWatchTmpl" type="text/x-jsrender">
+       <tr>
+          <td>{{:updateTime}}</td>
+          <td>{{:total}}</td>
+          <td>{{:result0}}</td>
+          <td>{{:result1}}</td>
+          <td>{{:result2}}</td>
+          <td>{{:result3}}</td>
+          <td>{{:result4}}</td>
+          <td>{{:result5}}</td>
+          <td>{{:result6}}</td>
+          <td>{{:coin}}</td>
+       </tr>
+    </script>
+
+    <script id="warControlNowTmpl" type="text/x-jsrender">
+       <p>当前设置</p>
+       <p>全输概率 : {{:winZero}}</p>
+       <p>赢一门概率 : {{:winOne}}</p>
+       <p>赢二门概率 : {{:winTwo}}</p>
+       <p>赢三门概率 : {{:winThree}}</p>
+       <p>赢四门概率 : {{:winFour}}</p>
+       <p>设置时间 : {{:setTime}}</p>
+    </script>
+    <script id="warControlWatchTmpl" type="text/x-jsrender">
+       <tr>
+          <td>{{:updateTime}}</td>
+          <td>{{:total}}</td>
+          <td>{{:result0}}</td>
+          <td>{{:result1}}</td>
+          <td>{{:result2}}</td>
+          <td>{{:result3}}</td>
+          <td>{{:result4}}</td>
+          <td>{{:coin}}</td>
+       </tr>
+    </script>
+
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>A</b>LT</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 4 messages</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li><!-- start message -->
+                        <a href="#">
+                          <div class="pull-left">
+                            <img src="../../image/user2-160x160.jpg" class="img-circle" alt="User Image">
+                          </div>
+                          <h4>
+                            Support Team
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <p>Why not buy a new awesome theme?</p>
+                        </a>
+                      </li><!-- end message -->
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">See All Messages</a></li>
+                </ul>
+              </li>
+              <!-- Notifications: style can be found in dropdown.less -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 10 notifications</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
+              <!-- Tasks: style can be found in dropdown.less -->
+              <li class="dropdown tasks-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">9</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 9 tasks</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li><!-- Task item -->
+                        <a href="#">
+                          <h3>
+                            Design some buttons
+                            <small class="pull-right">20%</small>
+                          </h3>
+                          <div class="progress xs">
+                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                              <span class="sr-only">20% Complete</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li><!-- end task item -->
+                    </ul>
+                  </li>
+                  <li class="footer">
+                    <a href="#">View all tasks</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="../../image/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Alexander Pierce</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="../../image/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <p>
+                      Alexander Pierce - Web Developer
+                      <small>Member since Nov. 2012</small>
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- =============================================== -->
+
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../../image/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>Alexander Pierce</p>
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Layout Options</span>
+                <span class="label label-primary pull-right">4</span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">Hot</small>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Charts</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Morris</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Flot</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>UI Elements</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> General</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Icons</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Buttons</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Sliders</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Timeline</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Modals</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-edit"></i> <span>Forms</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> General Elements</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Editors</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-table"></i> <span>Tables</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Data tables</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-calendar"></i> <span>Calendar</span>
+                <small class="label pull-right bg-red">3</small>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                <small class="label pull-right bg-yellow">12</small>
+              </a>
+            </li>
+            <li class="treeview active">
+              <a href="#">
+                <i class="fa fa-folder"></i> <span>Examples</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Profile</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Login</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Register</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-share"></i> <span>Multilevel</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
+                      <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+            <li class="header">LABELS</li>
+            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- =============================================== -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Blank page
+            <small>it all starts here</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Examples</a></li>
+            <li class="active">Blank page</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+          <!-- Default box -->
+          <div class="box" style="display: default">
+            <div class="box-header with-border">
+              <h3 class="box-title">游戏世界</h3>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <input id="enterWorld" type="button" class="btn btn-primary btn-flat" value="进入游戏大厅">
+              <input id="getPlayerInfoInWorld" type="button" class="btn btn-primary btn-flat" value="获取玩家信息">
+              <input id="friend" type="button" class="btn btn-primary btn-flat" value="好友">
+              <input id="kick" type="button" class="btn btn-primary btn-flat" value="剔出在线玩家">
+              <input id="allPlayersCoin" type="button" class="btn btn-primary btn-flat" value="玩家总金额">
+              <input id="tradeconf" type="button" class="btn btn-primary btn-flat" value="商品配置">
+              <input id="alipaygetorder" type="button" class="btn btn-primary btn-flat" value="订单编号">
+              <input id="signReward" type="button" class="btn btn-primary btn-flat" value="签到奖励">
+              <input id="rankingList" type="button" class="btn btn-primary btn-flat" value="排行榜">
+              <input id="payAuth" type="button" class="btn btn-primary btn-flat" value="订单校验">
+              <input id="sendGift" type="button" class="btn btn-primary btn-flat" value="赠送礼物">
+              <input id="sellGift" type="button" class="btn btn-primary btn-flat" value="出售商品">
+              <input id="setPlayerInfo" type="button" class="btn btn-primary btn-flat" value="修改玩家信息">
+              <input onclick="prom()" type="button" class="btn btn-primary btn-flat" value="绑定身份">
+              <input onclick="indulge()" type="button" class="btn btn-primary btn-flat" value="沉迷等级">
+              <input id="getActivity" type="button" class="btn btn-primary btn-flat" value="获取任务列表">
+              <input id="exchanCoin" type="button" class="btn btn-primary btn-flat" value="兑换金币">
+              <input id="openBox" type="button" class="btn btn-primary btn-flat" value="进入保险箱">
+              <input id="createBox" type="button" class="btn btn-primary btn-flat" value="创建保险箱">
+              <input id="saveToBox" type="button" class="btn btn-primary btn-flat" value="存入保险箱">
+              <input id="getFromBox" type="button" class="btn btn-primary btn-flat" value="从保险箱取出">
+              <input id="version_ckeck" type="button" class="btn btn-primary btn-flat" value="版本校验">
+              <input id="pay_type" type="button" class="btn btn-primary btn-flat" value="支付方式">
+              <input id="getpic" type="button" class="btn btn-primary btn-flat" value="下载图片">
+              <input id="test" type="button" class="btn btn-primary btn-flat" value="测试">
+              <input id="warCard" type="button" class="btn btn-primary btn-flat" value="牛牛控制">
+              <input id="warGameStop" type="button" class="btn btn-primary btn-flat" value="停止牛牛">
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              Footer
+            </div><!-- /.box-footer-->
+          </div><!-- /.box -->
+
+          <div class="box"  style="display: block">
+            <div class="box-header with-border">
+              <h3 class="box-title">经典场斗地主</h3>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <input id="enterGameClassic" type="button" class="btn btn-primary btn-flat" value="进入游戏">
+              <input id="leaveGameClassic" type="button" class="btn btn-primary btn-flat" value="退出游戏">
+              <input id="reconnectGame" type="button" class="btn btn-primary btn-flat" value="游戏重连">
+              <input id="conClassicGame" type="button" class="btn btn-primary btn-flat" value="继续游戏">
+              <input id="chanClassicGame" type="button" class="btn btn-primary btn-flat" value="换桌">
+
+              <input id="openDeal" type="button" class="btn btn-primary btn-flat" value="明牌">
+              <input id="doubleRate" type="button" class="btn btn-primary btn-flat" value="加倍">
+              <input id="superRate" type="button" class="btn btn-primary btn-flat" value="超级加倍">
+              <input id="callLord" type="button" class="btn btn-primary btn-flat" value="叫地主">
+              <input id="grabLord" type="button" class="btn btn-primary btn-flat" value="抢地主">
+              <input id="deposit" type="button" class="btn btn-primary btn-flat" value="托管">
+
+              <input id="useExpression" type="button" class="btn btn-primary btn-flat" value="互动表情">
+              <input id="chatInClassic" type="button" class="btn btn-primary btn-flat" value="经典场聊天">
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              Footer
+            </div><!-- /.box-footer-->
+          </div><!-- /.box -->
+
+          <div class="box"  style="display: block">
+            <div class="box-header with-border">
+              <h3 class="box-title">不洗牌</h3>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <input id="enterGameUnshuffle" type="button" class="btn btn-primary btn-flat" value="进入游戏">
+              <input id="leaveGameUnshuffle" type="button" class="btn btn-primary btn-flat" value="退出游戏">
+              <input id="readyFive" type="button" class="btn btn-primary btn-flat" value="准备">
+              <input id="luoziFive" type="button" class="btn btn-primary btn-flat" value="落子">
+              <input id="failFive" type="button" class="btn btn-primary btn-flat" value="认输">
+              <input id="removePlayer" type="button" class="btn btn-primary btn-flat" value="踢人">
+              <input id="chessDogfall" type="button" class="btn btn-primary btn-flat" value="平局">
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              Footer
+            </div><!-- /.box-footer-->
+          </div><!-- /.box -->
+
+          <div class="box"  style="display: block">
+            <div class="box-header with-border">
+              <h3 class="box-title">捕鱼</h3>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <input id="enterGameFish" type="button" class="btn btn-primary btn-flat" value="进入游戏">
+              <input id="GameFishChangeR" type="button" class="btn btn-primary btn-flat" value="换房">
+              <input id="setCannonGrade" type="button" class="btn btn-primary btn-flat" value="设置大炮等级">
+              <input id="fire" type="button" class="btn btn-primary btn-flat" value="开炮">
+              <input id="ice" type="button" class="btn btn-primary btn-flat" value="冰封">
+              <input id="clock" type="button" class="btn btn-primary btn-flat" value="锁定">
+              <input id="getPlayerInfoInGameFish" type="button" class="btn btn-primary btn-flat" value="获取玩家信息">
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              Footer
+            </div><!-- /.box-footer-->
+          </div><!-- /.box -->
+
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">时时彩监控</h3>
+              <!--<div class="box-tools pull-right">-->
+              <!--<button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>-->
+              <!--<button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>-->
+              <!--</div>-->
+            </div>
+            <div class="box-body">
+              <div id="colorControlSetting" class="controlSetting">
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="noneNiu">没牛</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="noneNiu" placeholder="70.03">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="smallNiu">小牛</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="smallNiu" placeholder="20.45">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="bigNiu">大牛</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="bigNiu" placeholder="4.75">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="niuNiu">牛牛</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="niuNiu" placeholder="4.25">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="fried">四炸</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="fried" placeholder="0.25">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="cattle">五花</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="cattle" placeholder="0.25">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="calves">五小</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="calves" placeholder="0.02">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="form-inline">
+                  <button type="button" class="btn btn-primary submit" style="outline:none;">确定</button>
+                  <button type="button" class="btn btn-default updateNow" style="outline:none;">刷新</button>
+                </form>
+              </div>
+              <table class="table table-bordered controlWatch" id="colorControlWatch">
+                <thead>
+                <tr>
+                  <th id="colorControlNow" colspan="10"></th>
+                </tr>
+                <tr>
+                  <th>更新时间</th>
+                  <th>总计</th>
+                  <th>没牛</th>
+                  <th>小牛</th>
+                  <th>大牛</th>
+                  <th>牛牛</th>
+                  <th>四炸</th>
+                  <th>五花</th>
+                  <th>五小</th>
+                  <th>金币净收入(万)</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+            </div><!-- /.box-body -->
+            <!--<div class="box-footer">-->
+            <!--Footer-->
+            <!--</div>&lt;!&ndash; /.box-footer&ndash;&gt;-->
+          </div><!-- /.box -->
+
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">百人大战监控</h3>
+              <!--<div class="box-tools pull-right">-->
+              <!--<button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>-->
+              <!--<button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>-->
+              <!--</div>-->
+            </div>
+            <div class="box-body">
+              <div id="warControlSetting" class="controlSetting">
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="noneNiu">全输</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="winZero" placeholder="15.00">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="smallNiu">赢一门</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="winOne" placeholder="20.00">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="bigNiu">赢二门</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="winTwo" placeholder="50.00">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="niuNiu">赢三门</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="winThree" placeholder="10.00">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="fried">赢四门</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="winFour" placeholder="5.00">
+                      <span class="input-group-addon">%</span>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="form-inline">
+                  <button type="button" class="btn btn-primary submit" style="outline:none;">确定</button>
+                  <button type="button" class="btn btn-default updateNow" style="outline:none;">刷新</button>
+                </form>
+              </div>
+              <table class="table table-bordered controlWatch" id="warControlWatch">
+                <thead>
+                <tr>
+                  <th id="warControlNow" colspan="8"></th>
+                </tr>
+                <tr>
+                  <th>更新时间</th>
+                  <th>总计</th>
+                  <th>全输</th>
+                  <th>赢一门</th>
+                  <th>赢二门</th>
+                  <th>赢三门</th>
+                  <th>赢四门</th>
+                  <th>系统庄净收入(万)</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+            </div><!-- /.box-body -->
+            <!--<div class="box-footer">-->
+            <!--Footer-->
+            <!--</div>&lt;!&ndash; /.box-footer&ndash;&gt;-->
+          </div><!-- /.box -->
+
+          <div class="box" style="display: block">
+            <div class="box-header with-border">
+              <h3 class="box-title">捕鱼监控</h3>
+              <!--<div class="box-tools pull-right">-->
+                <!--<button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>-->
+                <!--<button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>-->
+              <!--</div>-->
+            </div>
+            <div class="box-body">
+              <div id="fishControlSetting" class="controlSetting">
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="fishGlobal">总体捕获概率</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="fishGlobal" placeholder="1.0000">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="fishRange">玩家稳定概率参考比例(%)</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="fishRange" placeholder="10.00">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="fishRange">数据更新时间区间(s)</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="lowerTime" placeholder="100">
+                    </div>
+                    <label for="fishRange"> - </label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="upperTime" placeholder="300">
+                    </div>
+                  </div>
+                </form>
+
+                <form class="form-inline">
+                  <button type="button" class="btn btn-primary submit" style="outline:none;">确定</button>
+                  <button type="button" class="btn btn-default updateNow" style="outline:none;">刷新</button>
+                </form>
+              </div>
+              <table class="table table-bordered controlWatch" id="fishControlWatch">
+                <thead>
+                  <tr>
+                    <th id="fishControlNow" colspan="5"></th>
+                  </tr>
+                  <tr>
+                    <th>更新时间</th>
+                    <th>金币总流入(万)</th>
+                    <th>金币总流出(万)</th>
+                    <th>差值(入-出)</th>
+                    <th>比值(入/出)</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+              <table class="table table-bordered" id="robotGameFishTotal">
+                <thead>
+                <tr>
+                  <td colspan="6"><h1>总体情况</h1></td>
+                </tr>
+                <tr>
+                  <th>更新时间</th>
+                  <th>机器人个数</th>
+                  <th>当前总金币</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+              <table class="table table-bordered" id="robotGameFishWatch">
+                <thead>
+                <tr>
+                  <td colspan="6"><h1>个体情况</h1></td>
+                </tr>
+                <tr>
+                  <th>机器人UID</th>
+                  <th>当前金币</th>
+                  <th>个人概率</th>
+                  <th>更新时间</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+            </div><!-- /.box-body -->
+            <!--<div class="box-footer">-->
+              <!--Footer-->
+            <!--</div>&lt;!&ndash; /.box-footer&ndash;&gt;-->
+          </div><!-- /.box -->
+
+          <div class="box"  style="display: none">
+            <div class="box-header with-border">
+              <h3 class="box-title">时时彩</h3>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <input id="getColorInfo" type="button" class="btn btn-primary btn-flat" value="获取当前情况">
+              <input id="betColorCoin" type="button" class="btn btn-primary btn-flat" value="押注">
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              Footer
+            </div><!-- /.box-footer-->
+          </div><!-- /.box -->
+
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 2.3.0
+        </div>
+        <strong>Copyright &copy; 2014-2015 <a href="#">Almsaeed Studio</a>.</strong> All rights reserved.
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+
+          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Home tab content -->
+          <div class="tab-pane" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <ul class="control-sidebar-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                    <p>Will be 23 on April 24th</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <i class="menu-icon fa fa-user bg-yellow"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                    <p>New phone +1(800)555-1234</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                    <p>nora@example.com</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                  <div class="menu-info">
+                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                    <p>Execution time 5 seconds</p>
+                  </div>
+                </a>
+              </li>
+            </ul><!-- /.control-sidebar-menu -->
+
+            <h3 class="control-sidebar-heading">Tasks Progress</h3>
+            <ul class="control-sidebar-menu">
+              <li>
+                <a href="javascript:;">
+                  <h4 class="control-sidebar-subheading">
+                    Custom Template Design
+                    <span class="label label-danger pull-right">70%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <h4 class="control-sidebar-subheading">
+                    Update Resume
+                    <span class="label label-success pull-right">95%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <h4 class="control-sidebar-subheading">
+                    Laravel Integration
+                    <span class="label label-warning pull-right">50%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <h4 class="control-sidebar-subheading">
+                    Back End Framework
+                    <span class="label label-primary pull-right">68%</span>
+                  </h4>
+                  <div class="progress progress-xxs">
+                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                  </div>
+                </a>
+              </li>
+            </ul><!-- /.control-sidebar-menu -->
+
+          </div><!-- /.tab-pane -->
+          <!-- Stats tab content -->
+          <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+          <!-- Settings tab content -->
+          <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+              <h3 class="control-sidebar-heading">General Settings</h3>
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Report panel usage
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Some information about this general settings option
+                </p>
+              </div><!-- /.form-group -->
+
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Allow mail redirect
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Other sets of options are available
+                </p>
+              </div><!-- /.form-group -->
+
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Expose author name in posts
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Allow the user to show his name in blog posts
+                </p>
+              </div><!-- /.form-group -->
+
+              <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Show me as online
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+              </div><!-- /.form-group -->
+
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Turn off notifications
+                  <input type="checkbox" class="pull-right">
+                </label>
+              </div><!-- /.form-group -->
+
+              <div class="form-group">
+                <label class="control-sidebar-subheading">
+                  Delete chat history
+                  <a href="javascript:;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                </label>
+              </div><!-- /.form-group -->
+            </form>
+          </div><!-- /.tab-pane -->
+        </div>
+      </aside><!-- /.control-sidebar -->
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="../js/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../js/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../js/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../js/plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../js/demo.js"></script>
+
+    <script src="../js/lib/build/build.js" type="text/javascript"></script>
+    <script src="../js/main.js"></script>
+
+    <script src="../js/plugins/jQuery/jsrender.js"></script>
+    <script src="../js/md5.js"></script>
+    <script type="text/javascript">
+      require('boot');    //这里初始化pomelo,很重要!
+    </script>
+    <script>
+      var params = queryString();
+      var uid = params.uid;
+      var token = params.token;
+      var deviceId = params.deviceId;
+      var controlId = null;
+      var countForGlobal = 0;
+      var countForRobot = 0;
+      var countForColor = 0;
+      var countForWar = 0;
+
+      addEvent();
+
+      $("#enterWorld").click(function() {
+        enterWorld(token);
+      });
+
+      $("#kick").click(function() {
+
+        kickPlayers();
+      });
+
+      $("#testGame").click(function() {
+
+        testGame();
+      });
+
+      $("#betCoin").click(function() {
+
+        betCoin();
+      });
+
+      $("#friend").click(function() {
+        window.location.href="friend.html?uid=" + uid + "&token=" + token +"&deviceId=" + deviceId;
+      });
+
+
+      //经典场斗地主
+      $("#enterGameClassic").click(function() {
+          var gameId=prompt("gameId","");
+          var openFlag=prompt("openFlag","");
+          enterGameClassic(gameId,openFlag);
+      });
+
+      $("#leaveGameClassic").click(function() {
+          leaveGameClassic();
+      });
+
+      $("#reconnectGame").click(function() {
+        var roomId=prompt("roomId","");
+        reconnectGame(roomId);
+      });
+
+      $("#conClassicGame").click(function() {
+        var openFlag=prompt("openFlag","");
+        conClassicGame(openFlag);
+      });
+
+      $("#chanClassicGame").click(function() {
+        var openFlag=prompt("openFlag","");
+        chanClassicGame(openFlag);
+      });
+
+      $("#callLord").click(function() {
+
+        var callFlag=prompt("callFlag","");
+        callLord(callFlag);
+
+      });
+
+      $("#grabLord").click(function() {
+        var grabFlag=prompt("grabFlag","");
+        grabLord(grabFlag);
+      });
+
+      $("#openDeal").click(function() {
+
+        openDeal();
+      });
+
+      $("#doubleRate").click(function() {
+        var doubleFlag=prompt("doubleFlag","");
+        console.log('doubleFlag"%s',doubleFlag);
+        doubleRate(doubleFlag);
+      });
+
+      $("#superRate").click(function() {
+        superRate();
+      });
+
+      $("#deposit").click(function() {
+        deposit();
+      });
+
+      $("#useExpression").click(function() {
+        var target=prompt("target","");
+        var content=prompt("content","");
+        useExpression(target,content);
+      });
+
+      $("#chatInClassic").click(function() {
+        var content=prompt("content","");
+        chatInClassic(target,content);
+      });
+
+      //不洗牌
+      $("#enterGameUnshuffle").click(function() {
+        var gameId=prompt("gameId","");
+        var openFlag=prompt("openFlag","");
+        enterGameUnshuffle(gameId,openFlag);
+      });
+
+      $("#readyFive").click(function() {
+
+        var guideFee=prompt("guideFee","");
+
+        readyFive(guideFee);
+
+      });
+
+      $("#luoziFive").click(function() {
+
+        var color=prompt("color","");
+        var x=prompt("x","");
+        var y=prompt("y","");
+
+        luoziFive(color,x,y);
+
+      });
+
+      $("#leaveGameUnshuffle").click(function() {
+
+        leaveGameUnshuffle();
+
+      });
+
+      $("#removePlayer").click(function() {
+
+        removePlayer();
+
+      });
+
+      $("#failFive").click(function() {
+
+        failFive();
+
+      });
+
+      $("#chessDogfall").click(function() {
+
+        chessDogfall();
+
+      });
+
+      //捕鱼
+      $("#enterGameFish").click(function() {
+
+        enterGameFish(300, -300, -500, 500, 1);
+      });
+      $("#GameFishChangeR").click(function() {
+
+        GameFishChangeR(300, -300, -500, 500, 1);
+      });
+
+
+      $("#leaveGameFish").click(function() {
+
+        leaveGameFish();
+      });
+
+      $("#getPlayerInfoInWorld").click(function() {
+
+        getPlayerInfo(uid, 0);
+      });
+
+      $("#getPlayerInfoInGameFish").click(function() {
+
+        getPlayerInfo(uid, 2);
+      });
+
+      $("#setCannonGrade").click(function() {
+
+        setCannonGrade(new Date().getSeconds());
+      });
+
+      $("#fire").click(function() {
+
+        fire(30, 100, -300);
+      });
+
+      $("#ice").click(function() {
+
+        useSkill(1);
+      });
+
+      $("#clock").click(function() {
+
+        useSkill(2);
+      });
+
+      $("#allPlayersCoin").click(function(){
+
+        $.ajax({
+          url: host+ "/user/getAllPlayersCoin",
+          type: "post",
+          dataType:'json',
+          headers: {"content-type":"application/json"},
+          data:JSON.stringify()
+        }).done(function(data){
+          if(data.code == 200) {
+            console.log("玩家总金额",JSON.stringify(data));
+          }
+
+        }).fail(function(msg) {
+          console.log("玩家总金额失败!", msg.responseText);
+        });
+      });
+
+      $("#tradeconf").click(function(){
+        $.ajax({
+          url: host+ "/account/trade/config",
+          type: "get",
+          dataType:'json',
+          headers: {"content-type":"application/json","uid":uid},
+          data:JSON.stringify()
+        }).done(function(data){
+          if(data.code == 200) {
+            console.log("商品配置",JSON.stringify(data));
+          }
+
+        }).fail(function(msg) {
+          console.log("商品配置失败!", msg.responseText);
+        });
+      });
+
+      $("#alipaygetorder").click(function(){
+
+        $.ajax({
+          url: host+ "/account/getOrderId",
+          type: "post",
+          dataType:'json',
+          headers: {"content-type":"application/json"},
+          data:JSON.stringify({"id":1,"uid":uid})
+        }).done(function(data){
+          if(data.code == 200) {
+            console.log("订单信息",JSON.stringify(data));
+          }
+
+        }).fail(function(msg) {
+          console.log("订单信息失败!", msg.responseText);
+        });
+      });
+
+      $("#version_ckeck").click(function(){
+        $.ajax({
+          url: host+ "/qqGroup/getPresentQQInfo",
+          type: "get",
+          dataType:'json',
+          headers: {"content-type":"application/json","Cache-Control":" no-cache "},
+          data:JSON.stringify()
+        }).done(function(data){
+
+            console.log("getPresentQQInfo:",data);
+
+
+        }).fail(function(msg) {
+          console.log("getPresentQQInfo!", msg.responseText);
+        });
+      });
+
+      $("#pay_type").click(function(){
+        //var system_name = prompt("渠道名称","");
+        $.ajax({
+          url: host+ "/aliwebpay/payType",
+          type: "get",
+          dataType:'json',
+          headers: {"content-type":"application/json","Cache-Control":" no-cache "},
+          data:JSON.stringify()
+        }).done(function(data){
+
+            console.log("支付方式:",data);
+
+
+        }).fail(function(msg) {
+          console.log("支付方式 失败!", msg.responseText);
+        });
+      });
+
+      $("#signReward").click(function() {
+
+        signRewad(function (data) {
+          console.log("sign:",data);
+        });
+
+
+      });
+
+      $("#sendGift").click(function() {
+
+        var giftnum=prompt("礼物数量","");
+        var target=prompt("目标","");
+
+        sendForGift(giftnum,target,function (data) {
+          console.log("send For Gift:",data);
+        });
+
+      });
+
+      $("#sellGift").click(function() {
+
+        checkOrder(function (data) {
+          console.log("checkOrder",data);
+        });
+
+      });
+
+      $("#rankingList").click(function() {
+        var paging=prompt("paging","");//将输入的内容赋给变量 name ，
+        var type=prompt("type","");//将输入的内容赋给变量 name ，
+
+        $.ajax({
+          url: host+ "/player/getRankingList",
+          type: "post",
+          dataType:'json',
+          headers: {"content-type":"application/json","Cache-Control":" no-cache ",uid:102048},
+          data:JSON.stringify({paging:paging,type:type}),
+          success:function(data){
+            console.log('suc data:',JSON.stringify(data));
+          },
+          fail:function(data){
+            console.log('err data:',JSON.stringify(data));
+          }
+        });
+      });
+
+      $("#payAuth").click(function() {
+        var orderId=prompt("订单编号","");//将输入的内容赋给变量 name ，
+        var cash=prompt("充值金额","");//将输入的内容赋给变量 name ，
+        var trade_id=prompt("商品编号","");//将输入的内容赋给变量 name ，
+        payAuthCheck(orderId,cash,trade_id,function (data) {
+          console.log("payAuth:",data);
+        });
+      });
+
+      $("#setPlayerInfo").click(function() {
+
+        setPlayerInfo(function (data) {
+          console.log("getPlayerInfo:",data);
+        });
+      });
+
+      function prom(){
+
+        var name=prompt("请输入您的名字","");//将输入的内容赋给变量 name ，
+
+        var idcard=prompt("请输入您身份证号","");
+        setAuth(name,idcard, function (data) {
+          console.log("setAuth:",data);
+        });
+      }
+
+      function indulge(){
+
+        var goodId=prompt("goodId","");
+        console.log('---uid:',uid);
+        var secret = hex_md5(uid+'tdaliwebpay'+goodId).substring(8,24).toUpperCase();
+
+
+        $.ajax({
+          url: host+ "/aliwebpay/webPay",
+          type: "post",
+          dataType:'json',
+          headers: {"content-type":"application/json","Cache-Control":" no-cache ",uid:uid,},
+          data:JSON.stringify({goodId:goodId,secret:secret})
+        }).done(function(data){
+
+          console.log("webpay:",JSON.stringify(data));
+
+
+        }).fail(function(msg) {
+          console.log("支付方式 失败!", msg.responseText);
+        });
+
+      }
+
+      $("#getActivity").click(function() {
+
+        getActivit(function (data) {
+          console.log("getActivity:",data);
+        });
+      });
+
+      $("#exchanCoin").click(function() {
+        var jewels = prompt("兑换数量","");
+        goExchange(jewels,function (data) {
+          console.log("exchangeCoin:",data);
+        });
+      });
+
+      $("#openBox").click(function() {
+        openBox(function (data) {
+          console.log("openSafeBox:",data);
+          if (data.code != 200){
+            $("#createBox").click();
+          }
+        });
+      });
+
+      $("#createBox").click(function() {
+        var password = prompt("密码","");
+        createBox(password,function (data) {
+          console.log("exchangeCoin:",data);
+        });
+      });
+
+      $("#saveToBox").click(function() {
+        var coins = prompt("存入金币","");
+        saveToBox(coins,function (data) {
+          console.log("exchangeCoin:",data);
+        });
+      });
+
+      $("#getFromBox").click(function() {
+        var password = prompt("密码","");
+        var coins = prompt("取出金币","");
+        getFromBox(password,coins,function (data) {
+          console.log("exchangeCoin:",data);
+        });
+      });
+
+      $("#warCard").click(function() {
+        var seat = prompt("座位","");
+        var status = prompt("输赢","");
+        setWarCard(seat,status,function (data) {
+          console.log("setWarCard:",data);
+        });
+      });
+
+      $("#warGameStop").click(function() {
+        setWarGameStop(function (data) {
+          console.log("warGameStop:",data);
+        });
+      });
+
+      $("#getpic").click(function() {
+        var path = prompt("文件路径","");
+        $.ajax({
+          url: host + "/player/getPic",
+          type: "post",
+          dataType: 'json',
+          headers: {"content-type" : "application/json"},
+          data: JSON.stringify({"path" : path})
+        }).done(function(data){
+
+          console.log('file get success:',data);
+
+        }).fail(function(msg) {
+
+          console.log("file get error ",msg);
+
+        });
+      });
+
+      $("#test").click(function() {
+
+        var cid = prompt("短号","");
+
+        getTest(cid,function (data) {
+          console.log("--购买靓号:",data);
+        });
+      });
+
+      $("#getColorInfo").click(function() {
+
+        getColorInfo();
+      });
+
+      $("#betColorCoin").click(function() {
+
+        betColorCoin();
+      });
+
+      /* ------------------------------------  以下为捕鱼控制  ------------------------------------ */
+
+
+      function updateRobotGameFish() {
+        $.ajax({
+          url: host + "/agent/updateRobotGameFish",
+          type: "post",
+          dataType: 'json',
+          headers: {"content-type" : "application/json"}
+        }).done(function(data){
+
+          if(data.code == 200) {
+
+//            $("#robotGameFishTotal").empty();
+            if(countForRobot == 10) {
+              $("#robotGameFishTotal tbody tr").first().remove();
+            }
+            else {
+              countForRobot += 1;
+            }
+            var html = $("#robotGameFishTotalTmpl").render(data.total);
+            $("#robotGameFishTotal tbody").append(html);
+
+            $("#robotGameFishWatch tbody").empty();
+            html = $("#robotGameFishWatchTmpl").render(data.result);
+            $("#robotGameFishWatch tbody").append(html);
+          }
+          else {
+            //alert("刷新失败! "+ data);
+          }
+
+        }).fail(function(msg) {
+
+          //alert("刷新失败! "+ msg.responseText);
+
+        });
+      };
+
+      /* ------------------------------------  以下为 时时彩 控制  ------------------------------------ */
+
+      $("#colorControlSetting .submit").click(function(){
+
+        var noneNiu = $.trim($("#colorControlSetting #noneNiu").val());
+        var smallNiu = $.trim($("#colorControlSetting #smallNiu").val());
+        var bigNiu = $.trim($("#colorControlSetting #bigNiu").val());
+        var niuNiu = $.trim($("#colorControlSetting #niuNiu").val());
+        var fried = $.trim($("#colorControlSetting #fried").val());
+        var cattle = $.trim($("#colorControlSetting #cattle").val());
+        var calves = $.trim($("#colorControlSetting #calves").val());
+
+        if(smallNiu == '' || bigNiu == '' || niuNiu == '' || fried == '' || cattle == '' || calves == '') {
+          alert("以上均为必填项！");
+        }
+        else if(isNaN(smallNiu) || isNaN(bigNiu) || isNaN(niuNiu) || isNaN(fried) || isNaN(cattle) || isNaN(calves)) {
+          alert("输入类型必须为数字！");
+        }
+        else if(parseFloat(smallNiu) < 0 || parseFloat(bigNiu) < 0 || parseFloat(niuNiu) < 0 || parseFloat(fried) < 0 || parseFloat(cattle) < 0 || parseFloat(calves) < 0
+                || parseFloat(smallNiu) > 100 || parseFloat(bigNiu) > 100 || parseFloat(niuNiu) > 100 || parseFloat(fried) > 100 || parseFloat(cattle) > 100 || parseFloat(calves) > 100) {
+          alert("输入数字必须在区间[0, 100]内！");
+        }
+        else if((parseFloat(smallNiu) + parseFloat(bigNiu) + parseFloat(niuNiu) + parseFloat(fried) + parseFloat(cattle) + parseFloat(calves)) > 100) {
+          alert("输入数字之和必须小于100");
+        }
+        else {
+          smallNiu = Math.floor(parseFloat(smallNiu) * 100);
+          bigNiu = Math.floor(parseFloat(bigNiu) * 100);
+          niuNiu = Math.floor(parseFloat(niuNiu) * 100);
+          fried = Math.floor(parseFloat(fried) * 100);
+          cattle = Math.floor(parseFloat(cattle) * 100);
+          calves = Math.floor(parseFloat(calves) * 100);
+          noneNiu = 10000 - (smallNiu + bigNiu + niuNiu + fried + cattle + calves);
+
+          $.ajax({
+            url: host + "/agent/setColorControl",
+            type: "post",
+            dataType: 'json',
+            headers: {"content-type" : "application/json"},
+            data: JSON.stringify({"noneNiu" : noneNiu, "smallNiu" : smallNiu, "bigNiu" : bigNiu, "niuNiu" : niuNiu, "fried" : fried, "cattle" : cattle, "calves" : calves})
+          }).done(function(data){
+
+            if(data.code == 200) {
+              alert("时时彩控制设置成功! ");
+              getColorControl();
+            }
+            else {
+              alert("时时彩控制设置失败! "+ data);
+            }
+
+          }).fail(function(msg) {
+
+            alert("时时彩控制设置失败! "+ msg.responseText);
+
+          });
+        }
+      });
+
+      $("#colorControlSetting .updateNow").click(function(){
+
+        getColorControl();
+
+      });
+
+      function getColorControl() {
+        $.ajax({
+          url: host + "/agent/getColorControl",
+          type: "post",
+          dataType: 'json',
+          headers: {"content-type" : "application/json"},
+        }).done(function(data){
+
+          if(data.code == 200) {
+
+            $("#colorControlNow").empty();
+            var html = $("#colorControlNowTmpl").render(data.result);
+            $("#colorControlNow").append(html);
+
+//            $("#fishControlWatch tbody").empty();
+            if(countForColor == 10) {
+              $("#colorControlWatch tbody tr").first().remove();
+            }
+            else {
+              countForColor += 1;
+            }
+            html = $("#colorControlWatchTmpl").render(data.result);
+            $("#colorControlWatch tbody").append(html);
+          }
+          else {
+            //alert("刷新失败! "+ data);
+          }
+
+        }).fail(function(msg) {
+
+          //alert("刷新失败! "+ msg.responseText);
+
+        });
+      };
+
+      /* ------------------------------------  以下为 百人大战 控制  ------------------------------------ */
+
+      $("#warControlSetting .submit").click(function(){
+
+        var winZero = $.trim($("#warControlSetting #winZero").val());
+        var winOne = $.trim($("#warControlSetting #winOne").val());
+        var winTwo = $.trim($("#warControlSetting #winTwo").val());
+        var winThree = $.trim($("#warControlSetting #winThree").val());
+        var winFour = $.trim($("#warControlSetting #winFour").val());
+
+        if(winOne == '' || winTwo == '' || winThree == '' || winFour == '') {
+          alert("以上均为必填项！");
+        }
+        else if(isNaN(winOne) || isNaN(winTwo) || isNaN(winThree) || isNaN(winFour)) {
+          alert("输入类型必须为数字！");
+        }
+        else if(parseFloat(winOne) < 0 || parseFloat(winTwo) < 0 || parseFloat(winThree) < 0 || parseFloat(winFour) < 0
+                || parseFloat(winOne) > 100 || parseFloat(winTwo) > 100 || parseFloat(winThree) > 100 || parseFloat(winFour) > 100) {
+          alert("输入数字必须在区间[0, 100]内！");
+        }
+        else if((parseFloat(winOne) + parseFloat(winTwo) + parseFloat(winThree) + parseFloat(winFour)) > 100) {
+          alert("输入数字之和必须小于100");
+        }
+        else {
+          winOne = Math.floor(parseFloat(winOne) * 100);
+          winTwo = Math.floor(parseFloat(winTwo) * 100);
+          winThree = Math.floor(parseFloat(winThree) * 100);
+          winFour = Math.floor(parseFloat(winFour) * 100);
+          winZero = 10000 - (winOne + winTwo + winThree + winFour);
+
+          $.ajax({
+            url: host + "/agent/setWarControl",
+            type: "post",
+            dataType: 'json',
+            headers: {"content-type" : "application/json"},
+            data: JSON.stringify({"winZero" : winZero, "winOne" : winOne, "winTwo" : winTwo, "winThree" : winThree, "winFour" : winFour})
+          }).done(function(data){
+
+            if(data.code == 200) {
+              alert("百人大战控制设置成功! ");
+              getWarControl();
+            }
+            else {
+              alert("百人大战控制设置失败! "+ data);
+            }
+
+          }).fail(function(msg) {
+
+            alert("百人大战控制设置失败! "+ msg.responseText);
+
+          });
+        }
+      });
+
+      $("#warControlSetting .updateNow").click(function(){
+
+        getWarControl();
+
+      });
+
+      function getWarControl() {
+        $.ajax({
+          url: host + "/agent/getWarControl",
+          type: "post",
+          dataType: 'json',
+          headers: {"content-type" : "application/json"},
+        }).done(function(data){
+
+          if(data.code == 200) {
+
+            $("#warControlNow").empty();
+            var html = $("#warControlNowTmpl").render(data.result);
+            $("#warControlNow").append(html);
+
+//            $("#fishControlWatch tbody").empty();
+            if(countForWar == 10) {
+              $("#warControlWatch tbody tr").first().remove();
+            }
+            else {
+              countForWar += 1;
+            }
+            html = $("#warControlWatchTmpl").render(data.result);
+            $("#warControlWatch tbody").append(html);
+          }
+          else {
+            //alert("刷新失败! "+ data);
+          }
+
+        }).fail(function(msg) {
+
+          //alert("刷新失败! "+ msg.responseText);
+
+        });
+      };
+
+    </script>
+  </body>
+</html>

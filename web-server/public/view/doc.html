@@ -1,0 +1,3766 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>斗地主 | Document</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../../js/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+      #container {
+        margin: 30px 10%;
+        width: 80%;
+        overflow:auto;
+        position: relative;
+      }
+      .table>thead>tr>th,.table>tbody>tr>td.area {
+        text-align: center;
+        vertical-align: middle;
+      }
+      .table>tbody>tr>td {
+        vertical-align: middle;
+      }
+      caption {
+        text-align: center;
+      }
+      #web,#game,#message,#code,#others {
+        padding-top: 70px;
+      }
+    </style>
+
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="100">
+
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Document</a>
+      </div>
+      <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+        <ul class="nav navbar-nav">
+          <li><a href="#web">web-server</a></li>
+          <li><a href="#game">game-server</a></li>
+          <li><a href="#message">消息</a></li>
+          <li><a href="#code">CODE</a></li>
+          <li><a href="#others">其它</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="web">
+        <blockquote>
+          <p>web-server API 使用说明</p>
+        </blockquote>
+      </div>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th rowspan="2">接口</th>
+            <th rowspan="2">描述</th>
+            <th colspan="2">参数</th>
+            <th rowspan="2">返回值</th>
+          </tr>
+          <tr>
+            <th>header</th>
+            <th>data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/user/loginByPhoneNum</td>
+            <td>手机号码</td>
+            <td>
+              <ul>
+                <li>deviceId : 设备号</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>phoneNum : 用户名</li>
+                <li>pwd : 密码</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code : 0:成功,1:失败</li>
+                <li>msg : 错误信息</li>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>/user/register</td>
+            <td>注册用户</td>
+            <td>
+              <ul>
+                <li>deviceId : 设备号</li>
+                <li>simId : SIM卡号</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>username : 用户名</li>
+                <li>password : 密码</li>
+                <li>codes : 验证码</li>
+                <li>regChannel : 注册渠道</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code : </li>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+                <li>flag : true/false 是否弹窗</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>/player/create</td>
+            <td>创建玩家</td>
+            <td>
+              <ul>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+                <li>deviceId : 设备号</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>nickname : 昵称</li>
+                <li>avatar : 头像</li>
+                <li>sex : 性别（选填）</li>
+              </ul>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>/player/uploadPic</td>
+            <td>上传头像</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>image : 基于base64的字符串</li>
+                <li>name : 文件名（后缀.png）</li>
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+        <tr>
+          <td>/player/getPic</td>
+          <td>下载文件</td>
+          <td>
+
+          </td>
+          <td>
+            <ul>
+              <li>path : 文件路径('images/system/system_16.jpg')</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code </li>
+              <li>file : 文件流</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>/player/getRankingList</td>
+          <td>排行榜</td>
+          <td>
+            <ul>
+              <li>uid:</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>type: 1:魅力榜 2:风云榜 3:琅琊榜</li>
+              <li>paging:0,1,2,3</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code </li>
+              <li>flag : 是否分页</li>
+              <li>data : 排行榜数组</li>
+            </ul>
+          </td>
+        </tr>
+          <tr>
+            <td>/user/quickLogin</td>
+            <td>快速登录</td>
+            <td>
+              <ul>
+                <li>deviceId : 设备号</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>username : 用户名</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>/user/confirmUser</td>
+            <td>确认用户</td>
+            <td>
+              <ul>
+                <li>simId : sim卡号</li>
+                <li>deviceId : 设备号</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>username : 用户名</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>/user/resetPassword</td>
+            <td>重置密码</td>
+            <td>
+              <ul>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>password : 密码</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li style="color: red;">当token超时返回以下值</li>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>/account/trade/conf</td>
+            <td>商品配置信息</td>
+            <td>
+              <ul>
+                <li>uid : 用户ID</li>
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>code:</li>
+                <li>flag : 是否可以充值</li>
+                <li>list :配置信息
+                  <ul>
+                    <li>id:商品ID</li>
+                    <li>cash : 应付金额</li>
+                    <li>gem : 所到钻石</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>/account/getPayType</td>
+            <td>请求支付方式</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>system_name : 渠道名称</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>payType :0:苹果支付;1:非苹果支付 </li>
+              </ul>
+            </td>
+          </tr>
+
+        <tr>
+          <td>/account/getOrderId</td>
+          <td>请求支付订单号</td>
+          <td>
+            <ul>
+              <li>deviceId : 设备号</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>id : 购买条目编号</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>orderId:支付订单号</li>
+              <li>cash : 该支付的金额</li>
+              <li>gem : 得到的钻石</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>/user/getCornetList</td>
+          <td>请求靓号</td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+            <ul>
+              <li>code  </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>/user/webSendMsg</td>
+          <td>web请求发送验证码</td>
+          <td>
+          </td>
+          <td>
+            <ul>
+              <li>username:手机号</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code  </li>
+            </ul>
+          </td>
+        </tr>
+
+          <tr>
+            <td>
+              <ul>
+                <li>接口 : /anySDK/login</li>
+                <li>回调地址 :http://120.27.155.115:3067/</li>
+              </ul>
+
+            </td>
+            <td>anySDK登录接口</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>anySDK需要的数据</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code : 返回码</li>
+                <li>uid : 用户ID</li>
+                <li>token : 用户令牌</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <ul>
+                <li>接口 : /anySDK/payNotice</li>
+                <li>回调地址 :http://120.27.155.115:3067/</li>
+              </ul>
+
+            </td>
+            <td>anySDK支付接口</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>anySDK需要的数据</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ok:成功</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <ul>
+                <li>接口 : /pay/alipay</li>
+                <li>回调地址 :http://120.27.155.115:3067/</li>
+              </ul>
+
+            </td>
+            <td>支付宝支付接口</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>anySDK需要的数据</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ok:成功</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <ul>
+                <li>接口 : /pay/weixinpay</li>
+                <li>回调地址 :http://120.27.155.115:3067/</li>
+              </ul>
+
+            </td>
+            <td>微信支付接口</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>anySDK需要的数据</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ok:成功</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <ul>
+                <li>接口 : /pay/iappay</li>
+                <li>回调地址 :http://120.27.155.115:3067/</li>
+              </ul>
+
+            </td>
+            <td>爱贝云支付接口</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>anySDK需要的数据</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ok:成功</li>
+              </ul>
+            </td>
+          </tr>
+
+        <tr>
+          <td>
+            <ul>
+              <li>接口 : /pay/applepay/payment</li>
+            </ul>
+
+          </td>
+          <td>苹果支付校验接口</td>
+          <td>
+          </td>
+          <td>
+            <ul>
+              <li>orderId</li>
+              <li>receipt</li>
+              <li>productId</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ul>
+              <li>接口 : /pay/wechat/pay</li>
+            </ul>
+
+          </td>
+          <td>whchatPay</td>
+          <td>
+          </td>
+          <td>
+            <ul>
+              <li>out_trade_no</li>
+              <li>total_fee</li>
+              <li>attach</li>
+              <li>body</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code</li>
+              <li>prepay_id</li>
+              <li>nonce_str</li>
+              <li>sign</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ul>
+              <li>接口 : /aliwebpay/webPay</li>
+            </ul>
+
+          </td>
+          <td>H5AliPay</td>
+          <td>
+          </td>
+          <td>
+            <ul>
+              <li>goodId</li>
+              <li>uid</li>
+              <li>secret</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code</li>
+              <li>info:错误信息</li>
+              <li>orderInfo
+                <ul>
+                  <li>orderUrl</li>
+                  <li>id</li>
+                  <li>pay</li>
+                  <li>gem</li>
+                  <li>sent</li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ul>
+              <li>接口 get: /aliwebpay/payType</li>
+            </ul>
+
+          </td>
+          <td>是否使用H5AliPay</td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+            <ul>
+              <li>flag:true/false</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ul>
+              <li>/hwsdk/login</li>
+            </ul>
+
+          </td>
+          <td>华为登陆校验</td>
+          <td>
+            <ul>
+              <li>ip_address</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>playerId</li>
+              <li>isAuth</li>
+              <li>gameAuthSign</li>
+              <li>ts</li>
+              <li>gameAuthSecret</li>
+              <li>simId</li>
+              <li>deviceId</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>code</li>
+              <li>info:错误信息</li>
+              <li>uid</li>
+              <li>token</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ul>
+              <li>/hwsdk/payAuth</li>
+            </ul>
+
+          </td>
+          <td>华为支付校验</td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+      <div id="game">
+        <blockquote>
+          <p>game-server API 使用说明</p>
+        </blockquote>
+      </div>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>服务器名</th>
+            <th>类名</th>
+            <th>方法</th>
+            <th>参数</th>
+            <th>返回值</th>
+            <th>描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>gate</td>
+            <td>gateHandler</td>
+            <td>queryEntry</td>
+            <td>
+              <ul>
+                <li>token</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>msg</li>
+                <li>host</li>
+                <li>port</li>
+              </ul>
+            </td>
+            <td>服务入口,分配connector服务器</td>
+          </tr>
+          <tr>
+            <td>connector</td>
+            <td>entryHandler</td>
+            <td>enter</td>
+            <td>
+              <ul>
+                <li>token</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>playerInfo
+                  <ul>
+                    <li>uid</li>
+                    <li>nickname</li>
+                    <li>avatar</li>
+                    <li>role</li>
+                    <li>coin</li>
+                    <li>jewel</li>
+                    <li>packet:红包</li>
+                    <li>charm:魅力值</li>
+                    <li>level</li>
+                    <li>experience</li>
+                    <li>vipLevel</li>
+                    <li>vipExperience</li>
+                    <li>lastLoginTime</li>
+                    <li>signId:签到标识</li>
+                    <li>unreadMail:未读邮件</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>建立连接,进入游戏大厅</td>
+          </tr>
+          <tr>
+            <td rowspan="24">world</td>
+            <td rowspan="24">worldHandler</td>
+            <td>getPlayerInfoForScene</td>
+            <td>
+              <ul>
+                <li>uidArray : uid, ...</li>
+                <li>sceneId : 场景ID</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>playerInfo : 依据场景变化</li>
+              </ul>
+            </td>
+            <td>按场景获取对应的玩家信息</td>
+          </tr>
+          <tr>
+            <td>getMailList</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>paging(分页控制:0,1,2....)</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>gmid</li>
+                <li>title</li>
+                <li>content</li>
+                <li>createTime</li>
+                <li>isRead</li>
+                <li>validity(失效时间)</li>
+              </ul>
+            </td>
+            <td>获取玩家邮件</td>
+          </tr>
+
+          <tr>
+            <td>readMail</td>
+            <td>
+              <ul>
+                <li>gmids(数组)</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>addCoin</li>
+                <li>addJewel</li>
+                <li>addIce</li>
+                <li>addClock</li>
+              </ul>
+            </td>
+            <td>读取邮件(有附件在领取完附件才能标为已读取)</td>
+          </tr>
+
+          <tr>
+            <td>delMail</td>
+            <td>
+              <ul>
+                <li>gmids(数组)</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>删除邮件</td>
+          </tr>
+
+          <tr>
+            <td>getSignReward</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>ratio</li>
+              </ul>
+            </td>
+            <td>领取签到奖励</td>
+          </tr>
+
+          <tr>
+            <td>getBankruptcy</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>coin</li>
+              </ul>
+            </td>
+            <td>领取破产补助</td>
+          </tr>
+
+          <tr>
+            <td>getRankingList</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>data</li>
+              </ul>
+            </td>
+            <td>排行榜</td>
+          </tr>
+
+          <tr>
+            <td>sendGift</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>giftNum(数量)</li>
+                  <li>target(目标)</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>reduceCoin</li>
+              </ul>
+            </td>
+            <td>赠送礼物</td>
+          </tr>
+
+          <tr>
+            <td>payAuth</td>
+            <td>
+              <ul>
+                <li>orderId(订单编号)</li>
+                <li>cash(充值金额)</li>
+                <li>trade_id(商品编号)</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>addJewel</li>
+                <li>vipLevelUp:0代表未升级,则vipExp为增量;不为0,则vipExp为当前量</li>
+                <li>vipExp:vip经验值.</li>
+              </ul>
+            </td>
+            <td>校验订单状态</td>
+          </tr>
+
+          <tr>
+            <td>checkOrder</td>
+            <td>
+              <ul>
+
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>orders</li>
+
+              </ul>
+            </td>
+            <td>校验未完成订单</td>
+          </tr>
+
+          <tr>
+            <td>setPlayerInfo</td>
+            <td>
+              <ul>
+                <li>nickname</li>
+                <li>avatar</li>
+                <li>coin</li>
+                <li>jewel</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>设置玩家信息</td>
+          </tr>
+
+          <tr>
+            <td>bindAuthen</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>realName</li>
+                  <li>idCard</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>绑定身份信息</td>
+          </tr>
+
+          <tr>
+            <td>indulgeCount</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>countId</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>沉迷等级(1:-50% ,2:-80%, 3:-100%)</td>
+          </tr>
+
+          <tr>
+            <td>bindAuthen</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>realName</li>
+                  <li>idCard</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>绑定身份信息</td>
+          </tr>
+
+          <tr>
+            <td>getActivity</td>
+            <td>
+
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>activity</li>
+              </ul>
+            </td>
+            <td>活动列表</td>
+          </tr>
+
+          <tr>
+            <td>exchangeCoins</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>jewels</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>addCoin</li>
+              </ul>
+            </td>
+            <td>钻石兑换金币</td>
+          </tr>
+
+          <tr>
+            <td>openSafeBox</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>coin</li>
+              </ul>
+            </td>
+            <td>打开保险箱</td>
+          </tr>
+
+          <tr>
+            <td>createSafeBox</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>password</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>创建保险箱</td>
+          </tr>
+
+          <tr>
+            <td>saveToSafeBox</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>coins</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>存入保险箱</td>
+          </tr>
+
+          <tr>
+            <td>getFromSafeBox</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>password</li>
+                  <li>coins</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>从保险箱取出</td>
+          </tr>
+
+          <tr>
+            <td>postTie</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>content</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>发帖</td>
+          </tr>
+
+          <tr>
+            <td>getTies</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>paging</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>data</li>
+              </ul>
+            </td>
+            <td>分页获取帖子</td>
+          </tr>
+
+          <tr>
+            <td>delTie</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>删除帖子</td>
+          </tr>
+
+          <tr>
+            <td>buyCornetID</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>cid:所买ID</li>
+                </ul>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>购买靓号</td>
+          </tr>
+
+          <tr>
+            <td rowspan="18">chat</td>
+            <td rowspan="18">chatHandler</td>
+            <td>getListInfo</td>
+            <td>
+
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>data</li>
+              </ul>
+            </td>
+            <td>获取uid在friend表中所有的字段信息</td>
+          </tr>
+          <tr>
+            <td>getFriendInfo</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>data</li>
+              </ul>
+            </td>
+            <td>获取player信息</td>
+          </tr>
+          <tr>
+            <td>applyFriend</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>申请添加好友</td>
+          </tr>
+          <tr>
+            <td>agreeFriendApply</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>同意fid的添加好友申请</td>
+          </tr>
+          <tr>
+            <td>refuseFriendApply</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>拒绝fid的添加好友申请</td>
+          </tr>
+
+          <tr>
+            <td>deleteFriend</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>删除好友</td>
+          </tr>
+          <tr>
+            <td>pullBlack</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>拉黑玩家</td>
+          </tr>
+          <tr>
+            <td>removeBlack</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>移除黑名单</td>
+          </tr>
+          <tr>
+            <td>playerChat</td>
+            <td>
+              <ul>
+                <li>target</li>
+                <li>content</li>
+              </ul>
+            </td>
+            <td>
+
+            </td>
+            <td>好友聊天</td>
+          </tr>
+
+          <tr>
+            <td>getChatList</td>
+            <td>
+              <ul>
+                <li>fid</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>sendId</li>
+                <li>reciveId</li>
+                <li>msg</li>
+                <li>sendTime</li>
+              </ul>
+            </td>
+            <td>获取聊天记录</td>
+          </tr>
+          <tr>
+            <td>hornChat</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>content</li>
+                </ul>
+              </ul>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+                <li>waitTime:等待时间(毫秒)</li>
+              </ul>
+            </td>
+            <td>发送喇叭(VIP9以上才可发送,每人每半小时可发送一次,保存在数据库中,循环推送,小于0的都是系统喇叭)</td>
+          </tr>
+
+          <tr>
+            <td>sendBarrage</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>content</li>
+                </ul>
+              </ul>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>发送弹幕</td>
+          </tr>
+
+          <tr>
+            <td>showBarrage</td>
+            <td>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+                <li>barrageFlag</li>
+              </ul>
+            </td>
+            <td>查看当前弹幕状态</td>
+          </tr>
+
+          <tr>
+            <td>convertBarrage</td>
+            <td>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+                <li>barrageFlag</li>
+              </ul>
+            </td>
+            <td>修改弹幕状态</td>
+          </tr>
+
+          <tr>
+            <td>customerChat</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>target:(普通玩家不需要传这个字段)</li>
+                  <li>content</li>
+                </ul>
+              </ul>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>客服聊天</td>
+          </tr>
+
+          <tr>
+            <td>getCustomerChatList</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>sid:(普通玩家不需要传这个字段)</li>
+                </ul>
+              </ul>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>拉取与客服聊天的记录</td>
+          </tr>
+
+          <tr>
+            <td>getServicesId</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>paging:0,1,2(每页20条)</li>
+                </ul>
+              </ul>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+                <li>customer:客服Id</li>
+                <li>roomId:数组,共20条,由客服ID和玩家ID组成,小的在前</li>
+              </ul>
+            </td>
+            <td>拉取客服与玩家聊天列表</td>
+          </tr>
+
+          <tr>
+            <td>setCustomerFlag</td>
+            <td>
+              <ul>
+                <li>msg</li>
+                <ul>
+                  <li>sid:对方uid</li>
+                </ul>
+              </ul>
+            </td>
+
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>标记结束聊天</td>
+          </tr>
+
+          <tr>
+            <td rowspan="12">classic</td>
+            <td rowspan="12">gameClassicHandler</td>
+            <td>enterGame</td>
+            <td>
+              <ul>
+                <li>gameId : 游戏场 1:初级场 2: 中级场 3:高级场</li>
+                <li>openFlag : true :明牌开始 false:非明牌</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>msg</li>
+              </ul>
+            </td>
+            <td>进入经典场</td>
+          </tr>
+          <tr>
+            <td>continueGame</td>
+            <td>
+              <ul>
+                <li>openFlag : true :明牌开始 false:非明牌</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>继续游戏</td>
+          </tr>
+          <tr>
+            <td>changeTable</td>
+            <td>
+              <ul>
+                <li>openFlag : true :明牌开始 false:非明牌</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>换桌</td>
+          </tr>
+          <tr>
+            <td>leaveGame</td>
+            <td></td>
+            <td></td>
+            <td>离开经典场游戏游戏</td>
+          </tr>
+          <tr>
+            <td>openDeal</td>
+            <td></td>
+            <td>
+
+            </td>
+            <td>经典场明牌</td>
+          </tr>
+          <tr>
+            <td>callLandlord</td>
+            <td>
+              <ul>
+                <li>callFlag : true:叫 ,false:不叫</li>
+              </ul>
+            </td>
+            <td>
+
+            </td>
+            <td>经典场叫地主</td>
+          </tr>
+          <tr>
+            <td>grabLandlord</td>
+            <td>
+              <ul>
+                <li>grabFlag : true:叫 ,false:不叫</li>
+              </ul>
+            </td>
+            <td>
+
+            </td>
+            <td>经典场抢地主</td>
+          </tr>
+          <tr>
+            <td>doubleRate</td>
+            <td><ul>
+              <li>doubleFlag : true:叫 ,false:不叫</li>
+            </ul></td>
+            <td>
+            </td>
+            <td>经典场翻倍</td>
+          </tr>
+          <tr>
+            <td>superRate</td>
+            <td>
+
+            </td>
+            <td>
+            </td>
+            <td>经典场超级加倍</td>
+          </tr>
+
+          <tr>
+            <td>deposit</td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>经典场托管</td>
+          </tr>
+
+
+          <tr>
+            <td>dealCard</td>
+            <td>
+              <ul>
+                <li>cards :数组,出的牌</li>
+              </ul>
+            </td>
+            <td>
+
+            </td>
+            <td>经典场出牌</td>
+          </tr>
+
+          <tr>
+            <td>chatInClassic</td>
+            <td>
+              <ul>
+                <li>content : 聊天内容</li>
+                <li>target : 作用对象</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>经典场聊天</td>
+          </tr>
+
+          <tr>
+            <td rowspan="6">color</td>
+            <td rowspan="6">gameColorHandler</td>
+            <td>enterGame</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>colorInfo
+                  <ul>
+                    <li>playerBet : 押注情况</li>
+                    <li>playerCoin : 押注金额(总量)</li>
+                    <li>nowNumber : 当前全场参与人数</li>
+                    <li>nowCoin : 当前全场投注总金额</li>
+                    <li>historyNumber : 上一场参与人数</li>
+                    <li>historyCoin : 上一场投注总金额</li>
+                    <li>historyResult : 上一场开奖结果</li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>打开时时彩</td>
+          </tr>
+          <tr>
+            <td>leaveGame</td>
+            <td></td>
+            <td></td>
+            <td>关闭时时彩</td>
+          </tr>
+          <tr>
+            <td>betColorCoin</td>
+            <td>
+              <ul>
+                <li>betInfo : {押注位置(1 ~ 6) : 押注倍数}</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>betResult : 押注结果
+                  <ul>
+                    <li>betCoin : 押注金额(增量)</li>
+                    <li>nowNumber : 当前全场参与人数</li>
+                    <li>nowCoin : 当前全场投注总金额</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>在时时彩游戏中,押注</td>
+          </tr>
+          <tr>
+            <td>getColorTrend</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>trend</li>
+              </ul>
+            </td>
+            <td>在时时彩游戏中,开奖趋势</td>
+          </tr>
+
+          <tr>
+            <td>changeCard</td>
+            <td>
+              <ul>
+                <li>bingo : {开牌位置(1 ~ 6)}</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>控制开牌</td>
+          </tr>
+
+          <tr>
+            <td>getColorRank</td>
+            <td>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>data</li>
+              </ul>
+            </td>
+            <td>获取每门下注情况</td>
+          </tr>
+
+          <tr>
+            <td rowspan="13">war</td>
+            <td rowspan="13">gameWarHandler</td>
+            <td>enterGame</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>warInfo
+                  <ul>
+                    <li>player
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                      </ul>
+                    </li>
+                    <li>playerInChair : 入座玩家,数组格式
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                      </ul>
+                    </li>
+                    <li>master
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>count</li>
+                      </ul>
+                    </li>
+                    <li>selfCoin : 自己押注情况</li>
+                    <li>totalCoin : 当场押注情况</li>
+                    <li>gameStatus : 游戏状态,'gameReady'或'gameStart'</li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>进入百人大战</td>
+          </tr>
+          <tr>
+            <td>leaveGame</td>
+            <td></td>
+            <td></td>
+            <td>离开百人大战</td>
+          </tr>
+          <tr>
+            <td>betWarCoin</td>
+            <td>
+              <ul>
+                <li>seatId : 押注位置(seat1 ~ seat4)</li>
+                <li>coin : 押注金额</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>betResult : 押注结果
+                  <ul>
+                    <li>selfCoin : 自己押注情况</li>
+                    <li>totalCoin : 当场押注情况</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>在百人大战游戏中,押注</td>
+          </tr>
+          <tr>
+            <td>applyMaster</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>applyQueue : 上庄队列
+                  <ul>
+                    <li>uid</li>
+                    <li>coin</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>在百人大战游戏中,上庄</td>
+          </tr>
+          <tr>
+            <td>offMaster</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>applyQueue : 上庄队列
+                  <ul>
+                    <li>uid</li>
+                    <li>coin</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>在百人大战游戏中,下庄</td>
+          </tr>
+          <tr>
+            <td>sitDown</td>
+            <td>
+              <ul>
+                <li>chairId : 座位号(0 ~ 3)</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>在百人大战游戏中,坐下</td>
+          </tr>
+          <tr>
+            <td>standUp</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+              </ul>
+            </td>
+            <td>在百人大战游戏中,起立</td>
+          </tr>
+          <tr>
+            <td>getWarTrend</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>trend</li>
+              </ul>
+            </td>
+            <td>在百人大战游戏中,开奖趋势</td>
+          </tr>
+          <tr>
+            <td>getApplyQueue</td>
+            <td></td>
+            <td>
+              <li>applyQueue : 上庄队列
+                <ul>
+                  <li>uid</li>
+                  <li>coin</li>
+                  <li>avatar</li>
+                  <li>nickname</li>
+                </ul>
+              </li>
+            </td>
+            <td>在百人大战游戏中,上庄申请列表</td>
+          </tr>
+          <tr>
+            <td>getPlayerNoChair</td>
+            <td></td>
+            <td>
+              <li>total : 玩家总数</li>
+              <li>playerNoChair : 无座玩家数量</li>
+              <li>players : 无座玩家列表
+                <ul>
+                  <li>uid</li>
+                  <li>coin</li>
+                  <li>avatar</li>
+                  <li>nickname</li>
+                </ul>
+              </li>
+            </td>
+            <td>在百人大战游戏中,获取无座玩家</td>
+          </tr>
+
+          <tr>
+            <td>setWarGameRest</td>
+            <td>
+              <ul>
+                <li>content : 内容</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>停止百人游戏</td>
+          </tr>
+
+          <tr>
+            <td>changeCardList</td>
+            <td>
+              <ul>
+                <li>seat : 座位(0,1,2,3,4)</li>
+                <li>status : 输赢标志(0,1)</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>上帝之手</td>
+          </tr>
+
+          <tr>
+            <td>chatInWar</td>
+            <td>
+              <ul>
+                <li>content : 内容</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>在百人大战游戏中,玩家聊天</td>
+          </tr>
+
+          <tr>
+            <td rowspan="8">battle</td>
+            <td rowspan="8">gameBattleHandler</td>
+            <td>enterGame</td>
+            <td>
+              <ul>
+                <li>gameId : 0.系统随机 1.创建私人房 2.加入私人房</li>
+                <li>roomId : 只有加入私人房是才有效</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>roomInfo
+                  <ul>
+                    <li>players
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>vipLevel</li>
+                      </ul>
+                    </li>
+                    <li>roomId</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>进入双人对战</td>
+          </tr>
+          <tr>
+            <td>leaveGame</td>
+            <td></td>
+            <td></td>
+            <td>离开双人对战</td>
+          </tr>
+          <tr>
+            <td>changeRoom</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>roomInfo
+                  <ul>
+                    <li>players
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>vipLevel</li>
+                      </ul>
+                    </li>
+                    <li>roomId</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战中,换桌</td>
+          </tr>
+          <tr>
+            <td>readyToBattle</td>
+            <td></td>
+            <td></td>
+            <td>双人对战中,准备游戏</td>
+          </tr>
+          <tr>
+            <td>betForBattle</td>
+            <td>
+              <ul>
+                <li>betIndex : 押注索引</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>双人对战中,闲家押注</td>
+          </tr>
+          <tr>
+            <td>openCards</td>
+            <td></td>
+            <td></td>
+            <td>双人对战中,玩家开牌</td>
+          </tr>
+          <tr>
+            <td>chatInBattle</td>
+            <td>
+              <ul>
+                <li>nickname</li>
+                <li>content : 内容</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>双人对战中,玩家聊天</td>
+          </tr>
+          <tr>
+            <td>getRewordInfo</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>coin : 奖池金币</li>
+                <li>reword : 上期奖金</li>
+              </ul>
+            </td>
+            <td>双人对战中,获取奖池信息</td>
+          </tr>
+
+
+          <tr>
+            <td rowspan="8">fivechess</td>
+            <td rowspan="8">gameFiveChessHandler</td>
+            <td>enterGame</td>
+            <td>
+              <ul>
+                <li>roomId : 0: 开房; !=0: 加入房间</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>roomInfo
+                  <ul>
+                    <li>players
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>vipLevel</li>
+                      </ul>
+                    </li>
+                    <li>roomId</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>创建/进入五子棋</td>
+          </tr>
+          <tr>
+            <td>leaveGame</td>
+            <td></td>
+            <td></td>
+            <td>离开五子棋</td>
+          </tr>
+          <tr>
+            <td>removePlayerInChess</td>
+            <td></td>
+            <td></td>
+            <td>五子棋剔除玩家</td>
+          </tr>
+          <tr>
+            <td>readyToChess</td>
+            <td>
+              <ul>
+                <li> guideFee: owner : >48W || =0 ; guest : -1</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>五子棋,准备游戏</td>
+          </tr>
+          <tr>
+            <td>giveChessUp</td>
+            <td></td>
+            <td></td>
+            <td>认输</td>
+          </tr>
+          <tr>
+            <td>drawChess</td>
+            <td>
+              <ul>
+                <li>color : 花色</li>
+                <li>x : 左上角为原点</li>
+                <li>y : 左上角为原点</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>落子</td>
+          </tr>
+          <tr>
+            <td>chessDogfall</td>
+            <td></td>
+            <td></td>
+            <td>平局</td>
+          </tr>
+          <tr>
+            <td>chatInChess</td>
+            <td>
+              <ul>
+                <li>nickname</li>
+                <li>content : 内容</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>双人对战中,玩家聊天</td>
+          </tr>
+
+          <tr>
+            <td rowspan="15">turnplate</td>
+            <td rowspan="15">gameTurnplateHandler</td>
+            <td>enterGame</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>turnInfo
+                  <ul>
+                    <li>player
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                      </ul>
+                    </li>
+                    <li>master
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>count</li>
+                      </ul>
+                    </li>
+                    <li>selfCoin : 自己押注情况</li>
+                    <li>totalCoin : 当场押注情况</li>
+                    <li>gameStatus : 游戏状态,'gameReady'或'gameStart'</li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>进入大转盘</td>
+          </tr>
+          <tr>
+            <td>leaveGame</td>
+            <td></td>
+            <td></td>
+            <td>离开大转盘</td>
+          </tr>
+          <tr>
+            <td>betTurnplateCoin</td>
+            <td>
+              <ul>
+                <li>seat1 : coin</li>
+                <li>......</li>
+                <li>seat8 : coin</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>selfCoin : 自己押注情况</li>
+              </ul>
+            </td>
+            <td>大转盘押注</td>
+          </tr>
+          <tr>
+            <td>applyMaster</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>applyQueue : 上庄队列
+                  <ul>
+                    <li>uid</li>
+                    <li>coin</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘上庄</td>
+          </tr>
+          <tr>
+            <td>offMaster</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>code</li>
+                <li>applyQueue : 上庄队列
+                  <ul>
+                    <li>uid</li>
+                    <li>coin</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘下庄</td>
+          </tr>
+
+          <tr>
+            <td>getTurnplateTrend</td>
+            <td></td>
+            <td>
+              <ul>
+                <li>trend</li>
+              </ul>
+            </td>
+            <td>大转盘走势</td>
+          </tr>
+          <tr>
+            <td>getApplyQueue</td>
+            <td></td>
+            <td>
+              <li>applyQueue : 上庄队列
+                <ul>
+                  <li>uid</li>
+                  <li>coin</li>
+                  <li>avatar</li>
+                  <li>nickname</li>
+                </ul>
+              </li>
+            </td>
+            <td>大转盘上庄申请列表</td>
+          </tr>
+          <tr>
+            <td>getPlayerList</td>
+            <td></td>
+            <td>
+              <li>total : 玩家总数</li>
+              <li>playerNoChair : 无座玩家数量</li>
+              <li>players : 无座玩家列表
+                <ul>
+                  <li>uid</li>
+                  <li>coin</li>
+                  <li>avatar</li>
+                  <li>nickname</li>
+                </ul>
+              </li>
+            </td>
+            <td>获取玩家列表</td>
+          </tr>
+
+          <tr>
+            <td>setTurnplateRest</td>
+            <td>
+              <ul>
+              </ul>
+            </td>
+            <td></td>
+            <td>停止大转盘</td>
+          </tr>
+
+          <tr>
+            <td>controlTurnLeast</td>
+            <td>
+              <ul>
+
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>isLeast:false/true</li>
+              </ul>
+            </td>
+            <td>开赔付最少最少的那门</td>
+          </tr>
+
+          <tr>
+            <td>controlTurnSite</td>
+            <td>
+              <ul>
+                <li>bingo : 开那个位置(1-8)</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>上帝之手</td>
+          </tr>
+
+          <tr>
+            <td>setTurnplatePro</td>
+            <td>
+              <ul>
+                <li>bigFish : 开大鱼百分比(0-100)</li>
+                <li>isSys : 1:控制系统, 0:</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>设置全局系数</td>
+          </tr>
+          <tr>
+            <td>setTurnplateSmall</td>
+            <td>
+              <ul>
+                <li>smallNo : 每百把出最小值系数(0-100)</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>每百把出最小值系数</td>
+          </tr>
+          <tr>
+            <td>getTurnplateControlData</td>
+            <td>
+
+            </td>
+            <td>
+              <ul>
+                <li>code:</li>
+                <li>controlTime:控制设置时间</li>
+                <li>smallFish:小鱼概率</li>
+                <li>bigFish:大鱼概率</li>
+                <li>smallData:百把最小值系数</li>
+                <li>wanBig:玩家庄大鱼概率</li>
+                <li>wanSmall:玩家庄小鱼概率</li>
+              </ul>
+            </td>
+            <td>获取控制系数</td>
+          </tr>
+
+          <tr>
+            <td>chatInTurnplate</td>
+            <td>
+              <ul>
+                <li>content : 内容</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>大转盘玩家聊天</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div id="message">
+        <blockquote>
+          <p>消息 使用说明</p>
+        </blockquote>
+      </div>
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <th>作用域</th>
+          <th>消息状态(route)</th>
+          <th>消息内容</th>
+          <th>描述</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="area" rowspan="14">classic</td>
+            <td>onClassicYardStart(所有人)</td>
+            <td>
+              <ul>
+                <li>data :
+                  <ul>
+                    <li>landLord:地主</li>
+                    <li>disCard:出牌人</li>
+                    <li>leaveCard</li>
+                    <li>leaveCard
+                      <ul>
+                        <li>cards:牌数组</li>
+                        <li>type:类型</li>
+                        <li>rate:倍率</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>经典场开始</td>
+          </tr>
+          <tr>
+            <td>onClassicYardDealCard(所有人)</td>
+            <td>
+              <ul>
+                <li>playerInfo : 玩家信息
+                  <ul>
+                    <li>coin</li>
+                    <li>jewel</li>
+                    <li>packet</li>
+                    <li>superCard</li>
+                    <li>delay</li>
+                    <li>chair</li>
+                    <li>isAuto</li>
+                    <li>charm</li>
+                    <li>role</li>
+                    <li>level</li>
+                    <li>vipLevel</li>
+                    <li>openFlag</li>
+                    <li>nickname</li>
+                    <li>avatar</li>
+                  </ul>
+                </li>
+                <li>chair : 座位号</li>
+                <li>cards : 自己牌信息</li>
+                <li>callLord : 谁叫地主</li>
+              </ul>
+            </td>
+            <td>开始发牌</td>
+          </tr>
+          <tr>
+            <td>onClassicYardOpenDeal</td>
+            <td>
+              <ul>
+                <li>rate : 当前倍率</li>
+                <li>cardInfo : 当前的牌</li>
+                <li>uid : 明牌玩家</li>
+                <li>callLord : 叫地主的人</li>
+              </ul>
+            </td>
+            <td>经典场明牌</td>
+          </tr>
+          <tr>
+            <td>onClassicYardCallLord</td>
+            <td>
+              <ul>
+                <li>callFlag : true/false</li>
+                <li>uid : 离开玩家ID</li>
+                <li>callLord : 下一个叫的人</li>
+              </ul>
+            </td>
+            <td>玩家叫地主</td>
+          </tr>
+          <tr>
+            <td>onClassicYardGrabLord</td>
+            <td>
+              <ul>
+                <li>grabFlag : true/false</li>
+                <li>uid : 离开玩家ID</li>
+                <li>grabLord : 下一个抢的人</li>
+              </ul>
+            </td>
+            <td>玩家抢地主</td>
+          </tr>
+
+
+          <tr>
+            <td>onClassicYardDoubleRate</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>rate:2</li>
+              </ul>
+            </td>
+            <td>翻倍</td>
+          </tr>
+          <tr>
+            <td>onClassicYardSuperRate</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>rate:4</li>
+              </ul>
+            </td>
+            <td>超级加倍</td>
+          </tr>
+
+          <tr>
+            <td>onClassicYardDeposit</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>isAuto:true/false</li>
+              </ul>
+            </td>
+            <td>是否托管</td>
+          </tr>
+          <tr>
+            <td>onClassicYardDiscard</td>
+            <td>
+              <ul>
+                <li>msgInfo : 捕获信息
+                  <ul>
+                    <li>uid</li>
+                    <li>isAuto</li>
+                    <li>outCards : </li>
+                    <li>cardType :
+                      <ul>
+                        <li>cardType</li>
+                        <li>cardTypeWeight</li>
+                        <li>groupCardsWeight</li>
+                      </ul>
+                    </li>
+                    <li>remainNo : 余下的牌数量</li>
+                    <li>discard : 下一个出牌人</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>出牌</td>
+          </tr>
+          <tr>
+            <td>onClassicYardGameOver</td>
+            <td>
+              <ul>
+                <li>win</li>
+                <li>landLord : </li>
+                <li>result : 结果详情
+                  <ul>
+                    <li>uid1:res1</li>
+                    <li>uid2:res2</li>
+                    <li>uid3:res3</li>
+                  </ul>
+                </li>
+                <li>point : 底分</li>
+                <li>rateInfo : 倍率详情
+                  <ul>
+                    <li>uid1:rate1</li>
+                    <li>uid2:rate2</li>
+                    <li>uid3:rate3</li>
+                  </ul>
+                </li>
+                <li>springFlag : 是否春天</li>
+              </ul>
+            </td>
+            <td>游戏结束</td>
+          </tr>
+          <tr>
+            <td>onChatInClassicYard</td>
+            <td>
+              <ul>
+                <li>chatInfo :
+                  <ul>
+                    <li>uid</li>
+                    <li>content : </li>
+                    <li>target : </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>经典场聊天</td>
+          </tr>
+          <tr>
+            <td>onPlayerLeaveClassicYard</td>
+            <td>
+              <ul>
+                <li>data :
+                  <ul>
+                    <li>uid</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>经典场离开</td>
+          </tr>
+
+          <tr>
+            <td>onClassicYardContinueGame</td>
+            <td>
+              <ul>
+                <li>data :
+                  <ul>
+                    <li>uid</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>经典场继续游戏</td>
+          </tr>
+
+          <tr>
+            <td>OnSetPropInClassicYard</td>
+            <td>
+              <ul>
+                <li>msgInfo :
+                  <ul>
+                    <li>uid</li>
+                    <li>coin : </li>
+                    <li>jewel : </li>
+                    <li>packet : </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>更新玩家属性</td>
+          </tr>
+
+
+          <tr>
+            <td class="area" rowspan="4">world</td>
+            <td>onMail</td>
+            <td>
+              <ul>
+                <li>sendId : 发送者</li>
+              </ul>
+            </td>
+            <td>有邮件</td>
+          </tr>
+
+          <tr>
+            <td>onGift</td>
+            <td>
+              <ul>
+                <li>sendId : 发送者</li>
+                <li>addCoin : 金币增量</li>
+                <li>giftNum : 礼物数量</li>
+              </ul>
+            </td>
+            <td>礼物赠送消息</td>
+          </tr>
+          <tr>
+            <td>OnPlayerInfoSetByAgent</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>coin</li>
+                <li>jewel</li>
+                <li>vipLevel</li>
+              </ul>
+            </td>
+            <td>管理员修改信息</td>
+          </tr>
+          <tr>
+            <td>OnPlayerBannedByAgent</td>
+            <td>
+              <ul>
+                <li>uid</li>
+              </ul>
+            </td>
+            <td>管理员封禁</td>
+          </tr>
+
+          <tr>
+            <td class="area" rowspan="5">chat</td>
+            <td>onChat</td>
+            <td>
+              <ul>
+                <li>msg : 消息内容</li>
+                <li>sendId : 发送者</li>
+                <li>sendTime : 发送时间</li>
+              </ul>
+            </td>
+            <td>有好友消息</td>
+          </tr>
+          <tr>
+            <td>onHorn</td>
+            <td>
+              <ul>
+                <li>msg : 消息内容</li>
+                <li>sendId : 发送者</li>
+                <li>sendTime : 发送时间</li>
+              </ul>
+            </td>
+            <td>有喇叭消息</td>
+          </tr>
+          <tr>
+            <td>onBarrage</td>
+            <td>
+              <ul>
+                <li>msg : 消息内容</li>
+              </ul>
+            </td>
+            <td>弹幕信息</td>
+          </tr>
+          <tr>
+            <td>onCustomerChat</td>
+            <td>
+              <ul>
+                <li>msg : 消息内容</li>
+                <li>sendId : 发送者</li>
+                <li>sendTime : 发送时间</li>
+              </ul>
+            </td>
+            <td>客服聊天</td>
+          </tr>
+
+          <tr>
+            <td>onApply</td>
+            <td>
+              <ul>
+                <li>sendId : 申请人</li>
+              </ul>
+            </td>
+            <td>有好友申请</td>
+          </tr>
+
+          <tr>
+            <td class="area" rowspan="3">color</td>
+            <td>onColorBalance(所有人)</td>
+            <td>
+              <ul>
+                <li>historyNumber : 本场最终参与人数</li>
+                <li>historyCoin : 本场最终投注总金额</li>
+                <li>historyResult : 本场开奖结果</li>
+                <li>timer : 倒计时(毫秒)</li>
+              </ul>
+            </td>
+            <td>时时彩游戏结算</td>
+          </tr>
+          <tr>
+            <td>onColorWin</td>
+            <td>
+              <ul>
+                <li>coin</li>
+              </ul>
+            </td>
+            <td>时时彩中奖结果</td>
+          </tr>
+          <tr>
+            <td>onColorRefresh</td>
+            <td>
+              <ul>
+                <li>nowNumber : 当前全场参与人数</li>
+                <li>nowCoin : 当前全场投注总金额</li>
+                <li>timer : 倒计时(毫秒)</li>
+              </ul>
+            </td>
+            <td>时时彩游戏刷新</td>
+          </tr>
+
+          <tr>
+            <td class="area" rowspan="12">war</td>
+            <td>onWarStart(所有人)</td>
+            <td>
+              <ul>
+                <li>startInfo
+                  <ul>
+                    <li>master
+                      <ul>
+                        <li>uid</li>
+                        <li>coin(总量)</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>count</li>
+                      </ul>
+                    </li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战游戏开始</td>
+          </tr>
+          <tr>
+            <td>onWarRefresh</td>
+            <td>
+              <ul>
+                <li>totalCoin : 当场押注情况</li>
+              </ul>
+            </td>
+            <td>百人大战游戏刷新</td>
+          </tr>
+          <tr>
+            <td>onWarBalance</td>
+            <td>
+              <ul>
+                <li>balanceInfo
+                  <ul>
+                    <li>cards
+                      <ul>
+                        <li>type</li>
+                        <li>cards</li>
+                        <li>value</li>
+                        <li>misc</li>
+                      </ul>
+                    </li>
+                    <li>balance : 比牌结果</li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战游戏结算</td>
+          </tr>
+          <tr>
+            <td>onWarResult</td>
+            <td>
+              <ul>
+                <li>resultInfo
+                  <ul>
+                    <li>coin(增量)</li>
+                    <li>playerInChair
+                      <ul>
+                        <li>uid</li>
+                        <li>chairId : 座位号</li>
+                        <li>coin(增量)</li>
+                      </ul>
+                    </li>
+                    <li>master : 本场庄家
+                      <ul>
+                        <li>uid</li>
+                        <li>coin(增量)</li>
+                      </ul>
+                    </li>
+                    <li>rank : 排行榜,数组格式
+                      <ul>
+                        <li>uid</li>
+                        <li>coin</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                      </ul>
+                    </li>
+                    <li>newMaster : 下一场庄家
+                      <ul>
+                        <li>uid</li>
+                        <li>coin(总量)</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>count</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战中奖结果</td>
+          </tr>
+          <tr>
+            <td>onMasterChange</td>
+            <td>
+              <ul>
+                <li>master
+                  <ul>
+                    <li>uid</li>
+                    <li>coin(总量)</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                    <li>count</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战庄家变更</td>
+          </tr>
+          <tr>
+            <td>onChairPlayerBet</td>
+            <td>
+              <ul>
+                <li>playerBet
+                  <ul>
+                    <li>uid</li>
+                    <li>coin(增量)</li>
+                    <li>chairId : 座位号</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战入座玩家押注</td>
+          </tr>
+          <tr>
+            <td>onPlayerSitDown</td>
+            <td>
+              <ul>
+                <li>playerBet
+                  <ul>
+                    <li>uid</li>
+                    <li>coin(总量)</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                    <li>chairId : 座位号</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战玩家坐下</td>
+          </tr>
+          <tr>
+            <td>onPlayerStandUp</td>
+            <td>
+              <ul>
+                <li>playerBet
+                  <ul>
+                    <li>uid</li>
+                    <li>chairId : 座位号</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战玩家起立</td>
+          </tr>
+          <tr>
+            <td>onChatInWar</td>
+            <td>
+              <ul>
+                <li>chatInfo
+                  <ul>
+                    <li>msg : 内容</li>
+                    <li>sendId : 发送者ID</li>
+                    <li>nickname</li>
+                    <li>sendTime</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人大战内聊天</td>
+          </tr>
+
+          <tr>
+            <td>onCardPub</td>
+            <td>
+              <ul>
+                <li>cardInfo
+                  <ul>
+                    <li>cards : 牌</li>
+                    <li>multi : 倍率</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>百人发牌</td>
+          </tr>
+
+          <tr>
+            <td>onSeatRank</td>
+            <td>
+              <ul>
+                <li>seatBetRank
+                  <ul>
+                    <li>seat1
+                      <ul>
+                        <li>rank:金币排名</li>
+                        <li>uids:玩家uid</li>
+                      </ul>
+                    </li>
+                    <li>seat2....</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>座位金币排名</td>
+          </tr>
+
+          <tr>
+            <td>onWarRest</td>
+            <td>
+              <ul>
+                <li>restInfo
+                  <ul>
+                    <li>msg:百人牛牛休息中,本局金币已返还到您的账户中 </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>每座金币排名</td>
+          </tr>
+
+          <tr>
+            <td class="area" rowspan="12">battle</td>
+            <td>onPlayerJoinBattle</td>
+            <td>
+              <ul>
+                <li>playerInfo
+                  <ul>
+                    <li>uid</li>
+                    <li>coin(总量)</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                    <li>vipLevel</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>加入双人对战游戏</td>
+          </tr>
+          <tr>
+            <td>onPlayerLeaveBattle</td>
+            <td>
+              <ul>
+                <li>uid</li>
+              </ul>
+            </td>
+            <td>离开双人对战游戏</td>
+          </tr>
+          <tr>
+            <td>onKickPlayer</td>
+            <td>
+              <ul>
+                <li>uid</li>
+              </ul>
+            </td>
+            <td>被踢出双人对战游戏</td>
+          </tr>
+          <tr>
+            <td>onPlayerReadyToBattle</td>
+            <td>
+              <ul>
+                <li>uid</li>
+              </ul>
+            </td>
+            <td>双人对战玩家准备开始</td>
+          </tr>
+          <tr>
+            <td>onPlayerBetForBattle</td>
+            <td>
+              <ul>
+                <li>betInfo
+                  <ul>
+                    <li>uid</li>
+                    <li>betCoin</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战闲家押注</td>
+          </tr>
+          <tr>
+            <td>onPlayerOpenCards</td>
+            <td>
+              <ul>
+                <li>cardsInfo
+                  <ul>
+                    <li>uid</li>
+                    <li>cards</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战玩家开牌</td>
+          </tr>
+          <tr>
+            <td>onBattleStart</td>
+            <td>
+              <ul>
+                <li>startInfo
+                  <ul>
+                    <li>timer : 倒计时</li>
+                    <li>master : 庄家</li>
+                    <li>betArray : 闲家押注选项</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战游戏开始</td>
+          </tr>
+          <tr>
+            <td>onBattleDeal</td>
+            <td>
+              <ul>
+                <li>dealInfo
+                  <ul>
+                    <li>timer</li>
+                    <li>cards</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战游戏发牌</td>
+          </tr>
+            <td>onBattleBalance</td>
+            <td>
+              <ul>
+                <li>balanceInfo
+                  <ul>
+                    <li>timer</li>
+                    <li>coin</li>
+                    <li>result</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战游戏结算</td>
+          </tr>
+          </tr>
+            <td>onBattleReward</td>
+            <td>
+              <ul>
+                <li>data
+                  <ul>
+                    <li>uid</li>
+                    <li>coin</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战游戏中奖</td>
+          </tr>
+          <tr>
+            <td>onChatInBattle</td>
+            <td>
+              <ul>
+                <li>chatInfo
+                  <ul>
+                    <li>msg : 内容</li>
+                    <li>sendId : 发送者ID</li>
+                    <li>nickname</li>
+                    <li>sendTime</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>双人对战内聊天</td>
+          </tr>
+          <tr>
+            <td>OnPlayerInfoSetByAgentForBattle</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>coin</li>
+                <li>vipLevel</li>
+              </ul>
+            </td>
+            <td>管理员修改信息</td>
+          </tr>
+
+
+          <tr>
+            <td class="area" rowspan="10">fivechess</td>
+            <td>onPlayerJoinChess</td>
+            <td>
+              <ul>
+                <li>playerInfo
+                  <ul>
+                    <li>uid</li>
+                    <li>coin(总量)</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                    <li>vipLevel</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>加入五子棋</td>
+          </tr>
+          <tr>
+            <td>onPlayerLeaveChess</td>
+            <td>
+              <ul>
+                <li>uid</li>
+              </ul>
+            </td>
+            <td>离开五子棋</td>
+          </tr>
+          <tr>
+            <td>onKickPlayerInChess</td>
+            <td>
+              <ul>
+                <li>uid</li>
+              </ul>
+            </td>
+            <td>被踢出五子棋</td>
+          </tr>
+          <tr>
+            <td>onChessDissolution</td>
+            <td>
+            </td>
+            <td>房间解散</td>
+          </tr>
+          <tr>
+            <td>onPlayerReadyToChess</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>color : 黑1白2</li>
+                <li>ready :当前准备人数(==2即可开始游戏,黑子先走)</li>
+              </ul>
+            </td>
+            <td>五子棋准备开始</td>
+          </tr>
+          <tr>
+            <td>onPlayerDrawChess</td>
+            <td>
+              <ul>
+                <li>color :</li>
+                <li>x : 左上为原点</li>
+                <li>y : 左上为原点</li>
+              </ul>
+            </td>
+            <td>五子棋落子</td>
+          </tr>
+          <tr>
+            <td>onChessGameOver</td>
+            <td>
+              <ul>
+                <li>winner :</li>
+                <li>giveUp : 0为非认输</li>
+                <li>guideFee : 指导费</li>
+              </ul>
+            </td>
+            <td>五子棋结束</td>
+          </tr>
+          <tr>
+            <td>onChessDogfall</td>
+            <td>
+              <ul>
+                <li>dogfall : true or false</li>
+              </ul>
+            </td>
+            <td>五子棋平局</td>
+          </tr>
+
+          <tr>
+            <td>onChatInChess</td>
+            <td>
+              <ul>
+                <li>chatInfo
+                  <ul>
+                    <li>msg : 内容</li>
+                    <li>sendId : 发送者ID</li>
+                    <li>nickname</li>
+                    <li>sendTime</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>五子棋聊天</td>
+          </tr>
+          <tr>
+            <td>OnPlayerInfoSetByAgentForChess</td>
+            <td>
+              <ul>
+                <li>uid</li>
+                <li>coin</li>
+                <li>vipLevel</li>
+              </ul>
+            </td>
+            <td>管理员修改信息</td>
+          </tr>
+
+          <tr>
+            <td class="area" rowspan="8">turnplate</td>
+            <td>onTurnStart(所有人)</td>
+            <td>
+              <ul>
+                <li>startInfo
+                  <ul>
+                    <li>master
+                      <ul>
+                        <li>uid</li>
+                        <li>coin(总量)</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>count</li>
+                      </ul>
+                    </li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘开始</td>
+          </tr>
+          <tr>
+            <td>onTurnRefresh</td>
+            <td>
+              <ul>
+                <li>totalCoin : 当场押注情况</li>
+              </ul>
+            </td>
+            <td>大转盘下注信息刷新</td>
+          </tr>
+          <tr>
+            <td>onTurnBalance</td>
+            <td>
+              <ul>
+                <li>balanceInfo
+                  <ul>
+                    <li>fishBingo : 开奖结果</li>
+                    <li>seat : 开奖位置</li>
+                    <li>timer : 倒计时(毫秒)</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘开奖结果</td>
+          </tr>
+          <tr>
+            <td>onTurnResult</td>
+            <td>
+              <ul>
+                <li>resultInfo
+                  <ul>
+                    <li>coin(增量)</li>
+                    <li>master : 本场庄家
+                      <ul>
+                        <li>uid</li>
+                        <li>coin(增量)</li>
+                      </ul>
+                    </li>
+                    <li>newMaster : 下一场庄家
+                      <ul>
+                        <li>uid</li>
+                        <li>coin(总量)</li>
+                        <li>avatar</li>
+                        <li>nickname</li>
+                        <li>count</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘玩家中奖结果</td>
+          </tr>
+          <tr>
+            <td>onTurnMasterChange</td>
+            <td>
+              <ul>
+                <li>master
+                  <ul>
+                    <li>uid</li>
+                    <li>coin(总量)</li>
+                    <li>avatar</li>
+                    <li>nickname</li>
+                    <li>count</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘庄家变更</td>
+          </tr>
+
+          <tr>
+            <td>onChatInTurn</td>
+            <td>
+              <ul>
+                <li>chatInfo
+                  <ul>
+                    <li>msg : 内容</li>
+                    <li>sendId : 发送者ID</li>
+                    <li>nickname</li>
+                    <li>sendTime</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘内聊天</td>
+          </tr>
+
+          <tr>
+            <td>onTurnSeatRank</td>
+            <td>
+              <ul>
+                <li>seatBetRank
+                  <ul>
+                    <li>seat1
+                      <ul>
+                        <li>rank:金币排名</li>
+                        <li>uids:玩家uid</li>
+                      </ul>
+                    </li>
+                    <li>seat2....</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>座位金币排名</td>
+          </tr>
+
+          <tr>
+            <td>onTurnRest</td>
+            <td>
+              <ul>
+                <li>restInfo
+                  <ul>
+                    <li>msg:大转盘休息中,本局金币已返还到您的账户中 </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td>大转盘停止</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div id="code">
+        <blockquote>
+          <p>CODE 错误码 使用说明</p>
+        </blockquote>
+      </div>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>领域</th>
+            <th>标识</th>
+            <th>码值</th>
+            <th>描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="3"></td><td>SUCCESS</td><td>200</td><td>成功</td></tr>
+          <tr><td>FAIL</td><td>500</td><td>失败</td></tr>
+          <tr><td>FREQUENT</td><td>444</td><td>请求频繁</td></tr>
+
+          <tr><td class="area" rowspan="28">ENTRY</td><td>V_USER_USERNAME_OR_PASSWORD_MISSING</td><td>101000</td><td>用户名或密码不能为空</td></tr>
+          <tr><td>V_USER_USERNAME_MISSING</td><td>101001</td><td>用户名不能为空</td></tr>
+          <tr><td>V_USER_USERNAME_NOT_EXIST</td><td>101002</td><td>用户名不存在</td></tr>
+          <tr><td>V_USER_USERNAME_ALREADY_EXIST</td><td>101003</td><td>该用户名已被占用</td></tr>
+          <tr><td>V_USER_USERNAME_INVALID</td><td>101004</td><td>用户名错误</td></tr>
+
+          <tr><td>V_USER_PASSWORD_INVALID</td><td>101100</td><td>密码错误</td></tr>
+          <tr><td>V_USER_PASSWORD_LENGTH_INVALID</td><td>101101</td><td>密码长度不符合要求</td></tr>
+
+          <tr><td>V_USER_CODE_ERROR</td><td>101200</td><td>验证码错误</td></tr>
+          <tr><td>V_USER_SECURITY_ANSWER_LENGTH_INVALID</td><td>101201</td><td>密保答案长度不符合要求</td></tr>
+
+          <tr><td>V_USER_REGISTER_CHANNEL_MISSING</td><td>101300</td><td>用户注册渠道不能为空</td></tr>
+
+          <tr><td>V_USER_SIM_OR_DEVICE_MISSING</td><td>101400</td><td>用户SIM卡号或设备号不能为空</td></tr>
+          <tr><td>V_USER_SIM_WITH_MAX_USER</td><td>101401</td><td>用户SIM卡号绑定超过最大限度</td></tr>
+          <tr><td>V_USER_DEVICE_WITH_MAX_USER</td><td>101402</td><td>用户设备号绑定超过最大限度</td></tr>
+          <tr><td>V_USER_ID_CARD_WITH_MAX_USER</td><td>101403</td><td>身份证绑定超过最大限度</td></tr>
+
+          <tr><td>V_USER_WAS_BANNED</td><td>101500</td><td>该用户已被封禁</td></tr>
+          <tr><td>V_USER_IS_VISITOR</td><td>101501</td><td>该用户是游客</td></tr>
+          <tr><td>V_USER_IS_FROM_CHANNEL</td><td>101502</td><td>该用户来自合作渠道</td></tr>
+
+          <tr><td>V_USER_NOT_EXIST</td><td>101600</td><td>该用户不存在</td></tr>
+
+          <tr><td>V_PLAYER_NOT_EXIST</td><td>102000</td><td>玩家尚未创建</td></tr>
+
+          <tr><td>V_PLAYER_NICKNAME_MISSING</td><td>102100</td><td>玩家昵称不能为空</td></tr>
+          <tr><td>V_PLAYER_NICKNAME_INVALID</td><td>102101</td><td>玩家昵称不符合要求</td></tr>
+          <tr><td>V_PLAYER_NICKNAME_ALREADY_EXIST</td><td>102102</td><td>该玩家昵称已被占用</td></tr>
+
+          <tr><td>V_PLAYER_SEX_MISSING</td><td>102200</td><td>玩家性别不能为空</td></tr>
+          <tr><td>V_PLAYER_SEX_INVALID</td><td>102201</td><td>玩家性别错误</td></tr>
+
+          <tr><td>V_PLAYER_AVATAR_MISSING</td><td>102300</td><td>玩家头像不能为空</td></tr>
+
+          <tr><td>V_VERSION_TOO_LOW</td><td>102400</td><td>版本号太低</td></tr>
+          <tr><td>V_VERSION_NOT_LATEST</td><td>102401</td><td>有新版本</td></tr>
+
+          <tr><td>V_AGENT_NOT_EXIST</td><td>103000</td><td>该代理不存在</td></tr>
+
+          <tr><td class="area" rowspan="15">AUTH</td><td>V_TOKEN_OR_UID_MISSING</td><td>201000</td><td>令牌或用户ID不能为空</td></tr>
+          <tr><td>V_TOKEN_INVALID</td><td>201001</td><td>令牌错误</td></tr>
+          <tr><td>V_TOKEN_EXPIRE</td><td>201002</td><td>令牌过期</td></tr>
+
+          <tr><td>V_CONNECTOR_NONE_AVAILABLE</td><td>201100</td><td>connector服务器不可用</td></tr>
+          <tr><td>V_CONNECTOR_UNKNOWN</td><td>201101</td><td>connector服务器未知</td></tr>
+
+          <tr><td>V_CHANNEL_UNKNOWN</td><td>201200</td><td>channel频道未知</td></tr>
+          <tr><td>V_CHANNEL_HAS_NO_OTHER_USERS</td><td>201201</td><td>channel频道不存在其他玩家</td></tr>
+          <tr><td>V_CHANNEL_ALREADY_HAS_THIS_USER</td><td>201202</td><td>channel频道已经存在该玩家</td></tr>
+
+          <tr><td>V_USER_NOT_ONLINE</td><td>201300</td><td>该用户不在线</td></tr>
+
+          <tr><td>V_PARAM_MISSING</td><td>201400</td><td>传入参数缺失</td></tr>
+
+          <tr><td>V_DEVICE_ID_MISSING</td><td>201500</td><td>设备号不能为空</td></tr>
+          <tr><td>V_DEVICE_ID_INVALID</td><td>201501</td><td>设备号错误</td></tr>
+          <tr><td>V_REAL_NAME_INVALID</td><td>201502</td><td>不合法的真实姓名</td></tr>
+          <tr><td>V_ID_CARD_INVALID</td><td>201503</td><td>不合法的身份证号</td></tr>
+          <tr><td>V_BIND_AUTHEN_ERROR</td><td>201504</td><td>绑定身份证错误</td></tr>
+
+          <tr><td class="area" rowspan="12">CHAT</td><td>V_CHAT_ADD_USER_NOT_EXIST</td><td>300000</td><td>该用户不存在</td></tr>
+          <tr><td>V_CHAT_ADD_ALREADY_SENT</td><td>300001</td><td>好友申请已发送</td></tr>
+          <tr><td>V_CHAT_ADD_IS_FRIEND</td><td>300002</td><td>已经是好友</td></tr>
+          <tr><td>V_CHAT_ADD_IS_BLACK</td><td>300003</td><td>在黑名单中</td></tr>
+          <tr><td>V_CHAT_ADD_IS_INVALID</td><td>300004</td><td>非法的申请好友ID</td></tr>
+
+          <tr><td>V_CHAT_PARAM_MISSING</td><td>301000</td><td>聊天参数缺失</td></tr>
+          <tr><td>V_CHAT_FID_INVALID</td><td>301001</td><td>非法的好友ID</td></tr>
+          <tr><td>V_CHAT_NOT_FRIEND</td><td>302000</td><td>对方不是好友</td></tr>
+          <tr><td>V_CHAT_SEND_FALL</td><td>303000</td><td>消息发送失败</td></tr>
+          <tr><td>V_CHAT_STORAGE_FALL</td><td>303001</td><td>消息存储失败</td></tr>
+          <tr><td>V_CHAT_LEVEL_DEFICIENT</td><td>304000</td><td>等级不够</td></tr>
+          <tr><td>V_CHAT_HORN_TIME_LIMIT</td><td>304001</td><td>半小时才能发送一次喇叭</td></tr>
+
+          <tr><td class="area" rowspan="19">AREA</td><td>V_ROOM_SUPPLY_INVALID</td><td>401000</td><td>房间提供无效</td></tr>
+          <tr><td>V_ROOM_ALREADY_FULL</td><td>401001</td><td>房间已满</td></tr>
+          <tr><td>V_ROOM_NOT_REACH_THRESHOLD</td><td>401002</td><td>房间没有达到门限</td></tr>
+          <tr><td>V_ROOM_HAS_NO_SUCH_FUNCTION</td><td>401003</td><td>房间没有此功能</td></tr>
+          <tr><td>V_ROOM_ID_INVALID</td><td>401004</td><td>房间ID无效</td></tr>
+
+          <tr><td>V_PLAYER_ALREADY_IN_GAME</td><td>402000</td><td>该玩家已在游戏中</td></tr>
+          <tr><td>V_PLAYER_NOT_IN_GAME</td><td>402001</td><td>该玩家不在游戏中</td></tr>
+          <tr><td>V_PLAYER_HAS_NOT_ENOUGH_COIN</td><td>402002</td><td>该玩家金币不足</td></tr>
+          <tr><td>V_PLAYER_HAS_NOT_ENOUGH_JEWEL</td><td>402003</td><td>该玩家宝石不足</td></tr>
+          <tr><td>V_PLAYER_HAS_NOT_ENOUGH_SKILL_ICE</td><td>402004</td><td>该玩家不能使用冰封技能</td></tr>
+          <tr><td>V_PLAYER_ALREADY_USE_SKILL_ICE</td><td>402005</td><td>该玩家已经使用冰封技能</td></tr>
+          <tr><td>V_PLAYER_HAS_NOT_ENOUGH_SKILL_CLOCK</td><td>402006</td><td>该玩家不能使用锁定技能</td></tr>
+          <tr><td>V_PLAYER_ALREADY_USE_SKILL_CLOCK</td><td>402007</td><td>该玩家已经使用冰封技能</td></tr>
+          <tr><td>V_PLAYER_HAS_NO_BREAK_CHANCE</td><td>402008</td><td>该玩家已经没有破产补助机会</td></tr>
+          <tr><td>V_PLAYER_IS_BREAK</td><td>402009</td><td>该玩家已经破产</td></tr>
+
+          <tr><td>V_CANNON_GRADE_OUT_OF_RANGE</td><td>403000</td><td>大炮等级超出范围</td></tr>
+          <tr><td>V_CANNON_GRADE_NOT_REACH_THRESHOLD</td><td>403001</td><td>大炮等级没有达到门限</td></tr>
+          <tr><td>V_CANNON_GRADE_NOT_ENOUGH</td><td>403002</td><td>大炮等级不足</td></tr>
+          <tr><td>V_CANNON_ID_NOT_ENOUGH</td><td>403003</td><td>大炮ID不足</td></tr>
+
+          <tr><td class="area" rowspan="35">WORLD</td><td>V_PLAYER_GET_INFORMATION_UNKNOWN</td><td>501000</td><td>获取玩家信息未知</td></tr>
+          <tr><td>V_PLAYER_HAS_NO_PERMISSIONS</td><td>501001</td><td>玩家没有操作权限</td></tr>
+          <tr><td>V_PLAYER_USE_COIN_NOT_ENOUGH</td><td>501002</td><td>玩家可用金额不足</td></tr>
+          <tr><td>V_PLAYER_VALUE_OUT_OF_RANGE</td><td>501003</td><td>玩家金币为负</td></tr>
+
+          <tr><td>V_MAIL_GMID_MISSING</td><td>502000</td><td>邮件ID缺失</td></tr>
+          <tr><td>V_MAIL_ALREADY_READ</td><td>502001</td><td>邮件已经读取</td></tr>
+          <tr><td>V_MAIL_SEND_FAIL</td><td>502002</td><td>邮件发送失败</td></tr>
+          <tr><td>V_MAIL_ALREADY_EXPIRE</td><td>502003</td><td>邮件已过期</td></tr>
+
+          <tr><td>V_SIGN_ALREADY_REWARD</td><td>503000</td><td>签到奖励已领取</td></tr>
+
+          <tr><td>V_PAY_AUTH_WITHOUT_ORDER</td><td>504000</td><td>订单号不正确或没有支付成功</td></tr>
+          <tr><td>V_PAY_AUTH_UID_INVALID</td><td>504001</td><td>非法的用户ID</td></tr>
+          <tr><td>V_PAY_AUTH_TRADE_FEE_ERR</td><td>504002</td><td>充值金额错误</td></tr>
+          <tr><td>V_PAY_AUTH_TRADE_ID_ERR</td><td>504003</td><td>充值商品ID错误</td></tr>
+          <tr><td>V_PAY_AUTH_TRADE_STATES_CHANGE_ERR</td><td>504004</td><td>修改订单状态失败</td></tr>
+          <tr><td>V_PAY_AUTH_TRADE_UNKNOWN_ERR</td><td>504005</td><td>未知逻辑错误</td></tr>
+
+          <tr><td>V_GIFT_SEND_INVALID_GIFT</td><td>505000</td><td>非法的礼物赠送</td></tr>
+          <tr><td>V_GIFT_SEND_INVALID_UID</td><td>505001</td><td>非法的用户ID</td></tr>
+          <tr><td>V_GIFT_SEND_MSG_MISSING</td><td>505002</td><td>必要的信息缺失</td></tr>
+          <tr><td>V_GIFT_SEND_COIN_NOT_ENOUGH</td><td>505003</td><td>玩家金币不足</td></tr>
+
+          <tr><td>V_SELL_ITEM_CANT_SOLD</td><td>506000</td><td>不可售卖</td></tr>
+          <tr><td>V_SELL_ITEM_NOT_ENOUGH</td><td>506001</td><td>数量不足</td></tr>
+          <tr><td>V_SELL_ITEM_MSG_MISSING</td><td>506002</td><td>必要的信息缺失</td></tr>
+
+          <tr><td>V_ACTIVITY_GET_ERROR</td><td>507000</td><td>活动获取失败</td></tr>
+
+          <tr><td>V_EXCHANGE_PARAM_MISSING</td><td>508000</td><td>参数缺失</td></tr>
+          <tr><td>V_EXCHANGE_JEWEL_NOT_ENOUGH</td><td>508001</td><td>钻石数量不足</td></tr>
+          <tr><td>V_EXCHANGE_CID_NOT_AVAILABLE</td><td>508002</td><td>靓号不可用</td></tr>
+
+          <tr><td>V_SAFE_BOX_NOT_OPEN</td><td>509000</td><td>保险箱尚未开通</td></tr>
+          <tr><td>V_SAFE_BOX_MSG_MISSING</td><td>509001</td><td>必要的参数缺失</td></tr>
+          <tr><td>V_SAFE_BOX_COIN_NOT_ENOUGH</td><td>509002</td><td>金币不足</td></tr>
+          <tr><td>V_SAFE_BOX_PASSWORD_ERR</td><td>509003</td><td>保险箱密码不正确</td></tr>
+          <tr><td>V_SAFE_BOX_PASSWORD_RESET</td><td>509004</td><td>保险箱密需要重置</td>
+
+          <tr><td>V_TIE_MSG_MISSING</td><td>510000</td><td>发帖信息缺失</td>
+          <tr><td>V_TIE_ALREADY_SEND</td><td>510001</td><td>已经发过帖子</td>
+          <tr><td>V_TIE_VIP_LIMIT</td><td>510002</td><td>VIP等级不足</td>
+
+          <tr><td>V_BANKRUPTCY_NOT_AVAILABLE</td><td>511000</td><td>破产补助不可用</td>
+
+          <tr><td class="area" rowspan="11">WAR</td><td>V_PLAYER_ALREADY_IN_QUEUE</td><td>601000</td><td>玩家已经存在上庄队列中</td></tr>
+          <tr><td>V_PLAYER_NOT_IN_QUEUE</td><td>601001</td><td>玩家不在上庄队列中</td></tr>
+          <tr><td>V_PLAYER_ALREADY_IN_CHAIR</td><td>601002</td><td>玩家已经入座</td></tr>
+          <tr><td>V_PLAYER_NOT_IN_CHAIR</td><td>601003</td><td>玩家没有入座</td></tr>
+          <tr><td>V_PLAYER_BEYOND_MAX_BET</td><td>601004</td><td>玩家押注超过最大值</td></tr>
+          <tr><td>V_PLAYER_IS_MASTER</td><td>601005</td><td>玩家正在坐庄</td></tr>
+          <tr><td>V_PLAYER_OFF_QUEUE_LATER</td><td>601006</td><td>本局结束后下庄</td></tr>
+
+          <tr><td>V_CHAIR_HAS_PLAYER</td><td>602000</td><td>该座位已经被占用</td></tr>
+
+          <tr><td>V_GAME_READY</td><td>603000</td><td>当前为游戏准备状态</td></tr>
+          <tr><td>V_GAME_START</td><td>603001</td><td>当前为游戏开始状态</td></tr>
+          <tr><td>V_GAME_REST</td><td>603002</td><td>百人牛牛休息中</td></tr>
+
+
+        </tbody>
+      </table>
+
+      <div id="others">
+        <blockquote>
+          <p>其它 规范说明</p>
+        </blockquote>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>注册用户</h3></caption>
+          <tbody>
+            <tr><td>用户名</td><td>6-20个数字或字母,不区分大小写</td></tr>
+            <tr><td>密码</td><td>6-20个字符</td></tr>
+            <tr><td>密保答案</td><td>最多20个字符或汉字</td></tr>
+            <tr><td>SIM卡号</td><td>一张SIM卡最多注册三个用户</td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>创建玩家</h3></caption>
+          <tbody>
+            <tr><td>昵称</td><td>4-8个字符或汉字</td></tr>
+            <tr><td>性别</td><td>0为女性,1为男性</td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>密保问题</h3></caption>
+          <thead>
+            <tr>
+              <th>编号</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>你第一所小学是什么?</td></tr>
+            <tr><td>2</td><td>你第一只宠物叫什么?</td></tr>
+            <tr><td>3</td><td>你小学班主任叫什么?</td></tr>
+            <tr><td>4</td><td>你出生在哪个城市?</td></tr>
+            <tr><td>5</td><td>你最喜欢的明星是谁?</td></tr>
+            <tr><td>6</td><td>你爸爸叫什么?</td></tr>
+            <tr><td>7</td><td>你妈妈叫什么?</td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>依据场景获取玩家信息</h3></caption>
+          <thead>
+            <tr>
+              <th>编号</th>
+              <th>场景</th>
+              <th>字段集</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>World</td><td>["uid","nickname","avatar","coin","jewel","experience","level","vipLevel"]</td></tr>
+            <tr><td>1</td><td>Chat</td><td>["uid","nickname","avatar","vipLevel","onLine"]</td></tr>
+            <tr><td>2</td><td>GameFish</td><td>["uid","nickname","avatar","coin","jewel"]</td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>掉落物品</h3></caption>
+          <thead>
+          <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>时效</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>0</td><td>twice</td><td>15s</td></tr>
+          <tr><td>1</td><td>ice</td><td>15s</td></tr>
+          <tr><td>2</td><td>clock</td><td>15s</td></tr>
+          <tr><td>3</td><td>jewel</td><td></td></tr>
+          <tr><td>4</td><td>red</td><td></td></tr>
+          <tr><td>5</td><td>yellow</td><td></td></tr>
+          <tr><td>6</td><td>blue</td><td></td></tr>
+          <tr><td>7</td><td>green</td><td></td></tr>
+          <tr><td>8</td><td>lucky</td><td></td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>游戏房间配置</h3></caption>
+          <thead>
+          <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>门限(金币)</th>
+          </tr>
+          </thead>
+            <tbody>
+              <tr><td>1</td><td>普通场</td><td>1</td></tr>
+              <tr><td>2</td><td>1/10倍场</td><td>1</td></tr>
+              <tr><td>3</td><td>5倍场</td><td>500000</td></tr>
+              <tr><td>4</td><td>10倍场</td><td>1000000</td></tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>大炮等级</h3></caption>
+          <thead>
+          <tr>
+            <th>等级</th>
+            <th>解锁宝石</th>
+            <th>等级</th>
+            <th>解锁宝石</th>
+            <th>等级</th>
+            <th>解锁宝石</th>
+            <th>等级</th>
+            <th>解锁宝石</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>0</td><td>50</td><td>20</td><td>200</td><td>70</td><td>600</td><td>200</td></tr>
+            <tr><td>2</td><td>2</td><td>60</td><td>20</td><td>250</td><td>80</td><td>700</td><td>250</td></tr>
+            <tr><td>3</td><td>3</td><td>70</td><td>20</td><td>300</td><td>90</td><td>800</td><td>300</td></tr>
+            <tr><td>4</td><td>3</td><td>80</td><td>20</td><td>350</td><td>100</td><td>900</td><td>350</td></tr>
+            <tr><td>5</td><td>5</td><td>90</td><td>20</td><td>400</td><td>130</td><td>1000</td><td>400</td></tr>
+            <tr><td>6</td><td>5</td><td>100</td><td>50</td><td>450</td><td>160</td><td></td><td></td></tr>
+            <tr><td>7</td><td>5</td><td>150</td><td>60</td><td>500</td><td>190</td><td></td><td></td></tr>
+            <tr><td>8</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>9</td><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>10</td><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>15</td><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>20</td><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>25</td><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>30</td><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>35</td><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>40</td><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>45</td><td>20</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover text-center">
+          <caption><h3>游戏道具表</h3></caption>
+          <thead>
+          <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>类型</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>1</td><td>金币:coin</td><td>游戏流通货币</td></tr>
+          <tr><td>2</td><td>钻石:jewel</td><td>商城货币</td></tr>
+          <tr><td>3</td><td>海星:starfish</td><td>礼物</td></tr>
+          <tr><td>4</td><td>冰冻:ice</td><td>道具</td></tr>
+          <tr><td>5</td><td>锁定:clock</td><td>道具</td></tr>
+
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover text-center">
+          <caption><h3>签到奖励</h3></caption>
+          <thead>
+          <tr>
+            <th>编号</th>
+            <th>奖励</th>
+            <th>概率</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>1</td><td>{"coin" : 20000}</td><td>1</td></tr>
+          <tr><td>2</td><td>{"coin" : 18000}</td><td>2</td></tr>
+          <tr><td>3</td><td>{"coin" : 16000}</td><td>5</td></tr>
+          <tr><td>4</td><td>{"coin" : 14000}</td><td>6</td></tr>
+          <tr><td>5</td><td>{"coin" : 12000}</td><td>7</td></tr>
+          <tr><td>6</td><td>{"coin" : 10000}</td><td>8</td></tr>
+          <tr><td>7</td><td>{"coin" : 8000}</td><td>9</td></tr>
+          <tr><td>8</td><td>{"coin" : 6000}</td><td>15</td></tr>
+          <tr><td>9</td><td>{"coin" : 4000}</td><td>22</td></tr>
+          <tr><td>10</td><td>{"coin" : 2000}</td><td>25</td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>玩家等级</h3></caption>
+          <thead>
+          <tr>
+            <th>等级</th>
+            <th>经验</th>
+            <th>奖励</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>1</td><td>100</td><td>{"ice" : 1, "clock" : 1, "coin" : 2000, "jewel" : 1}</td></tr>
+          <tr><td>2</td><td>390</td><td>{"ice" : 1, "clock" : 1, "coin" : 1000, "jewel" : 2}</td></tr>
+          <tr><td>3</td><td>620</td><td>{"ice" : 1, "clock" : 1, "coin" : 3000, "jewel" : 3}</td></tr>
+          <tr><td>4</td><td>1090</td><td>{"ice" : 1, "clock" : 1, "coin" : 4000, "jewel" : 4}</td></tr>
+          <tr><td>5</td><td>1800</td><td>{"ice" : 1, "clock" : 1, "coin" : 5000, "jewel" : 5}</td></tr>
+          <tr><td>6</td><td>2400</td><td>{"ice" : 1, "clock" : 1, "coin" : 6000, "jewel" : 6}</td></tr>
+          <tr><td>7</td><td>2612</td><td>{"ice" : 2, "clock" : 2, "coin" : 7000, "jewel" : 7}</td></tr>
+          <tr><td>8</td><td>3600</td><td>{"ice" : 2, "clock" : 2, "coin" : 8000, "jewel" : 8}</td></tr>
+          <tr><td>9</td><td>6000</td><td>{"ice" : 2, "clock" : 2, "coin" : 9000, "jewel" : 9}</td></tr>
+          <tr><td>10</td><td>6800</td><td>{"ice" : 2, "clock" : 2, "coin" : 10000, "jewel" : 10}</td></tr>
+          <tr><td>11</td><td>12500</td><td>{"ice" : 2, "clock" : 2, "coin" : 11000, "jewel" : 11}</td></tr>
+          <tr><td>12</td><td>25000</td><td>{"ice" : 3, "clock" : 3, "coin" : 12000, "jewel" : 12}</td></tr>
+          <tr><td>13</td><td>75000</td><td>{"ice" : 3, "clock" : 3, "coin" : 13000, "jewel" : 13}</td></tr>
+          <tr><td>14</td><td>109000</td><td>{"ice" : 3, "clock" : 3, "coin" : 14000, "jewel" : 14}</td></tr>
+          <tr><td>15</td><td>250000</td><td>{"ice" : 3, "clock" : 3, "coin" : 15000, "jewel" : 15}</td></tr>
+          <tr><td>16</td><td>300000</td><td>{"ice" : 3, "clock" : 3, "coin" : 16000, "jewel" : 16}</td></tr>
+          <tr><td>17</td><td>344450</td><td>{"ice" : 3, "clock" : 3, "coin" : 17000, "jewel" : 17}</td></tr>
+          <tr><td>18</td><td>415700</td><td>{"ice" : 4, "clock" : 4, "coin" : 18000, "jewel" : 18}</td></tr>
+          <tr><td>19</td><td>474350</td><td>{"ice" : 4, "clock" : 4, "coin" : 19000, "jewel" : 19}</td></tr>
+          <tr><td>20</td><td>497500</td><td>{"ice" : 4, "clock" : 4, "coin" : 20000, "jewel" : 20}</td></tr>
+          <tr><td>21</td><td>591100</td><td>{"ice" : 4, "clock" : 4, "coin" : 21000, "jewel" : 21}</td></tr>
+          <tr><td>22</td><td>684700</td><td>{"ice" : 5, "clock" : 5, "coin" : 22000, "jewel" : 22}</td></tr>
+          <tr><td>23</td><td>8171500</td><td>{"ice" : 6, "clock" : 6, "coin" : 23000, "jewel" : 23}</td></tr>
+          <tr><td>24</td><td>9520250</td><td>{"ice" : 7, "clock" : 7, "coin" : 24000, "jewel" : 24}</td></tr>
+          <tr><td>25</td><td>10869000</td><td>{"ice" : 8, "clock" : 8, "coin" : 25000, "jewel" : 25}</td></tr>
+          <tr><td>26</td><td>12217750</td><td></td></tr>
+          <tr><td>27</td><td>14585000</td><td></td></tr>
+          <tr><td>28</td><td>16952250</td><td></td></tr>
+          <tr><td>29</td><td>19319500</td><td></td></tr>
+          <tr><td>30</td><td>21686750</td><td></td></tr>
+          <tr><td>31</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover text-center">
+          <caption><h3>VIP等级</h3></caption>
+          <thead>
+          <tr>
+            <th>等级</th>
+            <th>经验</th>
+            <th>签到倍率</th>
+            <th>礼物税点</th>
+            <th>奖励</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>0</td><td>20</td><td>1</td><td>5%</td><td>[0,0,0]</td></tr>
+          <tr><td>1</td><td>200</td><td>2</td><td>1%</td><td>[2,10|4,1|5,1]</td></tr>
+          <tr><td>2</td><td>500</td><td>3</td><td>1%</td><td>[2,20|4,2|5,2]</td></tr>
+          <tr><td>3</td><td>1000</td><td>4</td><td>1%</td><td>[2,30|4,3|5,3]</td></tr>
+          <tr><td>4</td><td>2000</td><td>5</td><td>1%</td><td>[2,40|4,4|5,4]</td></tr>
+          <tr><td>5</td><td>5000</td><td>6</td><td>1%</td><td>[2,50|4,5|5,5]</td></tr>
+          <tr><td>6</td><td>10000</td><td>7</td><td>1%</td><td>[2,60|4,6|5,6]</td></tr>
+          <tr><td>7</td><td>20000</td><td>8</td><td>1%</td><td>[2,70|4,7|5,7]</td></tr>
+          <tr><td>8</td><td>50000</td><td>9</td><td>1%</td><td>[2,80|4,8|5,8]</td></tr>
+          <tr><td>9</td><td></td><td>10</td><td>0%</td><td>[2,90|4,9|5,9]</td></tr>
+          </tbody>
+
+        </table>
+
+        <table class="table table-bordered table-hover">
+          <caption><h3>鱼阵组合</h3></caption>
+          <thead>
+          <tr>
+            <th>编号</th>
+            <th>组合</th>
+            <th>持续时间</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>0</td><td>[70,71]</td><td>60</td></tr>
+          <tr><td>1</td><td>[72,73]</td><td>60</td></tr>
+          <tr><td>2</td><td>[58,59,60,61,62,63]</td><td>30</td></tr>
+          <tr><td>3</td><td>[64,65,66,67,68,69]</td><td>30</td></tr>
+          <tr><td>4</td><td>[13,14,50,51,52,53]</td><td>48</td></tr>
+          <tr><td>5</td><td>[15,16,54,55,56,57]</td><td>48</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../js/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../js/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../../js/main.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>

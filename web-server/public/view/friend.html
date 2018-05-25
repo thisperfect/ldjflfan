@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>好友板块</title>
+	<link rel="stylesheet" href="../css/style.css" type="text/css" />
+	<!--<script src="../js/client.js"></script>-->
+	<script src="../js/pop.js"></script>
+	<script>
+		window.onload = function(){
+			var ul = document.getElementById('ul');
+			ul.index = 1;
+
+			var li = ul.getElementsByTagName('li');
+			var content = document.getElementById('content');
+			var div = content.getElementsByTagName('div');
+			//循环遍历整个ul
+			for(var i = 0;i<li.length;i++){
+				li[i].index = i;//就是为了将当前循环的值绑定在控件身上而已
+
+				li[i].onclick = function(){
+					for (var i = 0;i<li.length;i++){
+						li[i].className = '';
+						div[i].style.display = 'none';
+					}
+					this.className = 'current';
+					div[this.index].style.display = 'block';
+				}
+
+			}
+		}
+	</script>
+</head>
+<body>
+<form>
+
+<div class="ultab">
+	<div id="enterWorld" style="border: 1px solid #d43f3a; font-size: 12px; text-align: center; padding: 10px 0; width:75px;float:left;">进入世界</div>
+	<ul id="ul">
+		<li id = 'f0'>我的好友</li>
+		<li id = 'f1'>邮箱</li>
+		<li>添加好友</li>
+	</ul>
+	<div id="content">
+		<p class="login-box-msg"></p>
+		<div class="show">
+
+			<table border="1px" id="fritable">
+				<tr class="apply">
+					<td><img src="ftp://192.168.0.121/images/player/114.png" width="50px" height="50px"></td>
+					<td onclick="agree(3)">同意3</td>
+					<td onclick="refuse(4)">拒绝4</td>
+					<td onclick="worldChat()">世界聊天</td>
+				</tr>
+				<tr class="apply">
+					<td ><img src="ftp://192.168.0.121/images/player/10001.png" width="50px" height="50px"></td>
+					<td onclick="agree(5)">同意5</td>
+					<td onclick="refuse(5)">拒绝5</td>
+				</tr>
+				<tr class="fri">
+					<td onclick="getChatList(4)"><img src="ftp://192.168.0.121/images/player/10001.png" width="50px" height="50px"></td>
+					<td onclick="chat(4)">聊天4</td>
+					<td onclick="deleteFriend(4)">删除4</td>
+					<td onclick="pullBlack(4) ">拉黑4</td>
+				</tr>
+
+				<tr class="fri">
+					<td onclick="getChatList(5)"><img  src="ftp://192.168.0.121/images/player/10001.png" width="50px" height="50px"></td>
+					<td onclick="chat(5)">聊天22</td>
+					<td onclick="deleteFriend(5)">删除</td>
+					<td onclick="pullBlack(5) ">拉黑5</td>
+				</tr>
+
+				<tr class="fri">
+					<td onclick="getChatList(6)"><img src="ftp://192.168.0.121/images/player/10001.png" width="50px" height="50px"></td>
+					<td onclick="chat(6)">聊天15</td>
+					<td onclick="deleteFriend(6)">删除6</td>
+					<td onclick="removeBlack(4)">移除黑名单4</td>
+				</tr>
+
+				<tr class="fri">
+					<td onclick="getChatList(12)"><img src="ftp://192.168.0.121/images/player/10001.png" width="50px" height="50px"></td>
+					<td onclick="chat(12)">聊天12</td>
+					<td onclick="deleteFriend(16)">删除16</td>
+					<td onclick="removeBlack(18)">移除黑名单18</td>
+				</tr>
+			</table>
+
+
+		</div>
+
+		<div>
+			<table border="1px" id="mailtable">
+				<tr class="apply">
+					<td>邮件标题</td>
+					<td>内容</td>
+					<td>删除</td>
+				</tr>
+
+				<tr class="fri">
+					<td onclick="getChatList(18)"><img src="ftp://192.168.0.121/images/player/10001.png" width="50px" height="50px"></td>
+					<td onclick="chat(18)">聊天18</td>
+					<td onclick="deleteFriend(15)">删除</td>
+					<td onclick="pullBlack(18) ">拉黑18</td>
+				</tr>
+
+
+			</table>
+
+		</div>
+
+
+		<div>
+
+				<input type="text"  name="fid"  style="height: 30px; line-height: 30px;" placeholder="输入要查找的用户ID">
+
+				<input type="button"  id="search"  style="padding: 10px;" value="搜 索">
+
+		</div>
+
+	</div>
+</div>
+</form>
+<!--<iframe id="chatView" class="chating" frameborder="1" src="chating.html"  allowfullscreen="true"></iframe>-->
+<div id="chatView" class="chating">
+
+	<div id="app">
+
+		<div id="chatHistory">
+		</div>
+		<div id="toolbar">
+			<ul id="status">
+				<li>
+					users:
+					<select name="users" id="usersList">
+						<option value="*">
+							all
+						</option>
+					</select>
+				</li>
+				<li>
+					name:
+                        <span id="name">
+                        </span>
+				</li>
+				<li>
+					room:
+                        <span id="room">
+                        </span>
+				</li>
+			</ul>
+			<input tabindex="1" type="text" id="entry" />
+		</div>
+	</div>
+	<div id="pop">
+		<div id="popHead">
+			<a id="popClose" title="close">Close</a>
+			<h2>
+				Tip
+			</h2>
+		</div>
+		<div id="popContent">
+			<dl>
+				<dd id="popIntro">
+				</dd>
+			</dl>
+			<p id="popMore">
+				No Tip Again
+			</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- jQuery -->
+<script src="../js/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="../js/lib/build/build.js" type="text/javascript"></script>
+<script src="../js/main.js"></script>
+<script type="text/javascript">
+	require('boot');
+</script>
+<script>
+
+	var params = queryString();
+	var uid = params.uid;
+	var token = params.token;
+	var deviceId = params.deviceId;
+
+	$("#chatView").hide();
+
+	$("#enterWorld").click(function () {
+		enterWorld(uid, token,deviceId);
+	});
+
+	$("#f0").click(function () {
+		getListInfo(function (data) {
+			if(data.code == 500){
+				$("p.login-box-msg").text('获取好友申请id失败!');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			var content = data.data;
+			console.log(data,content);
+
+			if (content.fid){
+				var fids = content.fid.split(',');
+			}
+
+
+//			var applys = content.apply.split(',');
+
+			var len = fids.length - 1;
+			for(var i = 0; i<len; i++) {
+				getFriendInfo(fids[i], function (data) {
+					console.log('data:', data);
+					if (data.code == 500) {
+						$("p.login-box-msg").text('获取好友申请人信息失败');
+						$("p.login-box-msg").css({'color': 'red'});
+					}
+					var player = data.player;
+					var picUrl = player.avatar;
+					var fid = player.uid;
+					var newRow = '<tr id="' + fid + '" class="apply"><td><img src="' + picUrl + '" width="50px" height="50px"></td><td onClick="agree(' + fid + ')">同意</td><td onClick="refuse(' + fid + ')">拒绝</td></tr>';
+					$('#fritable').append(newRow);
+				});
+			}
+		});
+
+	});
+
+	$("#search").click(function(){
+		var fid = $.trim($("form input[name=fid]").val());
+		if (fid == ''){
+			$("p.login-box-msg").text('请输入您要找的用户ID!');
+			$("p.login-box-msg").css({'color':'red'});
+			return;
+		}
+		applyFriend(fid, function (data) {
+			if (data.code == 300000){
+				$("p.login-box-msg").text('改ID用户不存在!');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 300001){
+				$("p.login-box-msg").text('好友申请已发送,请等待对方通过!');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 300002){
+				$("p.login-box-msg").text('你们已经是好友！');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 300003){
+				$("p.login-box-msg").text('对方已被添加进您的黑名单，不可添加为好友！');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 300004){
+				$("p.login-box-msg").text('请输入合法的ID!');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 200){
+				$("p.login-box-msg").text('好友申请已成功发送!');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+		});
+
+	});
+
+	function agree(fid){
+		agreeFriendApply(fid, function (data) {
+			if (data.code == 300002){
+				$("p.login-box-msg").text('你们已经是好友！');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 300003){
+				$("p.login-box-msg").text('对方已被添加进您的黑名单，不可添加为好友！');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+			if (data.code == 200){
+				$("p.login-box-msg").text('好友添加成功');
+				$("p.login-box-msg").css({'color':'red'});
+			}
+		});
+	}
+
+	function refuse(fid){
+		refuseFriend(fid, function (data) {
+			console.log('====refuseFriend:',data);
+		});
+	}
+
+
+
+	function deleteFriend(fid){
+		deleteFriendByUid(fid, function (data) {
+			console.log('====deleteFriend:',data);
+		});
+	}
+
+	function pullBlack(fid){
+		pullBlackByUid(fid, function (data) {
+			console.log('====pullBlack:',data);
+		});
+	}
+
+	function removeBlack(fid){
+		removeBlackByUid(fid, function (data) {
+			console.log('====pullBlack:',data);
+		});
+	}
+
+	function chat(fid){
+		$("#chatView").show();
+		$("#entry").focus();
+		$("entry").focus();
+		//deal with chat mode.
+		$("#entry").keypress(function(e) {									//监听键盘按下事件,如果是enter键就发送
+			if(e.keyCode != 13 /* Return */ ) return;
+			var msg = $("#entry").val().replace('/n','');
+			if(!isBlank(msg)) {
+				chatWithMsg(fid,msg,function (data) {
+					console.log("playerChat",data);
+				})
+			}
+		});
+	}
+
+	function worldChat(){
+		worldChating('这是一条喇叭聊天'+uid,function(data){
+			console.log("worldChat",data);
+		});
+	}
+
+
+	// add message on board
+	function addMessage(from, target, text, time) {
+		console.log("=====addMessage====",from,target,text,time);
+		var name = (target == '*' ? 'all' : target);
+		if(text === null) return;
+		if(time == null) {
+			// if the time is null or undefined, use the current time.
+			time = new Date();
+		} else if((time instanceof Date) === false) {
+			// if it's a timestamp, interpret it
+			time = new Date(time);
+		}
+		//every message you see is actually a table with 3 cols:
+		//  the time,
+		//  the person who caused the event,
+		//  and the content
+		var messageElement = $(document.createElement("table"));
+		messageElement.addClass("message");
+		// sanitize
+		text = util.toStaticHTML(text);
+		var content = '<tr>' + '  <td class="date">' + util.timeString(time) + '</td>' + '  <td class="nick">' + util.toStaticHTML(from) + ' says to ' + name + ': ' + '</td>' + '  <td class="msg-text">' + text + '</td>' + '</tr>';
+		messageElement.html(content);
+		//the log is the stream that we view
+		$("#chatHistory").append(messageElement);
+		base += increase;
+		scrollDown(base);
+	};
+
+	// show tip
+	function tip(type, name) {
+		var tip,title;
+		switch(type){
+			case 'online':
+				tip = name + ' is online now.';
+				title = 'Online Notify';
+				break;
+			case 'offline':
+				tip = name + ' is offline now.';
+				title = 'Offline Notify';
+				break;
+			case 'message':
+				tip = name + ' is saying now.'
+				title = 'Message Notify';
+				break;
+		}
+		var pop=new Pop(title, tip);
+	};
+
+	// init user list
+	function initUserList(data) {
+		users = data.users;
+		for(var i = 0; i < users.length; i++) {
+			var slElement = $(document.createElement("option"));
+			slElement.attr("value", users[i]);
+			slElement.text(users[i]);
+			$("#usersList").append(slElement);
+		}
+	};
+
+	// add user in user list
+	function addUser(user) {
+		var slElement = $(document.createElement("option"));
+		slElement.attr("value", user);
+		slElement.text(user);
+		$("#usersList").append(slElement);
+	};
+	function isBlank(text) {
+		var blank = /^\s*$/;
+		return(text.match(blank) !== null);
+	}
+
+
+	pomelo.on('onChat', function(data) {
+		console.log("onChat:", data);
+	});
+
+	pomelo.on('onHorn', function(data) {
+		console.log("onHorn:", data);
+	});
+
+	pomelo.on('onMail', function(data) {
+		console.log("onMail:", data);
+	});
+
+	pomelo.on('onApply', function(data) {
+		console.log("onApply:", data);
+	});
+
+	function getChatList(fid){
+		getChatListByFid(fid, function (data) {
+			console.log("getChatList:",data);
+		});
+	}
+
+	$("#f1").click(function () {
+		var paging = prompt("分页","");//将输入的内容赋给变量 name
+		getMail(paging,function (data) {
+			console.log("getMail:",JSON.stringify(data.data));
+			var content = data.data;
+			var len = content.length,gmids = new Array();
+			for(var i = 0; i<len; i++) {
+
+				var gmid = [content[i].gmid];
+				gmids.push(content[i].gmid);
+				var newRow = '<tr id="' + gmid + '" class="apply"><td></td><td onClick="readMail([' + gmid + '])">阅读"' + gmid + '"</td><td onClick="delMail([' + gmid + '])">删除"' + gmid + '"</td></tr>';
+				$('#mailtable').append(newRow);
+			}
+			var allRow = '<tr id="' + gmids + '" class="apply"><td></td><td onClick="readMail([' + gmids + '])">阅读全部"' + gmids + '"</td><td onClick="delMail([' + gmids + '])">删除全部"' + gmids + '"</td></tr>';
+			$('#mailtable').append(allRow);
+			console.log("redMail:-->",allRow+' gmids:',gmids+" type:",Array.isArray(gmids));
+		});
+	});
+
+	function readMail(gmids){
+		console.log("redMail:-->",gmids);
+		readMailByGmid(gmids, function (data) {
+			console.log("readMail:",data);
+		});
+	}
+	function delMail(gmids){
+		console.log("delMail:-->",gmids);
+		delMailByGmid(gmids, function (data) {
+			console.log("delMail:",data);
+		});
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "classicYardPoint1" : 25,
+  "classicYardPoint2" : 60,
+  "classicYardPoint3" : 100,
+  "classicYardRoomCharge1" : 240,
+  "classicYardRoomCharge2" : 500,
+  "classicYardRoomCharge3" : 1200,
+  "classicYardLimit1" : 1000,
+  "classicYardLimit2" : 8000,
+  "classicYardLimit3" : 20000
+}

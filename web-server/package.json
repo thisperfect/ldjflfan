@@ -1,0 +1,21 @@
+{
+  "name": "DouDiZhuServer",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "express": "3.4.8",
+    "generic-pool":"2.4.2",
+    "mysql": "2.11.1",
+    "crypto": "latest",
+    "request": "2.74.0",
+	"form-urlencoded": "0.0.6",
+    "util": "latest",
+    "redis": "2.6.2",
+    "https": "latest",
+    "iconv-lite": "latest",
+    "node-schedule": "latest",
+    "jssha": "^1.5.0",
+    "log4js": "0.6.14",
+    "jsonwebtoken": "latest"
+  }
+}
