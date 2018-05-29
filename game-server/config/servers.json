@@ -1,0 +1,40 @@
+{
+    "development": {
+  
+      "gate": [
+        {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 3014, "frontend": true}
+      ],
+  
+      "connector":[
+        {"id": "connector-server-1", "host": "127.0.0.1", "port": 4070, "clientPort": 3070, "frontend": true},
+        {"id": "connector-server-2", "host": "127.0.0.1", "port": 4071, "clientPort": 3071, "frontend": true}
+      ],
+  
+      "chat":[
+        {"id":"chat-server-1", "host":"127.0.0.1", "port":6070}
+      ],
+  
+      "world": [
+        {"id": "world-server-1", "host": "127.0.0.1", "port":7070}
+      ],
+  
+      "classic": [
+        {"id": "classic-server-0", "host": "127.0.0.1", "port": 8020},
+        {"id": "classic-server-1", "host": "127.0.0.1", "port": 8021},
+        {"id": "classic-server-2", "host": "127.0.0.1", "port": 8022}
+      ],
+      "unshuffle": [
+        {"id": "unshuffle-server-0", "host": "127.0.0.1", "port": 8030},
+        {"id": "unshuffle-server-1", "host": "127.0.0.1", "port": 8031},
+        {"id": "unshuffle-server-2", "host": "127.0.0.1", "port": 8032}
+      ]
+  
+    },
+  
+    "production": {
+      "connector": [
+        {"id": "connector-server-1", "host": "127.0.0.1", "port": 3150, "clientHost": "127.0.0.1", "clientPort": 3010, "frontend": true}
+      ]
+    }
+  }
+  

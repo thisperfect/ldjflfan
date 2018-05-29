@@ -8,8 +8,8 @@ module.exports = function (app) {
     return new Handler(app);
 };
 
-class Handler {
-    constructor(app) {
-        this.app = app
-    }
-}
+var Handler = function (app) {
+    this.app =  app;
+};
+
+var handler = Handler.prototype;

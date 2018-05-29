@@ -1,0 +1,1382 @@
+[2018-05-25 17:12:42.385] [INFO] console - 成功
+[2018-05-26 14:17:25.132] [INFO] console - 成功
+[2018-05-26 14:18:37.953] [INFO] console - 成功
+[2018-05-26 14:19:32.740] [INFO] console - 111
+[2018-05-26 14:19:32.925] [INFO] console - 成功
+[2018-05-26 15:49:37.563] [INFO] console - 111
+[2018-05-26 15:49:37.820] [INFO] console - 成功
+[2018-05-28 09:52:35.423] [INFO] console - 111
+[2018-05-28 09:52:37.249] [INFO] console - 成功
+[2018-05-28 10:01:03.437] [INFO] console - 111
+[2018-05-28 10:01:03.632] [INFO] console - 成功
+[2018-05-28 15:06:39.447] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:06:39.650] [INFO] console - 成功
+[2018-05-28 15:07:30.197] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:07:30.273] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:07:30.396] [INFO] console - 成功
+[2018-05-28 15:09:02.428] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:09:02.511] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:09:02.512] [INFO] console - gate-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:18:18.023] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:18:18.111] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:36:48.222] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:36:48.308] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:07.357] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:07.451] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.323] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.436] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.322] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.485] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.485] [INFO] console - gate-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.501] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.630] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.689] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.690] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.939] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.940] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.764] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.729] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.730] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.564] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.815] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.993] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.991] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.994] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.993] [INFO] console - world-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.825] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.033] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:08.826] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.033] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.124] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.125] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.459] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.719] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.720] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.650] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.966] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 15:38:09.967] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:19.408] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:19.490] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.405] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.433] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.603] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.611] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.612] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.407] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.637] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.638] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.437] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.488] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.671] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.633] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.672] [INFO] console - gate-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.851] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.690] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.690] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.852] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.827] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.136] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.137] [INFO] console - world-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:20.916] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.066] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.154] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.154] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.321] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.322] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.258] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.565] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.566] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.594] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.868] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:21.869] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:04:40.731] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 16:04:40.734] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":3044},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":2620}]
+[2018-05-28 16:04:40.734] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":2620}
+[2018-05-28 16:04:40.810] [INFO] console - { init: [Function],
+  getBase: [Function],
+  require: [Function],
+  configureLogger: [Function],
+  filter: [Function],
+  before: [Function],
+  after: [Function],
+  globalFilter: [Function],
+  globalBefore: [Function],
+  globalAfter: [Function],
+  rpcBefore: [Function],
+  rpcAfter: [Function],
+  rpcFilter: [Function],
+  load: [Function],
+  loadConfigBaseApp: [Function],
+  loadConfig: [Function],
+  route: [Function],
+  beforeStopHook: [Function],
+  start: [Function],
+  afterStart: [Function],
+  stop: [Function],
+  set: [Function],
+  get: [Function],
+  enabled: [Function],
+  disabled: [Function],
+  enable: [Function],
+  disable: [Function],
+  configure: [Function],
+  registerAdmin: [Function],
+  use: [Function],
+  transaction: [Function],
+  getMaster: [Function],
+  getCurServer: [Function],
+  getServerId: [Function],
+  getServerType: [Function],
+  getServers: [Function],
+  getServersFromConfig: [Function],
+  getServerTypes: [Function],
+  getServerById: [Function],
+  getServerFromConfig: [Function],
+  getServersByType: [Function],
+  isFrontend: [Function],
+  isBackend: [Function],
+  isMaster: [Function],
+  addServers: [Function],
+  removeServers: [Function],
+  replaceServers: [Function],
+  addCrons: [Function],
+  removeCrons: [Function],
+  loaded: 
+   [ Component { app: [Circular], opts: [Object], client: [Object] },
+     Component { app: [Circular], opts: [Object], remote: [Object] },
+     Component {
+       app: [Circular],
+       service: [Object],
+       addLoginedUser: [Function],
+       updateUserInfo: [Function],
+       increaseConnectionCount: [Function],
+       removeLoginedUser: [Function],
+       decreaseConnectionCount: [Function],
+       getStatisticsInfo: [Function] },
+     Component {
+       app: [Circular],
+       watchers: [Object],
+       serverProtos: {},
+       clientProtos: {},
+       version: 'xT9OvpsqULwrUv2IpdUD4Q==',
+       serverProtosPath: '/config/serverProtos.json',
+       clientProtosPath: '/config/clientProtos.json' },
+     Component {
+       app: [Circular],
+       connector: [Object],
+       encode: undefined,
+       decode: undefined,
+       useCrypto: undefined,
+       useHostFilter: undefined,
+       useAsyncCoder: undefined,
+       blacklistFun: undefined,
+       keys: {},
+       blacklist: [],
+       server: [Object],
+       session: [Object],
+       connection: [Object] },
+     Component {
+       app: [Circular],
+       service: [Object],
+       create: [Function],
+       bind: [Function],
+       unbind: [Function],
+       get: [Function],
+       getByUid: [Function],
+       remove: [Function],
+       import: [Function],
+       importAll: [Function],
+       kick: [Function],
+       kickBySessionId: [Function],
+       getClientAddressBySessionId: [Function],
+       sendMessage: [Function],
+       sendMessageByUid: [Function],
+       forEachSession: [Function],
+       forEachBindedSession: [Function],
+       getSessionsCount: [Function] },
+     PushScheduler { app: [Circular], scheduler: [Object] },
+     BackendSessionService { app: [Circular], name: '__backendSession__' },
+     ChannelService {
+       app: [Circular],
+       channels: {},
+       prefix: undefined,
+       store: undefined,
+       broadcastFilter: undefined,
+       channelRemote: [Object],
+       name: '__channel__' },
+     Component { server: [Object] },
+     Component { monitor: [Object] } ],
+  components: 
+   { __proxy__: Component { app: [Circular], opts: [Object], client: [Object] },
+     __remote__: Component { app: [Circular], opts: [Object], remote: [Object] },
+     __connection__: 
+      Component {
+        app: [Circular],
+        service: [Object],
+        addLoginedUser: [Function],
+        updateUserInfo: [Function],
+        increaseConnectionCount: [Function],
+        removeLoginedUser: [Function],
+        decreaseConnectionCount: [Function],
+        getStatisticsInfo: [Function] },
+     __protobuf__: 
+      Component {
+        app: [Circular],
+        watchers: [Object],
+        serverProtos: {},
+        clientProtos: {},
+        version: 'xT9OvpsqULwrUv2IpdUD4Q==',
+        serverProtosPath: '/config/serverProtos.json',
+        clientProtosPath: '/config/clientProtos.json' },
+     __connector__: 
+      Component {
+        app: [Circular],
+        connector: [Object],
+        encode: undefined,
+        decode: undefined,
+        useCrypto: undefined,
+        useHostFilter: undefined,
+        useAsyncCoder: undefined,
+        blacklistFun: undefined,
+        keys: {},
+        blacklist: [],
+        server: [Object],
+        session: [Object],
+        connection: [Object] },
+     __session__: 
+      Component {
+        app: [Circular],
+        service: [Object],
+        create: [Function],
+        bind: [Function],
+        unbind: [Function],
+        get: [Function],
+        getByUid: [Function],
+        remove: [Function],
+        import: [Function],
+        importAll: [Function],
+        kick: [Function],
+        kickBySessionId: [Function],
+        getClientAddressBySessionId: [Function],
+        sendMessage: [Function],
+        sendMessageByUid: [Function],
+        forEachSession: [Function],
+        forEachBindedSession: [Function],
+        getSessionsCount: [Function] },
+     __pushScheduler__: PushScheduler { app: [Circular], scheduler: [Object] },
+     __backendSession__: BackendSessionService { app: [Circular], name: '__backendSession__' },
+     __channel__: 
+      ChannelService {
+        app: [Circular],
+        channels: {},
+        prefix: undefined,
+        store: undefined,
+        broadcastFilter: undefined,
+        channelRemote: [Object],
+        name: '__channel__' },
+     __server__: Component { server: [Object] },
+     __monitor__: Component { monitor: [Object] } },
+  settings: 
+   { base: 'D:\\my_file\\work\\ldjflfan\\game-server',
+     env: 'development',
+     master: { id: 'master-server-1', host: '127.0.0.1', port: 3005 },
+     servers: 
+      { gate: [Array],
+        connector: [Array],
+        chat: [Array],
+        world: [Array],
+        classic: [Array],
+        unshuffle: [Array] },
+     __serverMap__: 
+      { 'gate-server-1': [Object],
+        'connector-server-1': [Object],
+        'connector-server-2': [Object],
+        'chat-server-1': [Object],
+        'world-server-1': [Object],
+        'classic-server-0': [Object],
+        'classic-server-1': [Object],
+        'classic-server-2': [Object],
+        'unshuffle-server-0': [Object],
+        'unshuffle-server-1': [Object],
+        'unshuffle-server-2': [Object] },
+     main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+     serverType: 'connector',
+     serverId: 'connector-server-2',
+     mode: 'clusters',
+     type: 'all',
+     curServer: 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'connector-server-2',
+        host: '127.0.0.1',
+        port: 4071,
+        clientPort: 3071,
+        frontend: 'true',
+        serverType: 'connector' },
+     name: 'DouDiZhuServer',
+     mysql: 
+      { host: '127.0.0.1',
+        port: '3306',
+        database: 'doudizhu',
+        user: 'root',
+        password: '123456' },
+     dbclient: 
+      { init: [Function],
+        shutdown: [Function],
+        insert: [Function: bound ],
+        update: [Function: bound ],
+        delete: [Function: bound ],
+        query: [Function: bound ] },
+     redis: { host: '127.0.0.1', port: 6379 },
+     redisclient: 
+      { init: [Function],
+        shutdown: [Function],
+        srandmember: [Function],
+        sismember: [Function],
+        sadd: [Function],
+        scard: [Function],
+        srem: [Function],
+        smembers: [Function],
+        zadd: [Function],
+        zincrby: [Function],
+        zscore: [Function],
+        zcard: [Function],
+        zrange: [Function],
+        zremrangebyrank: [Function],
+        zscan: [Function],
+        get: [Function],
+        set: [Function],
+        incrby: [Function],
+        exists: [Function],
+        expire: [Function],
+        expOnly: [Function],
+        del: [Function],
+        rpush: [Function],
+        lpush: [Function],
+        llen: [Function],
+        lindex: [Function],
+        lrange: [Function],
+        ltrim: [Function],
+        zrem: [Function],
+        hmget: [Function],
+        hmset: [Function],
+        hset: [Function],
+        hget: [Function],
+        hdel: [Function],
+        hvals: [Function],
+        hgetall: [Function],
+        hincrby: [Function],
+        hincrbyUint: [Function],
+        ttl: [Function],
+        lrem: [Function],
+        lpop: [Function],
+        rpop: [Function],
+        zrevrangebyscore: [Function] },
+     connectorConfig: 
+      { connector: [Object],
+        heartbeat: 10,
+        publishRoute: 'connector.entryHandler.publish',
+        subscribeRoute: 'connector.entryHandler.subscribe',
+        useProtobuf: true },
+     sessionService: 
+      Component {
+        app: [Circular],
+        service: [Object],
+        create: [Function],
+        bind: [Function],
+        unbind: [Function],
+        get: [Function],
+        getByUid: [Function],
+        remove: [Function],
+        import: [Function],
+        importAll: [Function],
+        kick: [Function],
+        kickBySessionId: [Function],
+        getClientAddressBySessionId: [Function],
+        sendMessage: [Function],
+        sendMessageByUid: [Function],
+        forEachSession: [Function],
+        forEachBindedSession: [Function],
+        getSessionsCount: [Function] },
+     backendSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+     localSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+     channelService: 
+      ChannelService {
+        app: [Circular],
+        channels: {},
+        prefix: undefined,
+        store: undefined,
+        broadcastFilter: undefined,
+        channelRemote: [Object],
+        name: '__channel__' },
+     __modules__: 
+      { __monitorwatcher__: [Object],
+        watchServer: [Object],
+        __console__: [Object] },
+     rpcInvoke: [Function: bound ] },
+  base: 'D:\\my_file\\work\\ldjflfan\\game-server',
+  event: 
+   EventEmitter {
+     domain: null,
+     _events: 
+      { add_servers: [Function: bound ],
+        remove_servers: [Function: bound ],
+        replace_servers: [Function: bound ],
+        add_crons: [Function: bound ],
+        remove_crons: [Function: bound ],
+        start_server: [Function: bound finishStart] },
+     _eventsCount: 6,
+     _maxListeners: undefined },
+  serverId: 'connector-server-2',
+  serverType: 'connector',
+  curServer: 
+   { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+     env: 'development',
+     id: 'connector-server-2',
+     host: '127.0.0.1',
+     port: 4071,
+     clientPort: 3071,
+     frontend: 'true',
+     serverType: 'connector' },
+  startTime: 1527494660828,
+  master: { id: 'master-server-1', host: '127.0.0.1', port: 3005 },
+  servers: 
+   { 'classic-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'classic-server-1',
+        host: '127.0.0.1',
+        port: 8021,
+        serverType: 'classic',
+        pid: 20332 },
+     'chat-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'chat-server-1',
+        host: '127.0.0.1',
+        port: 6070,
+        serverType: 'chat',
+        pid: 1204 },
+     'connector-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'connector-server-1',
+        host: '127.0.0.1',
+        port: 4070,
+        clientPort: 3070,
+        frontend: 'true',
+        serverType: 'connector',
+        pid: 3044 },
+     'gate-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'gate-server-1',
+        host: '127.0.0.1',
+        clientPort: 3014,
+        frontend: 'true',
+        serverType: 'gate',
+        pid: 15068 },
+     'connector-server-2': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'connector-server-2',
+        host: '127.0.0.1',
+        port: 4071,
+        clientPort: 3071,
+        frontend: 'true',
+        serverType: 'connector',
+        pid: 2620 },
+     'classic-server-0': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'classic-server-0',
+        host: '127.0.0.1',
+        port: 8020,
+        serverType: 'classic',
+        pid: 15600 },
+     'world-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'world-server-1',
+        host: '127.0.0.1',
+        port: 7070,
+        serverType: 'world',
+        pid: 19428 },
+     'classic-server-2': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'classic-server-2',
+        host: '127.0.0.1',
+        port: 8022,
+        serverType: 'classic',
+        pid: 2552 },
+     'unshuffle-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'unshuffle-server-1',
+        host: '127.0.0.1',
+        port: 8031,
+        serverType: 'unshuffle',
+        pid: 5004 },
+     'unshuffle-server-0': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'unshuffle-server-0',
+        host: '127.0.0.1',
+        port: 8030,
+        serverType: 'unshuffle',
+        pid: 19256 },
+     'unshuffle-server-2': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'unshuffle-server-2',
+        host: '127.0.0.1',
+        port: 8032,
+        serverType: 'unshuffle',
+        pid: 7996 } },
+  serverTypeMaps: 
+   { classic: [ [Object], [Object], [Object] ],
+     chat: [ [Object] ],
+     connector: [ [Object], [Object] ],
+     gate: [ [Object] ],
+     world: [ [Object] ],
+     unshuffle: [ [Object], [Object], [Object] ] },
+  serverTypes: [ 'classic', 'chat', 'connector', 'gate', 'world', 'unshuffle' ],
+  lifecycleCbs: {},
+  clusterSeq: {},
+  env: 'development',
+  main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+  mode: 'clusters',
+  type: 'all',
+  state: 3,
+  sessionService: 
+   Component {
+     app: [Circular],
+     service: SessionService { singleSession: undefined, sessions: [Object], uidMap: {} },
+     create: [Function],
+     bind: [Function],
+     unbind: [Function],
+     get: [Function],
+     getByUid: [Function],
+     remove: [Function],
+     import: [Function],
+     importAll: [Function],
+     kick: [Function],
+     kickBySessionId: [Function],
+     getClientAddressBySessionId: [Function],
+     sendMessage: [Function],
+     sendMessageByUid: [Function],
+     forEachSession: [Function],
+     forEachBindedSession: [Function],
+     getSessionsCount: [Function] },
+  backendSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+  localSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+  channelService: 
+   ChannelService {
+     app: [Circular],
+     channels: {},
+     prefix: undefined,
+     store: undefined,
+     broadcastFilter: undefined,
+     channelRemote: Remote { app: [Circular] },
+     name: '__channel__' },
+  rpc: [Getter],
+  sysrpc: [Getter],
+  rpcInvoke: [Function: bound ] }
+[2018-05-28 16:04:40.823] [INFO] console - 1111
+[2018-05-28 16:04:40.824] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NDU2MSwiZXhwIjoxNTI4MDk5MzYxfQ.AheUi87NX8YCMCsTQ2k9J8I5awFmPwEt5RPZiWuq-VQ
+[2018-05-28 16:04:40.849] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2017-12-20T06:47:48.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:04:40.915] [INFO] console - connected
+[2018-05-28 16:04:40.918] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:06:08.379] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:08.457] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.460] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.425] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.645] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.645] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.672] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.404] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.412] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.555] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.452] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.652] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.653] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.631] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.631] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.680] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.594] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.838] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.839] [INFO] console - world-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.681] [INFO] console - gate-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.850] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.851] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.665] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.011] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.012] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.932] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.200] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.200] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:09.969] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.250] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.250] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.814] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.969] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:10.970] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:06:17.401] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 16:06:17.404] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":14332},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10196}]
+[2018-05-28 16:06:17.404] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10196}
+[2018-05-28 16:06:17.472] [INFO] console - { init: [Function],
+  getBase: [Function],
+  require: [Function],
+  configureLogger: [Function],
+  filter: [Function],
+  before: [Function],
+  after: [Function],
+  globalFilter: [Function],
+  globalBefore: [Function],
+  globalAfter: [Function],
+  rpcBefore: [Function],
+  rpcAfter: [Function],
+  rpcFilter: [Function],
+  load: [Function],
+  loadConfigBaseApp: [Function],
+  loadConfig: [Function],
+  route: [Function],
+  beforeStopHook: [Function],
+  start: [Function],
+  afterStart: [Function],
+  stop: [Function],
+  set: [Function],
+  get: [Function],
+  enabled: [Function],
+  disabled: [Function],
+  enable: [Function],
+  disable: [Function],
+  configure: [Function],
+  registerAdmin: [Function],
+  use: [Function],
+  transaction: [Function],
+  getMaster: [Function],
+  getCurServer: [Function],
+  getServerId: [Function],
+  getServerType: [Function],
+  getServers: [Function],
+  getServersFromConfig: [Function],
+  getServerTypes: [Function],
+  getServerById: [Function],
+  getServerFromConfig: [Function],
+  getServersByType: [Function],
+  isFrontend: [Function],
+  isBackend: [Function],
+  isMaster: [Function],
+  addServers: [Function],
+  removeServers: [Function],
+  replaceServers: [Function],
+  addCrons: [Function],
+  removeCrons: [Function],
+  loaded: 
+   [ Component { app: [Circular], opts: [Object], client: [Object] },
+     Component { app: [Circular], opts: [Object], remote: [Object] },
+     Component {
+       app: [Circular],
+       service: [Object],
+       addLoginedUser: [Function],
+       updateUserInfo: [Function],
+       increaseConnectionCount: [Function],
+       removeLoginedUser: [Function],
+       decreaseConnectionCount: [Function],
+       getStatisticsInfo: [Function] },
+     Component {
+       app: [Circular],
+       watchers: [Object],
+       serverProtos: {},
+       clientProtos: {},
+       version: 'xT9OvpsqULwrUv2IpdUD4Q==',
+       serverProtosPath: '/config/serverProtos.json',
+       clientProtosPath: '/config/clientProtos.json' },
+     Component {
+       app: [Circular],
+       connector: [Object],
+       encode: undefined,
+       decode: undefined,
+       useCrypto: undefined,
+       useHostFilter: undefined,
+       useAsyncCoder: undefined,
+       blacklistFun: undefined,
+       keys: {},
+       blacklist: [],
+       server: [Object],
+       session: [Object],
+       connection: [Object] },
+     Component {
+       app: [Circular],
+       service: [Object],
+       create: [Function],
+       bind: [Function],
+       unbind: [Function],
+       get: [Function],
+       getByUid: [Function],
+       remove: [Function],
+       import: [Function],
+       importAll: [Function],
+       kick: [Function],
+       kickBySessionId: [Function],
+       getClientAddressBySessionId: [Function],
+       sendMessage: [Function],
+       sendMessageByUid: [Function],
+       forEachSession: [Function],
+       forEachBindedSession: [Function],
+       getSessionsCount: [Function] },
+     PushScheduler { app: [Circular], scheduler: [Object] },
+     BackendSessionService { app: [Circular], name: '__backendSession__' },
+     ChannelService {
+       app: [Circular],
+       channels: {},
+       prefix: undefined,
+       store: undefined,
+       broadcastFilter: undefined,
+       channelRemote: [Object],
+       name: '__channel__' },
+     Component { server: [Object] },
+     Component { monitor: [Object] } ],
+  components: 
+   { __proxy__: Component { app: [Circular], opts: [Object], client: [Object] },
+     __remote__: Component { app: [Circular], opts: [Object], remote: [Object] },
+     __connection__: 
+      Component {
+        app: [Circular],
+        service: [Object],
+        addLoginedUser: [Function],
+        updateUserInfo: [Function],
+        increaseConnectionCount: [Function],
+        removeLoginedUser: [Function],
+        decreaseConnectionCount: [Function],
+        getStatisticsInfo: [Function] },
+     __protobuf__: 
+      Component {
+        app: [Circular],
+        watchers: [Object],
+        serverProtos: {},
+        clientProtos: {},
+        version: 'xT9OvpsqULwrUv2IpdUD4Q==',
+        serverProtosPath: '/config/serverProtos.json',
+        clientProtosPath: '/config/clientProtos.json' },
+     __connector__: 
+      Component {
+        app: [Circular],
+        connector: [Object],
+        encode: undefined,
+        decode: undefined,
+        useCrypto: undefined,
+        useHostFilter: undefined,
+        useAsyncCoder: undefined,
+        blacklistFun: undefined,
+        keys: {},
+        blacklist: [],
+        server: [Object],
+        session: [Object],
+        connection: [Object] },
+     __session__: 
+      Component {
+        app: [Circular],
+        service: [Object],
+        create: [Function],
+        bind: [Function],
+        unbind: [Function],
+        get: [Function],
+        getByUid: [Function],
+        remove: [Function],
+        import: [Function],
+        importAll: [Function],
+        kick: [Function],
+        kickBySessionId: [Function],
+        getClientAddressBySessionId: [Function],
+        sendMessage: [Function],
+        sendMessageByUid: [Function],
+        forEachSession: [Function],
+        forEachBindedSession: [Function],
+        getSessionsCount: [Function] },
+     __pushScheduler__: PushScheduler { app: [Circular], scheduler: [Object] },
+     __backendSession__: BackendSessionService { app: [Circular], name: '__backendSession__' },
+     __channel__: 
+      ChannelService {
+        app: [Circular],
+        channels: {},
+        prefix: undefined,
+        store: undefined,
+        broadcastFilter: undefined,
+        channelRemote: [Object],
+        name: '__channel__' },
+     __server__: Component { server: [Object] },
+     __monitor__: Component { monitor: [Object] } },
+  settings: 
+   { base: 'D:\\my_file\\work\\ldjflfan\\game-server',
+     env: 'development',
+     master: { id: 'master-server-1', host: '127.0.0.1', port: 3005 },
+     servers: 
+      { gate: [Array],
+        connector: [Array],
+        chat: [Array],
+        world: [Array],
+        classic: [Array],
+        unshuffle: [Array] },
+     __serverMap__: 
+      { 'gate-server-1': [Object],
+        'connector-server-1': [Object],
+        'connector-server-2': [Object],
+        'chat-server-1': [Object],
+        'world-server-1': [Object],
+        'classic-server-0': [Object],
+        'classic-server-1': [Object],
+        'classic-server-2': [Object],
+        'unshuffle-server-0': [Object],
+        'unshuffle-server-1': [Object],
+        'unshuffle-server-2': [Object] },
+     main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+     serverType: 'connector',
+     serverId: 'connector-server-1',
+     mode: 'clusters',
+     type: 'all',
+     curServer: 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'connector-server-1',
+        host: '127.0.0.1',
+        port: 4070,
+        clientPort: 3070,
+        frontend: 'true',
+        serverType: 'connector' },
+     name: 'DouDiZhuServer',
+     mysql: 
+      { host: '127.0.0.1',
+        port: '3306',
+        database: 'doudizhu',
+        user: 'root',
+        password: '123456' },
+     dbclient: 
+      { init: [Function],
+        shutdown: [Function],
+        insert: [Function: bound ],
+        update: [Function: bound ],
+        delete: [Function: bound ],
+        query: [Function: bound ] },
+     redis: { host: '127.0.0.1', port: 6379 },
+     redisclient: 
+      { init: [Function],
+        shutdown: [Function],
+        srandmember: [Function],
+        sismember: [Function],
+        sadd: [Function],
+        scard: [Function],
+        srem: [Function],
+        smembers: [Function],
+        zadd: [Function],
+        zincrby: [Function],
+        zscore: [Function],
+        zcard: [Function],
+        zrange: [Function],
+        zremrangebyrank: [Function],
+        zscan: [Function],
+        get: [Function],
+        set: [Function],
+        incrby: [Function],
+        exists: [Function],
+        expire: [Function],
+        expOnly: [Function],
+        del: [Function],
+        rpush: [Function],
+        lpush: [Function],
+        llen: [Function],
+        lindex: [Function],
+        lrange: [Function],
+        ltrim: [Function],
+        zrem: [Function],
+        hmget: [Function],
+        hmset: [Function],
+        hset: [Function],
+        hget: [Function],
+        hdel: [Function],
+        hvals: [Function],
+        hgetall: [Function],
+        hincrby: [Function],
+        hincrbyUint: [Function],
+        ttl: [Function],
+        lrem: [Function],
+        lpop: [Function],
+        rpop: [Function],
+        zrevrangebyscore: [Function] },
+     connectorConfig: 
+      { connector: [Object],
+        heartbeat: 10,
+        publishRoute: 'connector.entryHandler.publish',
+        subscribeRoute: 'connector.entryHandler.subscribe',
+        useProtobuf: true },
+     sessionService: 
+      Component {
+        app: [Circular],
+        service: [Object],
+        create: [Function],
+        bind: [Function],
+        unbind: [Function],
+        get: [Function],
+        getByUid: [Function],
+        remove: [Function],
+        import: [Function],
+        importAll: [Function],
+        kick: [Function],
+        kickBySessionId: [Function],
+        getClientAddressBySessionId: [Function],
+        sendMessage: [Function],
+        sendMessageByUid: [Function],
+        forEachSession: [Function],
+        forEachBindedSession: [Function],
+        getSessionsCount: [Function] },
+     backendSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+     localSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+     channelService: 
+      ChannelService {
+        app: [Circular],
+        channels: {},
+        prefix: undefined,
+        store: undefined,
+        broadcastFilter: undefined,
+        channelRemote: [Object],
+        name: '__channel__' },
+     __modules__: 
+      { __monitorwatcher__: [Object],
+        watchServer: [Object],
+        __console__: [Object] },
+     rpcInvoke: [Function: bound ] },
+  base: 'D:\\my_file\\work\\ldjflfan\\game-server',
+  event: 
+   EventEmitter {
+     domain: null,
+     _events: 
+      { add_servers: [Function: bound ],
+        remove_servers: [Function: bound ],
+        replace_servers: [Function: bound ],
+        add_crons: [Function: bound ],
+        remove_crons: [Function: bound ],
+        start_server: [Function: bound finishStart] },
+     _eventsCount: 6,
+     _maxListeners: undefined },
+  serverId: 'connector-server-1',
+  serverType: 'connector',
+  curServer: 
+   { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+     env: 'development',
+     id: 'connector-server-1',
+     host: '127.0.0.1',
+     port: 4070,
+     clientPort: 3070,
+     frontend: 'true',
+     serverType: 'connector' },
+  startTime: 1527494769755,
+  master: { id: 'master-server-1', host: '127.0.0.1', port: 3005 },
+  servers: 
+   { 'classic-server-0': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'classic-server-0',
+        host: '127.0.0.1',
+        port: 8020,
+        serverType: 'classic',
+        pid: 17340 },
+     'chat-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'chat-server-1',
+        host: '127.0.0.1',
+        port: 6070,
+        serverType: 'chat',
+        pid: 5276 },
+     'connector-server-2': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'connector-server-2',
+        host: '127.0.0.1',
+        port: 4071,
+        clientPort: 3071,
+        frontend: 'true',
+        serverType: 'connector',
+        pid: 14332 },
+     'connector-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'connector-server-1',
+        host: '127.0.0.1',
+        port: 4070,
+        clientPort: 3070,
+        frontend: 'true',
+        serverType: 'connector',
+        pid: 10196 },
+     'world-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'world-server-1',
+        host: '127.0.0.1',
+        port: 7070,
+        serverType: 'world',
+        pid: 14532 },
+     'gate-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'gate-server-1',
+        host: '127.0.0.1',
+        clientPort: 3014,
+        frontend: 'true',
+        serverType: 'gate',
+        pid: 15220 },
+     'unshuffle-server-0': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'unshuffle-server-0',
+        host: '127.0.0.1',
+        port: 8030,
+        serverType: 'unshuffle',
+        pid: 11148 },
+     'classic-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'classic-server-1',
+        host: '127.0.0.1',
+        port: 8021,
+        serverType: 'classic',
+        pid: 8496 },
+     'unshuffle-server-2': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'unshuffle-server-2',
+        host: '127.0.0.1',
+        port: 8032,
+        serverType: 'unshuffle',
+        pid: 16764 },
+     'unshuffle-server-1': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'unshuffle-server-1',
+        host: '127.0.0.1',
+        port: 8031,
+        serverType: 'unshuffle',
+        pid: 5668 },
+     'classic-server-2': 
+      { main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+        env: 'development',
+        id: 'classic-server-2',
+        host: '127.0.0.1',
+        port: 8022,
+        serverType: 'classic',
+        pid: 16492 } },
+  serverTypeMaps: 
+   { classic: [ [Object], [Object], [Object] ],
+     chat: [ [Object] ],
+     connector: [ [Object], [Object] ],
+     world: [ [Object] ],
+     gate: [ [Object] ],
+     unshuffle: [ [Object], [Object], [Object] ] },
+  serverTypes: [ 'classic', 'chat', 'connector', 'world', 'gate', 'unshuffle' ],
+  lifecycleCbs: {},
+  clusterSeq: {},
+  env: 'development',
+  main: 'D:\\my_file\\work\\ldjflfan\\game-server\\app.js',
+  mode: 'clusters',
+  type: 'all',
+  state: 3,
+  sessionService: 
+   Component {
+     app: [Circular],
+     service: SessionService { singleSession: undefined, sessions: [Object], uidMap: {} },
+     create: [Function],
+     bind: [Function],
+     unbind: [Function],
+     get: [Function],
+     getByUid: [Function],
+     remove: [Function],
+     import: [Function],
+     importAll: [Function],
+     kick: [Function],
+     kickBySessionId: [Function],
+     getClientAddressBySessionId: [Function],
+     sendMessage: [Function],
+     sendMessageByUid: [Function],
+     forEachSession: [Function],
+     forEachBindedSession: [Function],
+     getSessionsCount: [Function] },
+  backendSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+  localSessionService: BackendSessionService { app: [Circular], name: '__backendSession__' },
+  channelService: 
+   ChannelService {
+     app: [Circular],
+     channels: {},
+     prefix: undefined,
+     store: undefined,
+     broadcastFilter: undefined,
+     channelRemote: Remote { app: [Circular] },
+     name: '__channel__' },
+  rpc: [Getter],
+  sysrpc: [Getter],
+  rpcInvoke: [Function: bound ] }
+[2018-05-28 16:06:17.484] [INFO] console - 1111
+[2018-05-28 16:06:17.484] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NDU2MSwiZXhwIjoxNTI4MDk5MzYxfQ.AheUi87NX8YCMCsTQ2k9J8I5awFmPwEt5RPZiWuq-VQ
+[2018-05-28 16:06:17.508] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:04:40.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:06:17.558] [INFO] console - connected
+[2018-05-28 16:06:17.562] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:09:00.691] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:00.767] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.724] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.876] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.711] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.877] [INFO] console - gate-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.858] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.854] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.872] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.046] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.047] [INFO] console - world-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.928] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.184] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.185] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:01.819] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.047] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.008] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.374] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.009] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.276] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.634] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.245] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.634] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.261] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.245] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.594] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.595] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.712] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.617] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.714] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.431] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.618] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.749] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:09:02.749] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:13.182] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:13.271] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.184] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.382] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.383] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.265] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.175] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.451] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.451] [INFO] console - world-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.413] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.347] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.175] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.348] [INFO] console - gate-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.576] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.577] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.362] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.363] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.251] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.441] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.442] [INFO] console - connector-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.602] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.846] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.838] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.846] [INFO] console - classic-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:14.737] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.102] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.021] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.022] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.393] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.547] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.548] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.584] [INFO] console - 111-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.750] [INFO] console - 222-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:15:15.750] [INFO] console - unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈
+[2018-05-28 16:19:21.210] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 16:19:21.214] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8144},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":17804}]
+[2018-05-28 16:19:21.215] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":17804}
+[2018-05-28 16:19:21.287] [INFO] console - 1111
+[2018-05-28 16:19:21.290] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NTQxNSwiZXhwIjoxNTI4MTAwMjE1fQ.PwWObaHhcUd7T2eBxIYRa7uDTE1zMtPoMtuME1q20Gc
+[2018-05-28 16:19:21.311] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:06:17.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:19:21.371] [INFO] console - connected
+[2018-05-28 16:19:21.375] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:20:17.089] [INFO] console - connected
+[2018-05-28 16:20:17.104] [INFO] console - connected
+[2018-05-28 16:20:22.306] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8144},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":17804}]
+[2018-05-28 16:20:22.307] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":17804}
+[2018-05-28 16:20:22.322] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NTQxNSwiZXhwIjoxNTI4MTAwMjE1fQ.PwWObaHhcUd7T2eBxIYRa7uDTE1zMtPoMtuME1q20Gc
+[2018-05-28 16:20:22.326] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 16:20:22.334] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}
+[2018-05-28 16:20:22.332] [INFO] console - connected
+[2018-05-28 16:20:22.335] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}}
+[2018-05-28 16:20:22.336] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:19:21.000Z","ipAddress":"::ffff:127.0.0.1","status":1,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:20:22.339] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:20:27.649] [ERROR] console -  Caught exception:{} ,stack:ReferenceError: moudule is not defined
+    at Object.<anonymous> (D:\my_file\work\ldjflfan\game-server\app\servers\world\handler\worldHandler.js:7:1)
+    at Module._compile (module.js:612:30)
+    at Object.Module._extensions..js (module.js:623:10)
+    at Module.load (module.js:531:32)
+    at tryModuleLoad (module.js:494:12)
+    at Function.Module._load (module.js:486:3)
+    at Module.require (module.js:556:17)
+    at require (internal/module.js:11:18)
+    at requireUncached (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-loader\lib\loader.js:131:12)
+    at loadFile (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-loader\lib\loader.js:43:10) 
+[2018-05-28 16:20:33.651] [ERROR] console -  Caught exception:{} ,stack:ReferenceError: moudule is not defined
+    at Object.<anonymous> (D:\my_file\work\ldjflfan\game-server\app\servers\world\handler\worldHandler.js:7:1)
+    at Module._compile (module.js:612:30)
+    at Object.Module._extensions..js (module.js:623:10)
+    at Module.load (module.js:531:32)
+    at tryModuleLoad (module.js:494:12)
+    at Function.Module._load (module.js:486:3)
+    at Module.require (module.js:556:17)
+    at require (internal/module.js:11:18)
+    at requireUncached (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-loader\lib\loader.js:131:12)
+    at loadFile (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-loader\lib\loader.js:43:10) 
+[2018-05-28 16:26:02.826] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 16:26:02.831] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":11284},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10424}]
+[2018-05-28 16:26:02.831] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10424}
+[2018-05-28 16:26:02.901] [INFO] console - 1111
+[2018-05-28 16:26:02.904] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NTQxNSwiZXhwIjoxNTI4MTAwMjE1fQ.PwWObaHhcUd7T2eBxIYRa7uDTE1zMtPoMtuME1q20Gc
+[2018-05-28 16:26:02.927] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:20:22.000Z","ipAddress":"::ffff:127.0.0.1","status":1,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:26:02.987] [INFO] console - connected
+[2018-05-28 16:26:02.991] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:26:28.813] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 16:26:28.820] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}
+[2018-05-28 16:26:28.820] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}}
+[2018-05-28 16:26:28.823] [INFO] console - connected
+[2018-05-28 16:26:28.823] [INFO] console - connected
+[2018-05-28 16:28:52.337] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":11284},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10424}]
+[2018-05-28 16:28:52.337] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10424}
+[2018-05-28 16:28:52.354] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NTQxNSwiZXhwIjoxNTI4MTAwMjE1fQ.PwWObaHhcUd7T2eBxIYRa7uDTE1zMtPoMtuME1q20Gc
+[2018-05-28 16:28:52.362] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:26:02.000Z","ipAddress":"::ffff:127.0.0.1","status":1,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:28:52.366] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:28:55.966] [INFO] console - connected
+[2018-05-28 16:29:15.267] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 16:29:15.319] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}
+[2018-05-28 16:29:15.321] [INFO] console - 410 available uid:10200, gameId:1, actr:[]
+[2018-05-28 16:29:15.322] [INFO] console - avai 420 roomId:102001527496155322, record:[object Object]
+[2018-05-28 16:29:15.322] [INFO] console - avai 426 classicYard:null
+[2018-05-28 16:29:15.323] [INFO] console - 428 classicYard:[object Object]
+[2018-05-28 16:30:27.295] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 16:30:27.299] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 16:30:27.299] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}}
+[2018-05-28 16:30:41.878] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":11284},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10424}]
+[2018-05-28 16:30:41.878] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":10424}
+[2018-05-28 16:30:41.893] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NjIyOSwiZXhwIjoxNTI4MTAxMDI5fQ.uhmOSTHuM4LMRnuMIQz8YBG38U7j2E2EWaNK_mFenus
+[2018-05-28 16:30:41.900] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:28:52.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:30:41.902] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:32:44.595] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 16:32:44.600] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 16:32:44.600] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}}
+[2018-05-28 16:33:43.723] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 16:33:43.727] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":19824},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}]
+[2018-05-28 16:33:43.728] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}
+[2018-05-28 16:33:43.795] [INFO] console - 1111
+[2018-05-28 16:33:43.804] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NjIyOSwiZXhwIjoxNTI4MTAxMDI5fQ.uhmOSTHuM4LMRnuMIQz8YBG38U7j2E2EWaNK_mFenus
+[2018-05-28 16:33:43.834] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:30:41.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 16:33:43.883] [INFO] console - connected
+[2018-05-28 16:33:43.888] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 16:34:11.205] [INFO] console - connected
+[2018-05-28 16:34:11.214] [INFO] console - classic gameId:1 ,openFlag:1
+[2018-05-28 16:34:11.274] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 16:34:11.282] [INFO] console - connected
+[2018-05-28 16:34:11.283] [INFO] console - 410 available uid:10200, gameId:1, actr:[]
+[2018-05-28 16:34:11.283] [INFO] console - avai 420 roomId:102001527496451283, record:[object Object]
+[2018-05-28 16:34:11.283] [INFO] console - avai 426 classicYard:null
+[2018-05-28 16:34:11.284] [INFO] console - 428 classicYard:[object Object]
+[2018-05-28 16:35:09.961] [INFO] console - classic gameId:2 ,openFlag:2
+[2018-05-28 16:35:09.964] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 16:36:08.273] [INFO] console - classic gameId:2 ,openFlag:2
+[2018-05-28 16:36:08.274] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}
+[2018-05-28 16:36:08.275] [INFO] console - 410 available uid:10200, gameId:2, actr:[]
+[2018-05-28 16:36:08.275] [INFO] console - avai 420 roomId:102001527496568275, record:[object Object]
+[2018-05-28 16:36:08.275] [INFO] console - avai 426 classicYard:null
+[2018-05-28 16:36:08.275] [INFO] console - 428 classicYard:[object Object]
+[2018-05-28 17:05:42.207] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:05:42.209] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:05:59.862] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:05:59.862] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"1"}
+[2018-05-28 17:05:59.863] [INFO] console - 410 available uid:10200, gameId:1, actr:[]
+[2018-05-28 17:05:59.863] [INFO] console - avai 420 roomId:102001527498359863, record:[object Object]
+[2018-05-28 17:05:59.863] [INFO] console - avai 426 classicYard:null
+[2018-05-28 17:05:59.864] [INFO] console - 428 classicYard:[object Object]
+[2018-05-28 17:07:21.449] [INFO] console - connected
+[2018-05-28 17:07:21.457] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:07:21.512] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:07:21.513] [INFO] console - classic han 29 row 经典场获取玩家缓存数据 data:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:07:21.520] [INFO] console - connected
+[2018-05-28 17:07:21.522] [INFO] console - man actr:[]
+[2018-05-28 17:07:45.027] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 17:07:45.038] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:07:45.038] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}}
+[2018-05-28 17:08:15.157] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":19824},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}]
+[2018-05-28 17:08:15.158] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}
+[2018-05-28 17:08:15.169] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NjIyOSwiZXhwIjoxNTI4MTAxMDI5fQ.uhmOSTHuM4LMRnuMIQz8YBG38U7j2E2EWaNK_mFenus
+[2018-05-28 17:08:15.175] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T08:33:43.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 17:08:15.179] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 17:08:21.427] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:08:21.429] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:08:21.430] [INFO] console - 410 available uid:10200, gameId:1, actr:[]
+[2018-05-28 17:08:21.430] [INFO] console - avai 420 roomId:102001527498501430, record:[object Object]
+[2018-05-28 17:08:21.430] [INFO] console - avai 426 classicYard:null
+[2018-05-28 17:08:21.431] [INFO] console - 428 classicYard:[object Object]
+[2018-05-28 17:08:24.788] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:08:24.790] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:08:24.791] [INFO] console - classic han 29 row 经典场获取玩家缓存数据 data:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:08:24.793] [INFO] console - man actr:["10200Mon May 28 2018 17:07:21 GMT+0800 (中国标准时间)"]
+[2018-05-28 17:09:08.472] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 17:09:08.479] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:09:08.479] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}}
+[2018-05-28 17:09:22.269] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":19824},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}]
+[2018-05-28 17:09:22.270] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}
+[2018-05-28 17:09:22.281] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NjIyOSwiZXhwIjoxNTI4MTAxMDI5fQ.uhmOSTHuM4LMRnuMIQz8YBG38U7j2E2EWaNK_mFenus
+[2018-05-28 17:09:22.287] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T09:08:15.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 17:09:22.290] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 17:09:42.280] [INFO] console - uid onUserLeave! 10200
+[2018-05-28 17:09:42.283] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:09:42.283] [INFO] console - onleave getValue data: {"code":0,"player":{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}}
+[2018-05-28 17:11:46.122] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":19824},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}]
+[2018-05-28 17:11:46.122] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":8284}
+[2018-05-28 17:11:46.133] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NjIyOSwiZXhwIjoxNTI4MTAxMDI5fQ.uhmOSTHuM4LMRnuMIQz8YBG38U7j2E2EWaNK_mFenus
+[2018-05-28 17:11:46.138] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T09:09:22.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 17:11:46.141] [INFO] console - add world session:[object Object], code:{"code":0}
+[2018-05-28 17:11:54.355] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:11:54.357] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:11:54.358] [INFO] console - 410 available uid:10200, gameId:1, actr:[]
+[2018-05-28 17:11:54.358] [INFO] console - avai 420 roomId:102001527498714358, record:[object Object]
+[2018-05-28 17:11:54.358] [INFO] console - avai 426 classicYard:null
+[2018-05-28 17:11:54.358] [INFO] console - 428 classicYard:[object Object]
+[2018-05-28 17:11:58.451] [INFO] console - classic gameId:1 ,openFlag:false
+[2018-05-28 17:11:58.452] [INFO] console - playerInfo cache err:null ,player:{"uid":"10200","nickname":"0号","avatar":"pic1","coin":"13700","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}
+[2018-05-28 17:26:11.622] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 17:26:11.626] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":12928},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":17904}]
+[2018-05-28 17:26:11.627] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":17904}
+[2018-05-28 17:26:11.681] [INFO] console - 1111
+[2018-05-28 17:26:11.685] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5NjIyOSwiZXhwIjoxNTI4MTAxMDI5fQ.uhmOSTHuM4LMRnuMIQz8YBG38U7j2E2EWaNK_mFenus
+[2018-05-28 17:26:11.707] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T09:11:46.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 17:26:11.750] [ERROR] console -  Caught exception:{} ,stack:TypeError: self.app.rpc.world.worldRemote.add is not a function
+    at D:\my_file\work\ldjflfan\game-server\app\servers\connector\handler\entryHandler.js:70:52
+    at D:\my_file\work\ldjflfan\game-server\app\util\entryService.js:70:17
+    at D:\my_file\work\ldjflfan\game-server\app\cache\playerCache.js:37:13
+    at Command.callback (D:\my_file\work\ldjflfan\game-server\app\cache\redis\redis.js:632:13)
+    at normal_reply (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:714:21)
+    at RedisClient.return_reply (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:816:9)
+    at JavascriptRedisParser.returnReply (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:188:18)
+    at JavascriptRedisParser.execute (D:\my_file\work\ldjflfan\game-server\node_modules\redis-parser\lib\parser.js:574:12)
+    at Socket.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:267:27)
+    at emitOne (events.js:115:13) 
+[2018-05-28 17:27:34.502] [INFO] console - 0.gate -> app:[object Object]
+[2018-05-28 17:27:34.506] [INFO] console - gate -> connectors:[{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4071,"clientPort":3071,"frontend":"true","serverType":"connector","pid":9684},{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":18008}]
+[2018-05-28 17:27:34.506] [INFO] console - gate -> res:{"main":"D:\\my_file\\work\\ldjflfan\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4070,"clientPort":3070,"frontend":"true","serverType":"connector","pid":18008}
+[2018-05-28 17:27:34.576] [INFO] console - 1111
+[2018-05-28 17:27:34.580] [INFO] console - connecter -> token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMjAwLCJkZXZpY2VJZCI6ImFzZGZnaCIsImlhdCI6MTUyNzQ5OTY0OCwiZXhwIjoxNTI4MTA0NDQ4fQ.G2B2Bo_XTAvjvL3OCIoO_ME6v78yl6g0DZGuOEwdzhQ
+[2018-05-28 17:27:34.603] [INFO] console - getPlayerDaoData err:null,res:{"uid":10200,"avatar":"pic1","nickname":"0号","role":0,"referee":null,"coin":13700,"jewel":66,"packet":0,"charm":0,"level":1,"experience":0,"vipLevel":0,"vipExperience":0,"lastLoginTime":"2018-05-28T09:11:46.000Z","ipAddress":"::ffff:127.0.0.1","status":2,"superCard":100,"cardMarker":1,"flower":160,"brick":100,"bomb":100,"markerTime":"2018-10-25T16:00:00.000Z"}
+[2018-05-28 17:27:34.655] [ERROR] console -  Caught exception:{} ,stack:TypeError: self.app.rpc.world.worldRemote.add is not a function
+    at D:\my_file\work\ldjflfan\game-server\app\servers\connector\handler\entryHandler.js:70:52
+    at D:\my_file\work\ldjflfan\game-server\app\util\entryService.js:70:17
+    at D:\my_file\work\ldjflfan\game-server\app\cache\playerCache.js:37:13
+    at Command.callback (D:\my_file\work\ldjflfan\game-server\app\cache\redis\redis.js:632:13)
+    at normal_reply (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:714:21)
+    at RedisClient.return_reply (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:816:9)
+    at JavascriptRedisParser.returnReply (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:188:18)
+    at JavascriptRedisParser.execute (D:\my_file\work\ldjflfan\game-server\node_modules\redis-parser\lib\parser.js:574:12)
+    at Socket.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\redis\index.js:267:27)
+    at emitOne (events.js:115:13) 

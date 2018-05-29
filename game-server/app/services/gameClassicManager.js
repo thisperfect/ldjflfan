@@ -459,6 +459,7 @@ var getAvailableRoom = function (manager,uid,gameId,openFlag,data,cb) {
             manager.classicCount[gameId]++;
             manager.playerMap[uid] = roomId;
         }
+        console.log(JSON.stringify(res),"哈哈哈哈哈哈");
         cb(res);
     });
 

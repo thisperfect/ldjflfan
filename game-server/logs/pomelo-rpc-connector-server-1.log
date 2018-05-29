@@ -1,0 +1,14 @@
+[2018-05-28 16:20:57.645] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 3 host: 127.0.0.1, port: 7070
+[2018-05-28 16:20:57.646] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 3 host: 127.0.0.1, port: 7070
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-28 16:20:57.646] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: world-server-1, msg: {"namespace":"sys","serverType":"world","service":"msgRemote","method":"forwardMessage","args":[{"id":6,"type":0,"compressRoute":0,"route":"world.worldHandler.kickOnlinePlayer","body":{},"compressGzip":0},{"id":2,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5
+[2018-05-28 16:21:01.773] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 4 host: 127.0.0.1, port: 7070
+[2018-05-28 16:21:01.773] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 4 host: 127.0.0.1, port: 7070
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-28 16:21:01.774] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: world-server-1, msg: {"namespace":"sys","serverType":"world","service":"msgRemote","method":"forwardMessage","args":[{"id":7,"type":0,"compressRoute":0,"route":"world.worldHandler.kickOnlinePlayer","body":{},"compressGzip":0},{"id":2,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5

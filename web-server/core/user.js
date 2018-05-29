@@ -36,7 +36,6 @@ var makePassword = function(password){
  * @param next
  */
 var loginByPhoneNum = function(req, res, next) {
-
     var body = req.body;
     var phoneNum = body.phoneNum;
     var pwd = body.pwd;
