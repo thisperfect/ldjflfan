@@ -467,12 +467,12 @@ var getAvailableRoom = function (manager, uid, gameId, openFlag, data, cb) {
         manager.activeRoomMap[gameId].splice(manager.activeRoomMap[gameId].indexOf(roomId), 1);
 
     }
-    /**
-         * 我加的 验证房间人数少于三人无法开启游戏
-         */
-    if (playerNum < 3) {
-        return cb({ code: 1, msg: '人数少于三人无法开启游戏!' });
-    }
+    // /**
+    //      * 我加的 验证房间人数少于三人无法开启游戏
+    //      */
+    // if (playerNum < 3) {
+    //     return cb({ code: 1, msg: '人数少于三人无法开启游戏!' });
+    // }
     classicYard.addPlayer(uid, openFlag, data, function (res) {
 
         if (res.code != 1) {  //进入成功
