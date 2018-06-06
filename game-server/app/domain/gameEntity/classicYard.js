@@ -72,7 +72,6 @@ classicYard.getGameStatus = function () {
 };
 
 classicYard.addPlayer = function (uid,openFlag,data,cb) {
-
     var self = this;
     if(self.playerArray.length >= 3){
         return cb({code:1,msg:'房间已满!'});

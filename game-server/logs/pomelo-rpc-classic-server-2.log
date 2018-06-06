@@ -1,0 +1,39 @@
+[2018-05-29 10:40:30.114] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error TypeError: Cannot read property 'toString' of null
+    at getSidByUid (D:\my_file\work\ldjflfan\game-server\app\services\areaService.js:277:45)
+    at areaService.add (D:\my_file\work\ldjflfan\game-server\app\services\areaService.js:26:15)
+    at ClassicYard.classicYard.addPlayer (D:\my_file\work\ldjflfan\game-server\app\domain\gameEntity\classicYard.js:80:35)
+    at getAvailableRoom (D:\my_file\work\ldjflfan\game-server\app\services\gameClassicManager.js:456:17)
+    at gameClassicManager.classicManager.addPlayer (D:\my_file\work\ldjflfan\game-server\app\services\gameClassicManager.js:43:5)
+    at gameClassicRemote.classicRemote.add (D:\my_file\work\ldjflfan\game-server\app\servers\classic\remote\gameClassicRemote.js:20:29)
+    at Dispatcher.pro.route (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-server\dispatcher.js:52:10)
+    at Acceptor.cb (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-server\gateway.js:22:16)
+    at processMsg (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-server\acceptors\mqtt-acceptor.js:138:12)
+    at Connection.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-server\acceptors\mqtt-acceptor.js:62:11)
+[2018-05-30 15:52:21.410] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc classic-server-2 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+[2018-05-30 15:52:21.410] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc classic-server-2 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 15:52:21.411] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-2, msg: {"namespace":"user","serverType":"classic","service":"gameClassicRemote","method":"add","args":[10203,1,true,{"uid":"10203","nickname":"3号","avatar":"pic1","coin":"47870","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}]}, error code: 5
+[2018-05-30 15:56:33.096] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc classic-server-2 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+[2018-05-30 15:56:33.097] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc classic-server-2 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 15:56:33.098] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-2, msg: {"namespace":"user","serverType":"classic","service":"gameClassicRemote","method":"add","args":[10203,1,true,{"uid":"10203","nickname":"3号","avatar":"pic1","coin":"47870","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}]}, error code: 5
+[2018-05-30 15:57:40.783] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc classic-server-2 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+[2018-05-30 15:57:40.785] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc classic-server-2 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 15:57:40.787] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-2, msg: {"namespace":"user","serverType":"classic","service":"gameClassicRemote","method":"add","args":[10203,1,true,{"uid":"10203","nickname":"3号","avatar":"pic1","coin":"47870","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}]}, error code: 5
+[2018-05-30 15:58:18.168] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc classic-server-2 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 8022
+[2018-05-30 15:58:18.169] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc classic-server-2 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 8022
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 15:58:18.170] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-2, msg: {"namespace":"user","serverType":"classic","service":"gameClassicRemote","method":"add","args":[10203,1,true,{"uid":"10203","nickname":"3号","avatar":"pic1","coin":"47870","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}]}, error code: 5

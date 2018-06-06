@@ -1,3 +1,6 @@
 [2018-05-28 16:20:33.649] [ERROR] pomelo - [31m[D:\my_file\work\ldjflfan\game-server\node_modules\pomelo\lib\filters\handler\serial.js] [39m[serial filter] msg timeout, msg:{"__route__":"world.worldHandler.kickOnlinePlayer"}
 [2018-05-28 16:20:39.649] [ERROR] pomelo - [31m[D:\my_file\work\ldjflfan\game-server\node_modules\pomelo\lib\filters\handler\serial.js] [39m[serial filter] msg timeout, msg:{"__route__":"world.worldHandler.kickOnlinePlayer"}
 [2018-05-28 16:26:15.116] [ERROR] pomelo - [31m[D:\my_file\work\ldjflfan\game-server\node_modules\pomelo\lib\common\service\handlerService.js] [39m[handleManager]: fail to find handler for "world.worldHandler.getPlayerInfoForScene"
+[2018-05-29 15:24:53.246] [ERROR] pomelo - [31m[D:\my_file\work\ldjflfan\game-server\node_modules\pomelo\lib\common\service\handlerService.js] [39m[handleManager]: fail to find handler for "world.worldHandler.kickOnlinePlayer"
+[2018-05-29 15:28:21.142] [ERROR] pomelo - [31m[D:\my_file\work\ldjflfan\game-server\node_modules\pomelo\lib\common\service\handlerService.js] [39m[handleManager]: fail to find handler for "world.worldHandler.getBankruptcy"
+[2018-05-29 15:30:40.479] [ERROR] pomelo - [31m[D:\my_file\work\ldjflfan\game-server\node_modules\pomelo\lib\common\service\handlerService.js] [39m[handleManager]: fail to find handler for "world.worldHandler.kickOnlinePlayer"

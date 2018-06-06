@@ -17,7 +17,7 @@ var unshuffleRemote = gameUnshuffleRemote.prototype;
 
 unshuffleRemote.add = function (uid,gameId,openFlag,data,cb) {
     var self = this;
-    self.gameUnshuffleManager.addPlayer(uid,gameId,openFlag,data, function (res) {
+    self.gameUnshuffleManager.addPlayer(uid,gameId,openFlag,data,  (res)=> {
         cb(res);
     });
 };

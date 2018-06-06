@@ -72,8 +72,10 @@ process.on('unhandledRejection', function (reason, p) {
   console.error("Unhandled Rejection at: Promise ", p, " reason: ", reason.stack);
 });
 
-app.listen(3006);
+app.listen(3006,()=>{
+  console.log("Web server has started.\nPlease log on http://127.0.0.1:3006/index.html");
+});
 
-console.log("Web server has started.\nPlease log on http://127.0.0.1:3006/index.html");
+
 
 

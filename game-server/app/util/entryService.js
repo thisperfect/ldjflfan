@@ -24,9 +24,9 @@ entryService.auth = function(uid, deviceId,ip, cb) {
 
             if (user && user.length == 1) {
 
-                if(user[0].deviceId != deviceId) {
-                    return cb({code:1,msg:'新设备请重新登录!'});
-                }
+                // if(user[0].deviceId != deviceId) {
+                //     return cb({code:1,msg:'新设备请重新登录!'});
+                // }
 
                 cb({code:0});
             }

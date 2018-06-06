@@ -12,3 +12,56 @@
     at tryOnTimeout (timers.js:306:5)
     at Timer.listOnTimeout (timers.js:266:5)
 [2018-05-28 16:21:01.774] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: world-server-1, msg: {"namespace":"sys","serverType":"world","service":"msgRemote","method":"forwardMessage","args":[{"id":7,"type":0,"compressRoute":0,"route":"world.worldHandler.kickOnlinePlayer","body":{},"compressGzip":0},{"id":2,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5
+[2018-05-29 09:58:16.991] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc client connector-server-1 process remote server world-server-1 message with error: TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at self.app.rpc.world.worldRemote.add (D:\my_file\work\ldjflfan\game-server\app\servers\connector\handler\entryHandler.js:70:46)
+    at Object.Utils.applyCallback (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\util\utils.js:11:6)
+    at D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailstation.js:268:15
+    at doFilter (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailstation.js:356:5)
+    at D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailstation.js:264:7
+    at processMsg (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:245:3)
+    at Connection.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:79:9)
+    at emitOne (events.js:115:13)
+    at Connection.emit (events.js:210:7)
+[2018-05-29 10:15:52.664] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 7070
+[2018-05-29 10:15:52.665] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 7070
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-29 10:15:52.666] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: world-server-1, msg: {"namespace":"user","serverType":"world","service":"worldRemote","method":"add","args":[null]}, error code: 5
+[2018-05-29 14:09:03.364] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+[2018-05-29 14:09:03.366] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8022
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-29 14:09:03.367] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-2, msg: {"namespace":"sys","serverType":"classic","service":"msgRemote","method":"forwardMessage","args":[{"id":26,"type":0,"compressRoute":0,"route":"classic.gameClassicHandler.enterGame","body":{"gameId":"","openFlag":""},"compressGzip":0},{"id":1,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5
+[2018-05-29 14:13:43.315] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+[2018-05-29 14:13:43.316] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-29 14:13:43.316] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-1, msg: {"namespace":"sys","serverType":"classic","service":"msgRemote","method":"forwardMessage","args":[{"id":29,"type":0,"compressRoute":0,"route":"classic.gameClassicHandler.enterGame","body":{"gameId":"","openFlag":""},"compressGzip":0},{"id":1,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5
+[2018-05-29 14:17:35.375] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 8020
+[2018-05-29 14:17:35.376] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 1 host: 127.0.0.1, port: 8020
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-29 14:17:35.376] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-0, msg: {"namespace":"sys","serverType":"classic","service":"msgRemote","method":"forwardMessage","args":[{"id":4,"type":0,"compressRoute":0,"route":"classic.gameClassicHandler.leaveGame","body":{},"compressGzip":0},{"id":1,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5
+[2018-05-29 14:17:37.679] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 2 host: 127.0.0.1, port: 8020
+[2018-05-29 14:17:37.679] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 2 host: 127.0.0.1, port: 8020
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-29 14:17:37.680] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-0, msg: {"namespace":"sys","serverType":"classic","service":"msgRemote","method":"forwardMessage","args":[{"id":5,"type":0,"compressRoute":0,"route":"classic.gameClassicHandler.leaveGame","body":{},"compressGzip":0},{"id":1,"frontendId":"connector-server-1","uid":10200,"settings":{"areaId":0}}]}, error code: 5
+[2018-05-30 15:55:11.617] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+[2018-05-30 15:55:11.618] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc connector-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 15:55:11.619] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-1, msg: {"namespace":"sys","serverType":"classic","service":"msgRemote","method":"forwardMessage","args":[{"id":3,"type":0,"compressRoute":0,"route":"classic.gameClassicHandler.enterGame","body":{"gameId":1,"openFlag":true},"compressGzip":0},{"id":1,"frontendId":"connector-server-1","uid":10203,"settings":{"areaId":0}}]}, error code: 5

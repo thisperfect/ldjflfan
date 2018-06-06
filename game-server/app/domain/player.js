@@ -2,12 +2,13 @@
  * Created by liuxiahui on 2017/10/26.
  */
 
-var playerDao = require('../dao/playerDao');
+const playerDao = require('../dao/playerDao');
 
-var playerCache = require('../cache/playerCache');
+const playerCache = require('../cache/playerCache');
+
+const Player = module.exports;
 
 
-var Player = module.exports;
 
 /**
  * 从缓存中获取

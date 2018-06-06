@@ -40,7 +40,6 @@ NND.set = function(key, args, cb) {
 NND.incrby = function(key, inc, cb) {
 
     _pool.acquire(function(err, client){
-
         if (!!err) {
             console.error('[incrby] '+err.stack);
             return;
@@ -589,7 +588,6 @@ NND.zremrangebyrank = function(args, cb) {
 NND.del = function(key, cb) {
 
     _pool.acquire(function(err, client) {
-
         if (!!err) {
             console.error('[del] '+err.stack);
             return;
@@ -653,7 +651,6 @@ NND.hget = function(key, args, cb){
 NND.hmget = function(key, args, cb){
 
     _pool.acquire(function(err, client) {
-
         if (!!err) {
             console.error('[hmget] '+err.stack);
             return;

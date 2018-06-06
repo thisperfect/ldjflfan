@@ -1,0 +1,14 @@
+[2018-05-30 15:55:11.689] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc classic-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+[2018-05-30 15:55:11.690] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc classic-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 15:55:11.691] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-1, msg: {"namespace":"user","serverType":"classic","service":"gameClassicRemote","method":"add","args":[10203,1,true,{"uid":"10203","nickname":"3号","avatar":"pic1","coin":"47870","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}]}, error code: 5
+[2018-05-30 16:06:12.609] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc classic-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+[2018-05-30 16:06:12.610] [ERROR] pomelo-rpc - [31m[MailStation] [39m[pomelo-rpc] fail to send message Error: rpc classic-server-1 callback timeout 30000, remote server 0 host: 127.0.0.1, port: 8021
+    at Timeout.<anonymous> (D:\my_file\work\ldjflfan\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:257:16)
+    at ontimeout (timers.js:471:11)
+    at tryOnTimeout (timers.js:306:5)
+    at Timer.listOnTimeout (timers.js:266:5)
+[2018-05-30 16:06:12.611] [ERROR] pomelo-rpc - [31m[failprocess] [39mrpc failed with error, remote server: classic-server-1, msg: {"namespace":"user","serverType":"classic","service":"gameClassicRemote","method":"add","args":[10203,1,true,{"uid":"10203","nickname":"3号","avatar":"pic1","coin":"47870","jewel":"66","packet":"0","charm":"0","level":"1","experience":"0","vipLevel":"0","vipExperience":"0","role":"0","loginIP":"::ffff:127.0.0.1","superCard":"100","cardMarker":"1","markerTime":"1540483200000","signId":"0","bankruptId":"0","status":"2"}]}, error code: 5

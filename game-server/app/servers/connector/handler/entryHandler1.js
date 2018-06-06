@@ -11,7 +11,6 @@ module.exports = function(app) {
 
 let Handler = function(app) {
   this.app = app;
-  console.log(1111);
 };
 
 let handler = Handler.prototype;

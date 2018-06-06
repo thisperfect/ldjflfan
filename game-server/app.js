@@ -11,8 +11,6 @@ app.set('name', 'DouDiZhuServer');  //设置应用名字
 // app configuration
 
 app.configure('production|development', function() {
-    // console.log("111-哈哈哈哈哈哈哈哈哈哈哈哈");
-
     // app.enable('systemMonitor');
 
     app.loadConfig('mysql', app.getBase() + '/../shared/mysql.json');
@@ -22,13 +20,9 @@ app.configure('production|development', function() {
     app.loadConfig('redis', app.getBase() + '/../shared/redis.json');
     var redisclient = require('./app/cache/redis/redis').init(app);
     app.set('redisclient', redisclient);
-    // console.log("222-哈哈哈哈哈哈哈哈哈哈哈哈");
-
 });
 
 app.configure('production|development', 'gate', function(){
-    // console.log("gate-哈哈哈哈哈哈哈哈哈哈哈哈");
-
     app.set('connectorConfig',
         {
             connector : pomelo.connectors.hybridconnector,
@@ -37,7 +31,7 @@ app.configure('production|development', 'gate', function(){
 });
 
 app.configure('production|development', 'connector', function(){
-    // console.log("connector-哈哈哈哈哈哈哈哈哈哈哈哈");
+    // console.log("connector----------");
     
     //<!--设置内部connector组建 心跳时长 通信协议-->
     app.set('connectorConfig',
@@ -46,24 +40,23 @@ app.configure('production|development', 'connector', function(){
             heartbeat : 10,
             publishRoute: 'connector.entryHandler.publish',
             subscribeRoute: 'connector.entryHandler.subscribe',
-            useProtobuf: true //enable useProtobuf 我加的
         });
 });
 
 app.configure('production|development', 'world', function() {
-    // console.log("world-哈哈哈哈哈哈哈哈哈哈哈哈");
+    // console.log("------world-----);
 
     app.filter(pomelo.filters.serial(6000));
 });
 
 app.configure('production|development', 'classic', function() {
-    // console.log("classic-哈哈哈哈哈哈哈哈哈哈哈哈");
+    // console.log("-----------classic-------");
 
     app.set('gameClassicManager', new gameClassicManager(app));
 
 });
 app.configure('production|development', 'unshuffle', function() {
-    // console.log("unshuffle-哈哈哈哈哈哈哈哈哈哈哈哈");
+    // console.log("--------------unshuffle----------");
 
     app.set('gameUnshuffleManager', new gameUnshuffleManager(app));
 
